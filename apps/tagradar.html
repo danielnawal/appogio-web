@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TagRadar — Rastreo de Activos BLE en Tiempo Real | Appogio</title>
+  <meta name="description" content="TagRadar rastrea activos, herramientas y equipos con tecnología BLE. Control de inventario en tiempo real, alertas de salida de zona y localización precisa en interiores.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2310B981'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='900' font-size='12' fill='white'>TR</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style>:root { --app-color: #10B981; }</style>
+</head>
+<body>
+
+<nav class="navbar scrolled">
+  <div class="container">
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.jpg" height="38" alt="Appogio" style="display:block;border-radius:6px"></a>
+    <div class="nav-links">
+      <a href="../index.html#features" class="nav-link">Plataforma</a>
+      <a href="../index.html#apps" class="nav-link">Aplicaciones</a>
+      <a href="../manuales/index.html" class="nav-link">Manuales</a>
+      <a href="../contacto.html" class="nav-link">Contacto</a>
+    </div>
+    <div class="nav-cta"><a href="../contacto.html" class="btn btn-outline btn-sm">Solicitar Demo</a></div>
+    <button class="nav-mobile-toggle" aria-label="Menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="../index.html">Inicio</a><a href="../index.html#apps">Aplicaciones</a>
+  <a href="../manuales/index.html">Manuales</a><a href="../contacto.html">Contacto</a>
+</div>
+
+<!-- HERO -->
+<section class="app-hero" style="--app-color:#10B981">
+  <div class="app-hero-glow" style="background:radial-gradient(ellipse,#10B981 0%,transparent 70%)"></div>
+  <div class="container">
+    <div data-reveal>
+      <div class="app-icon-lg" style="background:none;border:none;padding:0">
+        <img src="../assets/images/icons/tagradar.svg" width="72" height="72" style="border-radius:18px;display:block">
+      </div>
+      <div class="app-hero-badge" style="border-color:#10B981;color:#10B981">Rastreo de Activos BLE</div>
+      <h1>Sabe dónde está <span style="color:#10B981">cada activo, siempre.</span></h1>
+      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem">TagRadar usa etiquetas BLE de larga duración captadas por antenas fijas o móviles. El mapa muestra en tiempo real la última antena que detectó cada activo. Sin GPS, sin SIM: funciona en interiores, patios y bodegas donde el GPS no llega.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#10B981;box-shadow:0 0 32px rgba(16,185,129,.3)">Solicitar Demo</a>
+        <a href="../manuales/index.html#tagradar" class="btn btn-outline btn-lg">Ver Manual</a>
+      </div>
+    </div>
+    <div data-reveal>
+      <div class="media-placeholder" style="border-color:rgba(16,185,129,.2)">
+        <div class="media-placeholder-inner" style="aspect-ratio:16/10">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#10B981" stroke-width="1.5" width="48" height="48" opacity=".3">
+            <circle cx="24" cy="24" r="4"/><circle cx="24" cy="24" r="10" stroke-dasharray="3 3"/><circle cx="24" cy="24" r="18" stroke-dasharray="3 3"/>
+            <path d="M24 6v4M24 38v4M6 24h4M38 24h4"/>
+          </svg>
+          <span style="color:#10B981;opacity:.6">Dashboard TagRadar</span>
+          <span class="media-upload-label">Agrega: assets/images/tagradar-screenshot.png</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div style="background:rgba(16,185,129,.06);border-top:1px solid rgba(16,185,129,.15);border-bottom:1px solid rgba(16,185,129,.15);padding:2rem 0">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center">
+      <div><div style="font-size:2.25rem;font-weight:900;color:#10B981;font-family:var(--font-head)">BLE 5</div><div style="font-size:.85rem;color:var(--c-text-3)">Tecnología de última generación</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#10B981;font-family:var(--font-head)">20s</div><div style="font-size:.85rem;color:var(--c-text-3)">Frecuencia de actualización del mapa</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#10B981;font-family:var(--font-head)" data-counter data-target="2" data-suffix=" años">0</div><div style="font-size:.85rem;color:var(--c-text-3)">Duración de batería del tag</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#10B981;font-family:var(--font-head)">0 SIM</div><div style="font-size:.85rem;color:var(--c-text-3)">Sin costo de conectividad</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" style="color:#10B981">Funcionalidades</span>
+      <h2 class="section-title">Del caos del inventario al control total</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" style="--card-color:#10B981" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#10B981"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" stroke-dasharray="2 2"/></svg></div>
+        <h4>Última posición por antena</h4>
+        <p>Cada tag BLE es captado por la antena más cercana. El mapa muestra en tiempo real la posición de la antena que lo detectó por última vez, actualizado cada 20 segundos.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#8840C8" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#8840C8"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#8840C8" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h4>Geocercas con alertas entrada/salida</h4>
+        <p>Define zonas para cada activo o grupo. Recibe alerta inmediata cuando un equipo entra o sale del área asignada. Configurable por zona y activo.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#F59E0B" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#F59E0B"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+        <h4>Historial de ruta 24 horas</h4>
+        <p>Consulta el historial completo de detecciones de cualquier activo en las últimas 24 horas: antena que lo vio, hora exacta y posición. Trazabilidad total.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#8B5CF6" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#8B5CF6"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M2 20c0-4 4.5-7 10-7s10 3 10 7"/></svg></div>
+        <h4>Estados de activo en tiempo real</h4>
+        <p><strong>En vivo</strong> (detectado hace &lt;5 min), <strong>Reciente</strong> (&lt;2 h) o <strong>Inactivo</strong> (&gt;2 h). De un vistazo sabes qué activos están siendo monitoreados y cuáles llevan tiempo sin reportar.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#EF4444" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#EF4444"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg></div>
+        <h4>Administración de activos y antenas</h4>
+        <p>Registra, edita y elimina tags con nombre y descripción. Consulta qué antenas están activas, cuándo reportaron por última vez y cuántos activos han captado.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#EC4899" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#EC4899"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#EC4899" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <h4>App Android + SSO con GPSwox</h4>
+        <p>Accede desde la app Android nativa con las mismas credenciales de GPS Software. Las antenas reportan via APK escáner BLE sin necesidad de hardware adicional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Casos de uso -->
+<section class="section" style="background:var(--c-bg-2)">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" style="color:#10B981">Casos de uso</span>
+      <h2 class="section-title">Para cualquier industria con activos que rastrear</h2>
+    </div>
+    <div class="industries-grid" data-reveal>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-7 8 7v10"/><path d="M9 20v-6h6v6"/></svg></div>
+        <h4>Construcción</h4>
+        <p>Herramientas eléctricas, andamios, maquinaria menor y materiales de alto valor.</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h4>Salud</h4>
+        <p>Equipos médicos portátiles, sillas de ruedas, camillas y dispositivos de diagnóstico.</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h4>Manufactura</h4>
+        <p>Herramientas de planta, carros de transporte, pallets y contenedores de producción.</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+        <h4>Logística</h4>
+        <p>Contenedores, embalajes de retorno, montacargas y activos de almacén.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal><span class="section-label" style="color:#10B981">Capturas de pantalla</span><h2 class="section-title">TagRadar en detalle</h2></div>
+    <div class="screenshots-gallery" data-reveal>
+      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><circle cx="12" cy="12" r="4"/></svg><span style="font-size:.75rem">Mapa de activos en tiempo real</span><span style="font-size:.65rem;opacity:.5">assets/images/tagradar-mapa.png</span></div>
+      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/></svg><span style="font-size:.75rem">Inventario de activos</span><span style="font-size:.65rem;opacity:.5">assets/images/tagradar-inventario.png</span></div>
+      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/></svg><span style="font-size:.75rem">Geocercas y zonas</span><span style="font-size:.65rem;opacity:.5">assets/images/tagradar-geocercas.png</span></div>
+      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"/></svg><span style="font-size:.75rem">Reportes de utilización</span><span style="font-size:.65rem;opacity:.5">assets/images/tagradar-reportes.png</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="container">
+    <h2 class="section-title">¿Listo para saber dónde está cada activo?</h2>
+    <p>Implementa TagRadar sin infraestructura costosa y empieza a rastrear tus activos en días, no meses.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
+      <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#10B981;box-shadow:0 0 32px rgba(16,185,129,.3)">Solicitar Demo de TagRadar</a>
+      <a href="../manuales/index.html#tagradar" class="btn btn-outline btn-lg">Ver Manual Completo</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.jpg" height="38" alt="Appogio" style="display:block;border-radius:6px"></a><div class="footer-bottom-links"><a href="driveiq.html">DriveIQ</a><a href="inspectpro.html">InspectPro</a><a href="pilotos.html">PilotOS</a><a href="camfleet.html">CamFleet</a><a href="notice.html">Notice</a></div></div></div></footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
