@@ -45,6 +45,18 @@
       </div>
       <a href="../contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
     </div>
+    <div class="lang-switcher">
+      <button class="lang-btn" id="lang-trigger" aria-label="Cambiar idioma">
+        <span class="fi fi-es fis" id="lang-flag"></span>
+        <span id="lang-code">ES</span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="lang-menu" id="lang-menu">
+        <button class="lang-option" data-lang="es" data-flag-class="fi-es" data-code="ES"><span class="fi fi-es fis"></span> Español</button>
+        <button class="lang-option" data-lang="pt" data-flag-class="fi-br" data-code="PT"><span class="fi fi-br fis"></span> Português</button>
+        <button class="lang-option" data-lang="en" data-flag-class="fi-us" data-code="EN"><span class="fi fi-us fis"></span> English</button>
+      </div>
+    </div>
     <div class="nav-cta">
       <a href="../contacto.html" class="btn btn-outline btn-sm" data-i18n="nav_demo">Solicitar Demo</a>
     </div>
@@ -67,11 +79,11 @@
       <div class="app-icon-lg" style="background:none;border:none;padding:0">
         <img src="../assets/images/icons/mailux.svg" width="72" height="72" style="border-radius:18px;display:block">
       </div>
-      <div class="app-hero-badge" style="border-color:#2563EB;color:#2563EB">Email Marketing</div>
-      <h1>Mailux — <span style="color:#2563EB">Email Marketing.</span></h1>
-      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem">Mailux es una plataforma de email marketing: envía campañas masivas, hace seguimiento de aperturas y clics en tiempo real y gestiona listas de contactos y landing pages.</p>
+      <div class="app-hero-badge" style="border-color:#2563EB;color:#2563EB" data-i18n="mx_badge">Email Marketing</div>
+      <h1 data-i18n-html="mx_title">Mailux — <span style="color:#2563EB">Email Marketing.</span></h1>
+      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem" data-i18n="mx_desc">Mailux es una plataforma de email marketing: envía campañas masivas, hace seguimiento de aperturas y clics en tiempo real y gestiona listas de contactos y landing pages.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap">
-        <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#2563EB;box-shadow:0 0 32px #2563EB4d">Solicitar Demo</a>
+        <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#2563EB;box-shadow:0 0 32px #2563EB4d" data-i18n="app_btn_demo">Solicitar Demo</a>
       </div>
     </div>
     <div data-reveal>
@@ -81,10 +93,10 @@
           <div><div style="font-weight:800;font-size:1.05rem;color:var(--c-text)">Mailux</div><div style="font-size:.8rem;color:var(--c-text-2)">Email Marketing</div></div>
         </div>
         <div style="display:flex;flex-direction:column;gap:.85rem">
-          <div style="display:flex;gap:.6rem;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:.92rem;color:var(--c-text-2)">Campañas de correo masivo</span></div>
-          <div style="display:flex;gap:.6rem;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:.92rem;color:var(--c-text-2)">Tracking de aperturas y clics en tiempo real</span></div>
-          <div style="display:flex;gap:.6rem;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:.92rem;color:var(--c-text-2)">Gestión de listas y contactos</span></div>
-          <div style="display:flex;gap:.6rem;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:.92rem;color:var(--c-text-2)">Landing pages y reportes</span></div>
+          <div style="display:flex;gap:.6rem;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:.92rem;color:var(--c-text-2)" data-i18n="mx_h1">Campañas de correo masivo</span></div>
+          <div style="display:flex;gap:.6rem;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:.92rem;color:var(--c-text-2)" data-i18n="mx_h2">Tracking de aperturas y clics en tiempo real</span></div>
+          <div style="display:flex;gap:.6rem;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:.92rem;color:var(--c-text-2)" data-i18n="mx_h3">Gestión de listas y contactos</span></div>
+          <div style="display:flex;gap:.6rem;align-items:flex-start"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span style="font-size:.92rem;color:var(--c-text-2)" data-i18n="mx_h4">Landing pages y reportes</span></div>
         </div>
       </div>
     </div>
@@ -94,43 +106,53 @@
 <section class="section">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="section-label" style="color:#2563EB">Funcionalidades</span>
-      <h2 class="section-title">Mailux en detalle</h2>
+      <span class="section-label" style="color:#2563EB" data-i18n="app_sec_features">Funcionalidades</span>
+      <h2 class="section-title" data-i18n="mx_feat_title">Mailux en detalle</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;max-width:920px;margin:0 auto" data-reveal>
-      <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;gap:1rem;align-items:center;box-shadow:var(--shadow-card)"><div style="width:46px;height:46px;border-radius:12px;background:#2563EB1a;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div style="font-weight:700;font-size:1rem;color:var(--c-text)">Campañas de correo masivo</div></div>
-      <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;gap:1rem;align-items:center;box-shadow:var(--shadow-card)"><div style="width:46px;height:46px;border-radius:12px;background:#2563EB1a;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div style="font-weight:700;font-size:1rem;color:var(--c-text)">Tracking de aperturas y clics en tiempo real</div></div>
-      <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;gap:1rem;align-items:center;box-shadow:var(--shadow-card)"><div style="width:46px;height:46px;border-radius:12px;background:#2563EB1a;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div style="font-weight:700;font-size:1rem;color:var(--c-text)">Gestión de listas y contactos</div></div>
-      <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;gap:1rem;align-items:center;box-shadow:var(--shadow-card)"><div style="width:46px;height:46px;border-radius:12px;background:#2563EB1a;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div style="font-weight:700;font-size:1rem;color:var(--c-text)">Landing pages y reportes</div></div>
+      <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;gap:1rem;align-items:center;box-shadow:var(--shadow-card)"><div style="width:46px;height:46px;border-radius:12px;background:#2563EB1a;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div style="font-weight:700;font-size:1rem;color:var(--c-text)" data-i18n="mx_f1">Campañas de correo masivo</div></div>
+      <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;gap:1rem;align-items:center;box-shadow:var(--shadow-card)"><div style="width:46px;height:46px;border-radius:12px;background:#2563EB1a;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div style="font-weight:700;font-size:1rem;color:var(--c-text)" data-i18n="mx_f2">Tracking de aperturas y clics en tiempo real</div></div>
+      <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;gap:1rem;align-items:center;box-shadow:var(--shadow-card)"><div style="width:46px;height:46px;border-radius:12px;background:#2563EB1a;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div style="font-weight:700;font-size:1rem;color:var(--c-text)" data-i18n="mx_f3">Gestión de listas y contactos</div></div>
+      <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.5rem;display:flex;gap:1rem;align-items:center;box-shadow:var(--shadow-card)"><div style="width:46px;height:46px;border-radius:12px;background:#2563EB1a;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div style="font-weight:700;font-size:1rem;color:var(--c-text)" data-i18n="mx_f4">Landing pages y reportes</div></div>
     </div>
   </div>
 </section>
 
 <section class="section" style="background:var(--c-bg-2)">
   <div class="container" style="max-width:740px;text-align:center">
-    <h2 class="section-title">¿Listo para empezar con Mailux?</h2>
-    <p class="section-desc">Mailux es una plataforma de email marketing: envía campañas masivas, hace seguimiento de aperturas y clics en tiempo real y gestiona listas de contactos y landing pages.</p>
+    <h2 class="section-title" data-i18n="mx_cta_title">¿Listo para empezar con Mailux?</h2>
+    <p class="section-desc" data-i18n="mx_cta_desc">Mailux es una plataforma de email marketing: envía campañas masivas, hace seguimiento de aperturas y clics en tiempo real y gestiona listas de contactos y landing pages.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
-      <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#2563EB;box-shadow:0 0 32px #2563EB4d">Solicitar Demo de Mailux</a>
-      <a href="../index.html#apps" class="btn btn-outline btn-lg">Ver todas las apps</a>
+      <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#2563EB;box-shadow:0 0 32px #2563EB4d" data-i18n="mx_cta_btn">Solicitar Demo de Mailux</a>
+      <a href="../index.html#apps" class="btn btn-outline btn-lg" data-i18n="mx_seeall">Ver todas las apps</a>
     </div>
   </div>
 </section>
 
 <section class="section" id="caracteristicas-todas">
 <div class="container">
-<div class="section-head" data-reveal><span class="section-label" style="color:#2563EB">Características</span><h2 class="section-title">Todo lo que incluye Mailux</h2></div>
-<div style="columns:2;column-gap:3rem;max-width:920px;margin:0 auto" data-reveal><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Campañas de correo masivo</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Seguimiento de aperturas y clics en tiempo real</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Gestión de listas y contactos</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Landing pages</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Reportes de desempeño de cada campaña</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Manejo de rebotes</span></div></div>
+<div class="section-head" data-reveal><span class="section-label" style="color:#2563EB" data-i18n="app_sec_specs">Características</span><h2 class="section-title" data-i18n="mx_car_title">Todo lo que incluye Mailux</h2></div>
+<div style="columns:2;column-gap:3rem;max-width:920px;margin:0 auto" data-reveal><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="mx_c1">Campañas de correo masivo</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="mx_c2">Seguimiento de aperturas y clics en tiempo real</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="mx_c3">Gestión de listas y contactos</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="mx_c4">Landing pages</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="mx_c5">Reportes de desempeño de cada campaña</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="mx_c6">Manejo de rebotes</span></div></div>
 </div>
 </section>
 
-<footer><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a><div class="footer-bottom-links"><a href="../index.html#apps">Todas las aplicaciones</a></div></div></div></footer>
+<footer><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a><div class="footer-bottom-links"><a href="../index.html#apps" data-i18n="nav_apps">Aplicaciones</a></div></div></div></footer>
 
 <a class="wa-float" href="https://wa.me/573052292372?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Mailux" target="_blank" rel="noopener" aria-label="WhatsApp">
   <div class="wa-float-btn">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.121 1.524 5.854L0 24l6.335-1.505A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.372l-.36-.213-3.728.885.939-3.63-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
   </div>
 </a>
+<div class="lang-float" id="lang-float">
+  <div class="lang-float-menu" id="lang-float-menu">
+    <button class="lang-float-option" data-lang="es" data-flag-class="fi-es"><span class="fi fi-es"></span><span>Español</span></button>
+    <button class="lang-float-option" data-lang="pt" data-flag-class="fi-br"><span class="fi fi-br"></span><span>Português</span></button>
+    <button class="lang-float-option" data-lang="en" data-flag-class="fi-us"><span class="fi fi-us"></span><span>English</span></button>
+  </div>
+  <button class="lang-float-btn" id="lang-float-trigger" aria-label="Cambiar idioma">
+    <span class="fi fi-es" id="float-flag"></span>
+  </button>
+</div>
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
