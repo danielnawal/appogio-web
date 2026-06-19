@@ -87,7 +87,7 @@
       </div>
     </div>
     <div data-reveal style="text-align:center">
-      <img src="../assets/images/pesv-panel.png" alt="PESV — panel de cumplimiento" style="max-width:560px;width:100%;border-radius:18px;border:1px solid rgba(22,163,74,.2);display:block;margin:0 auto;box-shadow:0 20px 60px #16A34A26">
+      <img src="../assets/images/pesv-panel.png" alt="PESV — panel de cumplimiento" style="width:100%;border-radius:16px;border:1px solid rgba(22,163,74,.2);display:block;box-shadow:0 20px 60px #16A34A1a">
     </div>
   </div>
 </section>
@@ -188,19 +188,9 @@
 <section class="section showcase" style="background:var(--c-bg-2)">
   <div class="container">
     <div class="section-head" data-reveal><span class="section-label" style="color:#16A34A" data-i18n="app_sec_how">Cómo funciona</span><h2 class="section-title" data-i18n="pv_sc_title">PESV en pantalla</h2></div>
-    <div style="display:flex;flex-direction:column;gap:2.5rem;max-width:900px;margin:0 auto" data-reveal>
-      <figure style="margin:0;text-align:center">
-        <img src="../assets/images/pesv-panel.png" alt="Panel de cumplimiento de PESV" style="width:100%;border-radius:16px;border:1px solid rgba(22,163,74,.2);display:block;box-shadow:0 16px 44px #16A34A1f">
-        <figcaption style="margin-top:1rem"><strong style="display:block;color:var(--c-text);font-size:1rem" data-i18n="pv_sc1t">Panel de cumplimiento</strong><span style="color:var(--c-text-2);font-size:.9rem" data-i18n="pv_sc1s">Nivel de riesgo, % de cumplimiento, requisitos, incidentes y conductores</span></figcaption>
-      </figure>
-      <figure style="margin:0;text-align:center">
-        <img src="../assets/images/pesv-requisitos.png" alt="Requisitos por pilar en PESV" style="width:100%;border-radius:16px;border:1px solid rgba(22,163,74,.2);display:block;box-shadow:0 16px 44px #16A34A1f">
-        <figcaption style="margin-top:1rem"><strong style="display:block;color:var(--c-text);font-size:1rem" data-i18n="pv_sc2t">Requisitos por pilar</strong><span style="color:var(--c-text-2);font-size:.9rem" data-i18n="pv_sc2s">Checklist del PESV con estado, responsable y evidencias de cada requisito</span></figcaption>
-      </figure>
-      <figure style="margin:0;text-align:center">
-        <img src="../assets/images/pesv-vencimientos.png" alt="Vencimientos próximos en PESV" style="width:100%;border-radius:16px;border:1px solid rgba(22,163,74,.2);display:block;box-shadow:0 16px 44px #16A34A1f">
-        <figcaption style="margin-top:1rem"><strong style="display:block;color:var(--c-text);font-size:1rem" data-i18n="pv_sc3t">Vencimientos al día</strong><span style="color:var(--c-text-2);font-size:.9rem" data-i18n="pv_sc3s">Licencias, exámenes, SOAT y RTM próximos a vencer o vencidos, en una lista</span></figcaption>
-      </figure>
+    <div class="showcase-wrap" data-reveal>
+      <div class="showcase-img"><img id="sc-img" src="../assets/images/pesv-panel.png" alt="PESV en pantalla"></div>
+      <div class="showcase-list"><button class="sc-feat active" data-img="../assets/images/pesv-panel.png"><strong data-i18n="pv_sc1t">Panel de cumplimiento</strong><span data-i18n="pv_sc1s">Nivel de riesgo, % de cumplimiento, requisitos, incidentes y conductores</span></button><button class="sc-feat" data-img="../assets/images/pesv-requisitos.png"><strong data-i18n="pv_sc2t">Requisitos por pilar</strong><span data-i18n="pv_sc2s">Checklist del PESV con estado, responsable y evidencias de cada requisito</span></button><button class="sc-feat" data-img="../assets/images/pesv-conductores.png"><strong data-i18n="pv_sc4t">Conductores</strong><span data-i18n="pv_sc4s">Licencias, categorías, exámenes médicos y comparendos</span></button><button class="sc-feat" data-img="../assets/images/pesv-vencimientos.png"><strong data-i18n="pv_sc3t">Vencimientos al día</strong><span data-i18n="pv_sc3s">Licencias, exámenes, SOAT y RTM próximos a vencer o vencidos</span></button><button class="sc-feat" data-img="../assets/images/pesv-incidentes.png"><strong data-i18n="pv_sc5t">Incidentes viales</strong><span data-i18n="pv_sc5s">Fecha, tipo, severidad, vehículo, conductor y acciones</span></button></div>
     </div>
   </div>
 </section>
@@ -242,5 +232,6 @@
 </div>
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
+<script>(function(){var bs=document.querySelectorAll(".sc-feat"),im=document.getElementById("sc-img");bs.forEach(function(b){b.addEventListener("click",function(){bs.forEach(function(x){x.classList.remove("active")});b.classList.add("active");im.src=b.getAttribute("data-img");});});})();</script>
 </body>
 </html>

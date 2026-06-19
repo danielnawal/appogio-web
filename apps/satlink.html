@@ -87,7 +87,7 @@
       </div>
     </div>
     <div data-reveal style="text-align:center">
-      <img src="../assets/images/satlink-panel.png" alt="SatLink — panel de control satelital" style="max-width:560px;width:100%;border-radius:18px;border:1px solid rgba(229,5,21,.2);display:block;margin:0 auto;box-shadow:0 20px 60px #E5051526">
+      <img src="../assets/images/satlink-panel.png" alt="SatLink — panel de control satelital" style="width:100%;border-radius:16px;border:1px solid rgba(229,5,21,.2);display:block;box-shadow:0 20px 60px #E505151a">
     </div>
   </div>
 </section>
@@ -188,19 +188,9 @@
 <section class="section showcase" style="background:var(--c-bg-2)">
   <div class="container">
     <div class="section-head" data-reveal><span class="section-label" style="color:#E50515" data-i18n="app_sec_how">Cómo funciona</span><h2 class="section-title" data-i18n="sl_sc_title">SatLink en pantalla</h2></div>
-    <div style="display:flex;flex-direction:column;gap:2.5rem;max-width:900px;margin:0 auto" data-reveal>
-      <figure style="margin:0;text-align:center">
-        <img src="../assets/images/satlink-panel.png" alt="Panel de control de SatLink" style="width:100%;border-radius:16px;border:1px solid rgba(229,5,21,.2);display:block;box-shadow:0 16px 44px #E505151f">
-        <figcaption style="margin-top:1rem"><strong style="display:block;color:var(--c-text);font-size:1rem" data-i18n="sl_sc1t">Panel de control</strong><span style="color:var(--c-text-2);font-size:.9rem" data-i18n="sl_sc1s">Equipos satelitales, reportes recibidos y unidades en línea</span></figcaption>
-      </figure>
-      <figure style="margin:0;text-align:center">
-        <img src="../assets/images/satlink-recibido.png" alt="Posiciones recibidas en el software GPS" style="width:100%;border-radius:16px;border:1px solid rgba(229,5,21,.2);display:block;box-shadow:0 16px 44px #E505151f">
-        <figcaption style="margin-top:1rem"><strong style="display:block;color:var(--c-text);font-size:1rem" data-i18n="sl_sc2t">Recibido en el software GPS</strong><span style="color:var(--c-text-2);font-size:.9rem" data-i18n="sl_sc2s">Las posiciones que llegaron a tu plataforma por el relay</span></figcaption>
-      </figure>
-      <figure style="margin:0;text-align:center">
-        <img src="../assets/images/satlink-relay.png" alt="Bitácora de actividad del relay" style="width:100%;border-radius:16px;border:1px solid rgba(229,5,21,.2);display:block;box-shadow:0 16px 44px #E505151f">
-        <figcaption style="margin-top:1rem"><strong style="display:block;color:var(--c-text);font-size:1rem" data-i18n="sl_sc3t">Actividad del relay</strong><span style="color:var(--c-text-2);font-size:.9rem" data-i18n="sl_sc3s">Bitácora de cada mensaje: recibido, reinyectado o descartado</span></figcaption>
-      </figure>
+    <div class="showcase-wrap" data-reveal>
+      <div class="showcase-img"><img id="sc-img" src="../assets/images/satlink-panel.png" alt="SatLink en pantalla"></div>
+      <div class="showcase-list"><button class="sc-feat active" data-img="../assets/images/satlink-panel.png"><strong data-i18n="sl_sc1t">Panel de control</strong><span data-i18n="sl_sc1s">Equipos satelitales, reportes recibidos y unidades en línea</span></button><button class="sc-feat" data-img="../assets/images/satlink-recibido.png"><strong data-i18n="sl_sc2t">Recibido en el software GPS</strong><span data-i18n="sl_sc2s">Las posiciones que llegaron a tu plataforma por el relay</span></button><button class="sc-feat" data-img="../assets/images/satlink-relay.png"><strong data-i18n="sl_sc3t">Actividad del relay</strong><span data-i18n="sl_sc3s">Bitácora de cada mensaje: recibido, reinyectado o descartado</span></button></div>
     </div>
   </div>
 </section>
@@ -242,5 +232,6 @@
 </div>
 <script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
+<script>(function(){var bs=document.querySelectorAll(".sc-feat"),im=document.getElementById("sc-img");bs.forEach(function(b){b.addEventListener("click",function(){bs.forEach(function(x){x.classList.remove("active")});b.classList.add("active");im.src=b.getAttribute("data-img");});});})();</script>
 </body>
 </html>
