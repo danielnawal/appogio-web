@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FleetSync — Integraciones GPS | Appogio</title>
+  <meta name="description" content="FleetSync es un hub de conectividad multi-proveedor que integra tus dispositivos y plataformas GPS en un solo flujo de datos normalizado para todo el ecosistema.">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css?v=1781723488">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
+  <style>:root { --app-color: #F0883A; }</style>
+</head>
+<body>
+<nav class="navbar scrolled">
+  <div class="container">
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a>
+    <div class="nav-links">
+      <a href="../index.html#features" class="nav-link" data-i18n="nav_platform">Plataforma</a>
+      <div class="nav-dropdown has-mega">
+        <a class="nav-link"><span data-i18n="nav_apps">Aplicaciones</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="dropdown-menu dropdown-mega"><div class="mega-inner"><div class="mega-head">Aplicaciones del ecosistema</div><div class="mega-grid">
+          <a href="driveiq.html" class="mega-item"><img src="../assets/images/icons/driveiq.svg"><div class="mi-text"><strong>DriveIQ</strong><span>Análisis de comportamiento vial</span></div></a>
+          <a href="inspectpro.html" class="mega-item"><img src="../assets/images/icons/inspectpro.png"><div class="mi-text"><strong>InspectPro</strong><span>Inspecciones digitales de vehículos</span></div></a>
+          <a href="pilotos.html" class="mega-item"><img src="../assets/images/icons/pilotos.png"><div class="mi-text"><strong>PilotOS</strong><span>Gestión de conductores</span></div></a>
+          <a href="camfleet.html" class="mega-item"><img src="../assets/images/icons/camfleet.svg"><div class="mi-text"><strong>CamFleet</strong><span>Cámaras y grabación vehicular</span></div></a>
+          <a href="tagradar.html" class="mega-item"><img src="../assets/images/icons/tagradar.svg"><div class="mi-text"><strong>TagRadar</strong><span>Rastreo de activos BLE</span></div></a>
+          <a href="notice.html" class="mega-item"><img src="../assets/images/icons/notice.png"><div class="mi-text"><strong>Notice</strong><span>Mensajería y comunicaciones</span></div></a>
+          <a href="fleetcare.html" class="mega-item"><img src="../assets/images/icons/fleetcare.png"><div class="mi-text"><strong>FleetCare</strong><span>Mantenimiento de flota</span></div></a>
+          <a href="workorders.html" class="mega-item"><img src="../assets/images/icons/workorders.png"><div class="mi-text"><strong>WorkOrders</strong><span>Órdenes de trabajo</span></div></a>
+          <a href="guardcheck.html" class="mega-item"><img src="../assets/images/icons/guardcheck.png"><div class="mi-text"><strong>GuardCheck</strong><span>Vigilancia y rondas</span></div></a>
+          <a href="fleetops.html" class="mega-item"><img src="../assets/images/icons/fleetops.png"><div class="mi-text"><strong>FleetOps</strong><span>Control operacional</span></div></a>
+          <a href="routeos.html" class="mega-item"><img src="../assets/images/icons/routeos.png"><div class="mi-text"><strong>RouteOS</strong><span>Rutas de transporte</span></div></a>
+          <a href="fleetsync.html" class="mega-item"><img src="../assets/images/icons/fleetsync.png"><div class="mi-text"><strong>FleetSync</strong><span>Integraciones GPS</span></div></a>
+          <a href="trackphone.html" class="mega-item"><img src="../assets/images/icons/trackphone.svg"><div class="mi-text"><strong>TrackPhone</strong><span>Rastreo por celular</span></div></a>
+          <a href="satlink.html" class="mega-item"><img src="../assets/images/icons/satlink.png"><div class="mi-text"><strong>SatLink</strong><span>Conexión satelital</span></div></a>
+          <a href="mailux.html" class="mega-item"><img src="../assets/images/icons/mailux.svg"><div class="mi-text"><strong>Mailux</strong><span>Email marketing</span></div></a>
+          <a href="developers.html" class="mega-item"><img src="../assets/images/icons/developers.png"><div class="mi-text"><strong>Developers</strong><span>API y documentación</span></div></a>
+        </div></div></div>
+      </div>
+      <a href="../contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn" id="lang-trigger" aria-label="Cambiar idioma">
+        <span class="fi fi-es fis" id="lang-flag"></span>
+        <span id="lang-code">ES</span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="lang-menu" id="lang-menu">
+        <button class="lang-option" data-lang="es" data-flag-class="fi-es" data-code="ES"><span class="fi fi-es fis"></span> Español</button>
+        <button class="lang-option" data-lang="pt" data-flag-class="fi-br" data-code="PT"><span class="fi fi-br fis"></span> Português</button>
+        <button class="lang-option" data-lang="en" data-flag-class="fi-us" data-code="EN"><span class="fi fi-us fis"></span> English</button>
+      </div>
+    </div>
+    <div class="nav-cta">
+      <a href="../contacto.html" class="btn btn-outline btn-sm" data-i18n="nav_demo">Solicitar Demo</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="../index.html" data-i18n="nav_home">Inicio</a>
+  <a href="../index.html#apps" data-i18n="nav_apps">Aplicaciones</a>
+  <a href="../contacto.html" data-i18n="nav_contact">Contacto</a>
+  <a href="../contacto.html" class="btn btn-primary" style="text-align:center;border-radius:100px;margin-top:1rem" data-i18n="nav_demo">Solicitar Demo</a>
+</div>
+
+<section class="app-hero" style="--app-color:#F0883A">
+  <div class="app-hero-glow" style="background:radial-gradient(ellipse,#F0883A 0%,transparent 70%)"></div>
+  <div class="container">
+    <div data-reveal>
+      <div class="app-icon-lg" style="background:none;border:none;padding:0">
+        <img src="../assets/images/icons/fleetsync.png" width="72" height="72" style="border-radius:18px;display:block">
+      </div>
+      <div class="app-hero-badge" style="border-color:#F0883A;color:#F0883A" data-i18n="fs_badge">Integraciones GPS</div>
+      <h1 data-i18n-html="fs_title">FleetSync — <span style="color:#F0883A">Integraciones GPS.</span></h1>
+      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem" data-i18n="fs_desc">FleetSync es un hub de conectividad multi-proveedor que integra tus dispositivos y plataformas GPS en un solo flujo de datos normalizado para todo el ecosistema.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#F0883A;box-shadow:0 0 32px #F0883A4d" data-i18n="app_btn_demo">Solicitar Demo</a>
+      </div>
+    </div>
+    <div data-reveal>
+      <img src="../assets/images/fleetsync-inicio.png" alt="FleetSync" style="width:100%;border-radius:16px;border:1px solid rgba(240,136,58,.2);display:block;box-shadow:0 20px 60px #F0883A1a">
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div style="background:rgba(240,136,58,.06);border-top:1px solid rgba(240,136,58,.15);border-bottom:1px solid rgba(240,136,58,.15);padding:2rem 0">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center">
+      <div><div style="font-size:2.25rem;font-weight:900;color:#F0883A;font-family:var(--font-head)">Multi</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="fs_stat1">Proveedores en un solo hub</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#F0883A;font-family:var(--font-head)">API</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="fs_stat2">REST para integrar</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#F0883A;font-family:var(--font-head)">24/7</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="fs_stat3">Sincronización continua</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#F0883A;font-family:var(--font-head)">1</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="fs_stat4">Formato de datos normalizado</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" style="color:#F0883A" data-i18n="app_sec_features">Funcionalidades</span>
+      <h2 class="section-title" data-i18n="fs_feat_title">Conecta todo tu GPS en un solo lugar</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
+        <h4 data-i18n="fs_f1t">Conecta múltiples proveedores GPS</h4>
+        <p data-i18n="fs_f1d">Integra dispositivos y plataformas de distintos proveedores en un solo hub, sin importar la marca ni el protocolo.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg></div>
+        <h4 data-i18n="fs_f2t">Sincronización de dispositivos</h4>
+        <p data-i18n="fs_f2d">Mantén tus dispositivos sincronizados automáticamente; las altas, bajas y cambios fluyen entre plataformas sin trabajo manual.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h4 data-i18n="fs_f3t">Datos normalizados en un solo formato</h4>
+        <p data-i18n="fs_f3d">FleetSync traduce los datos de cada proveedor a un único formato estándar, listo para consumir por todo el ecosistema.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h4 data-i18n="fs_f4t">Conexiones gestionadas desde un panel</h4>
+        <p data-i18n="fs_f4d">Crea, monitorea y revoca tus integraciones desde un panel claro, con el estado de cada conexión en tiempo real.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6v5l4 9a2 2 0 01-1.8 3H6.8A2 2 0 015 17l4-9V3z"/><path d="M9 3h6"/></svg></div>
+        <h4 data-i18n="fs_f5t">Sandbox para probar la integración</h4>
+        <p data-i18n="fs_f5d">Prueba tus conexiones en un entorno de sandbox antes de pasarlas a producción, sin riesgo para tus datos reales.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+        <h4 data-i18n="fs_f6t">API y documentación para desarrolladores</h4>
+        <p data-i18n="fs_f6d">API REST documentada para que tu equipo o tus integradores construyan sobre la plataforma con confianza.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Casos de uso -->
+<section class="section" style="background:var(--c-bg-2)">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" style="color:#F0883A" data-i18n="app_sec_usecases">Casos de uso</span>
+      <h2 class="section-title" data-i18n="fs_uc_title">Para quien vive entre varias plataformas GPS</h2>
+    </div>
+    <div class="industries-grid" data-reveal>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v3M11 12l-5 5M13 12l5 5"/></svg></div>
+        <h4 data-i18n="fs_uc1t">Distribuidores multi-plataforma</h4>
+        <p data-i18n="fs_uc1d">Distribuidores que manejan varias plataformas GPS y necesitan unificar los datos.</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h4 data-i18n="fs_uc2t">Flotas con equipos mixtos</h4>
+        <p data-i18n="fs_uc2d">Empresas con dispositivos de distintos proveedores en una misma flota.</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+        <h4 data-i18n="fs_uc3t">Integradores y software de terceros</h4>
+        <p data-i18n="fs_uc3d">Equipos que conectan sistemas externos (ERP, BI, facturación) al GPS.</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg></div>
+        <h4 data-i18n="fs_uc4t">Migración entre plataformas</h4>
+        <p data-i18n="fs_uc4d">Proyectos que mueven dispositivos de una plataforma a otra sin perder datos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section showcase" style="background:var(--c-bg-2)">
+  <div class="container">
+    <div class="section-head" data-reveal><span class="section-label" style="color:#F0883A" data-i18n="app_sec_how">Cómo funciona</span><h2 class="section-title" data-i18n="fs_sc_title">FleetSync en acción</h2></div>
+    <div class="showcase-wrap" data-reveal>
+      <div class="showcase-img"><img id="sc-img" src="../assets/images/fleetsync-inicio.png" alt="FleetSync en acción"></div>
+      <div class="showcase-list"><button class="sc-feat active" data-img="../assets/images/fleetsync-inicio.png"><strong data-i18n="fs_sc1t">Plataforma conectada</strong><span data-i18n="fs_sc1s">Integra tu GPS con sistemas externos</span></button><button class="sc-feat" data-img="../assets/images/fleetsync-conexiones.png"><strong data-i18n="fs_sc2t">Mis conexiones</strong><span data-i18n="fs_sc2s">Gestiona tus integraciones activas</span></button><button class="sc-feat" data-img="../assets/images/fleetsync-desarrolladores.png"><strong data-i18n="fs_sc3t">Desarrolladores</strong><span data-i18n="fs_sc3s">API y documentación para integrar</span></button></div>
+    </div>
+  </div>
+  <script>(function(){var bs=document.querySelectorAll(".sc-feat"),im=document.getElementById("sc-img");bs.forEach(function(b){b.addEventListener("click",function(){bs.forEach(function(x){x.classList.remove("active")});b.classList.add("active");im.src=b.getAttribute("data-img");});});})();</script>
+</section>
+<section class="section" style="background:var(--c-bg-2)">
+  <div class="container" style="max-width:740px;text-align:center">
+    <h2 class="section-title" data-i18n="fs_cta_title">¿Listo para empezar con FleetSync?</h2>
+    <p class="section-desc" data-i18n="fs_cta_desc">FleetSync es un hub de conectividad multi-proveedor que integra tus dispositivos y plataformas GPS en un solo flujo de datos normalizado para todo el ecosistema.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
+      <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#F0883A;box-shadow:0 0 32px #F0883A4d" data-i18n="fs_cta_btn">Solicitar Demo de FleetSync</a>
+      <a href="../index.html#apps" class="btn btn-outline btn-lg" data-i18n="fs_seeall">Ver todas las apps</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="caracteristicas-todas">
+<div class="container">
+<div class="section-head" data-reveal><span class="section-label" style="color:#F0883A" data-i18n="app_sec_specs">Características</span><h2 class="section-title" data-i18n="fs_car_title">Todo lo que incluye FleetSync</h2></div>
+<div style="columns:2;column-gap:3rem;max-width:920px;margin:0 auto" data-reveal><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0883A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="fs_c1">Conecta múltiples proveedores GPS</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0883A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="fs_c2">Sincronización de dispositivos</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0883A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="fs_c3">Datos normalizados en un solo formato</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0883A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="fs_c4">Conexiones gestionadas desde un panel</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0883A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="fs_c5">Sandbox para probar la integración</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0883A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="fs_c6">Documentación para desarrolladores</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F0883A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="fs_c7">Integración con todo el ecosistema Appogio</span></div></div>
+</div>
+</section>
+
+<footer><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a><div class="footer-bottom-links"><a href="../index.html#apps" data-i18n="nav_apps">Aplicaciones</a></div></div></div></footer>
+
+<a class="wa-float" href="https://wa.me/573052292372?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20FleetSync" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <div class="wa-float-btn">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.121 1.524 5.854L0 24l6.335-1.505A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.372l-.36-.213-3.728.885.939-3.63-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+  </div>
+</a>
+<div class="lang-float" id="lang-float">
+  <div class="lang-float-menu" id="lang-float-menu">
+    <button class="lang-float-option" data-lang="es" data-flag-class="fi-es"><span class="fi fi-es"></span><span>Español</span></button>
+    <button class="lang-float-option" data-lang="pt" data-flag-class="fi-br"><span class="fi fi-br"></span><span>Português</span></button>
+    <button class="lang-float-option" data-lang="en" data-flag-class="fi-us"><span class="fi fi-us"></span><span>English</span></button>
+  </div>
+  <button class="lang-float-btn" id="lang-float-trigger" aria-label="Cambiar idioma">
+    <span class="fi fi-es" id="float-flag"></span>
+  </button>
+</div>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

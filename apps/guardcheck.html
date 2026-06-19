@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GuardCheck — Vigilancia y Rondas | Appogio</title>
+  <meta name="description" content="GuardCheck controla las rondas de vigilancia con puntos de verificación QR, turnos con antifraude y registro de visitantes, pensado para empresas de seguridad privada.">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css?v=1781723488">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
+  <style>:root { --app-color: #4E90E0; }</style>
+</head>
+<body>
+<nav class="navbar scrolled">
+  <div class="container">
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a>
+    <div class="nav-links">
+      <a href="../index.html#features" class="nav-link" data-i18n="nav_platform">Plataforma</a>
+      <div class="nav-dropdown has-mega">
+        <a class="nav-link"><span data-i18n="nav_apps">Aplicaciones</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="dropdown-menu dropdown-mega"><div class="mega-inner"><div class="mega-head">Aplicaciones del ecosistema</div><div class="mega-grid">
+          <a href="driveiq.html" class="mega-item"><img src="../assets/images/icons/driveiq.svg"><div class="mi-text"><strong>DriveIQ</strong><span>Análisis de comportamiento vial</span></div></a>
+          <a href="inspectpro.html" class="mega-item"><img src="../assets/images/icons/inspectpro.png"><div class="mi-text"><strong>InspectPro</strong><span>Inspecciones digitales de vehículos</span></div></a>
+          <a href="pilotos.html" class="mega-item"><img src="../assets/images/icons/pilotos.png"><div class="mi-text"><strong>PilotOS</strong><span>Gestión de conductores</span></div></a>
+          <a href="camfleet.html" class="mega-item"><img src="../assets/images/icons/camfleet.svg"><div class="mi-text"><strong>CamFleet</strong><span>Cámaras y grabación vehicular</span></div></a>
+          <a href="tagradar.html" class="mega-item"><img src="../assets/images/icons/tagradar.svg"><div class="mi-text"><strong>TagRadar</strong><span>Rastreo de activos BLE</span></div></a>
+          <a href="notice.html" class="mega-item"><img src="../assets/images/icons/notice.png"><div class="mi-text"><strong>Notice</strong><span>Mensajería y comunicaciones</span></div></a>
+          <a href="fleetcare.html" class="mega-item"><img src="../assets/images/icons/fleetcare.png"><div class="mi-text"><strong>FleetCare</strong><span>Mantenimiento de flota</span></div></a>
+          <a href="workorders.html" class="mega-item"><img src="../assets/images/icons/workorders.png"><div class="mi-text"><strong>WorkOrders</strong><span>Órdenes de trabajo</span></div></a>
+          <a href="guardcheck.html" class="mega-item"><img src="../assets/images/icons/guardcheck.png"><div class="mi-text"><strong>GuardCheck</strong><span>Vigilancia y rondas</span></div></a>
+          <a href="fleetops.html" class="mega-item"><img src="../assets/images/icons/fleetops.png"><div class="mi-text"><strong>FleetOps</strong><span>Control operacional</span></div></a>
+          <a href="routeos.html" class="mega-item"><img src="../assets/images/icons/routeos.png"><div class="mi-text"><strong>RouteOS</strong><span>Rutas de transporte</span></div></a>
+          <a href="fleetsync.html" class="mega-item"><img src="../assets/images/icons/fleetsync.png"><div class="mi-text"><strong>FleetSync</strong><span>Integraciones GPS</span></div></a>
+          <a href="trackphone.html" class="mega-item"><img src="../assets/images/icons/trackphone.svg"><div class="mi-text"><strong>TrackPhone</strong><span>Rastreo por celular</span></div></a>
+          <a href="satlink.html" class="mega-item"><img src="../assets/images/icons/satlink.png"><div class="mi-text"><strong>SatLink</strong><span>Conexión satelital</span></div></a>
+          <a href="mailux.html" class="mega-item"><img src="../assets/images/icons/mailux.svg"><div class="mi-text"><strong>Mailux</strong><span>Email marketing</span></div></a>
+          <a href="developers.html" class="mega-item"><img src="../assets/images/icons/developers.png"><div class="mi-text"><strong>Developers</strong><span>API y documentación</span></div></a>
+        </div></div></div>
+      </div>
+      <a href="../contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn" id="lang-trigger" aria-label="Cambiar idioma">
+        <span class="fi fi-es fis" id="lang-flag"></span>
+        <span id="lang-code">ES</span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="lang-menu" id="lang-menu">
+        <button class="lang-option" data-lang="es" data-flag-class="fi-es" data-code="ES"><span class="fi fi-es fis"></span> Español</button>
+        <button class="lang-option" data-lang="pt" data-flag-class="fi-br" data-code="PT"><span class="fi fi-br fis"></span> Português</button>
+        <button class="lang-option" data-lang="en" data-flag-class="fi-us" data-code="EN"><span class="fi fi-us fis"></span> English</button>
+      </div>
+    </div>
+    <div class="nav-cta">
+      <a href="../contacto.html" class="btn btn-outline btn-sm" data-i18n="nav_demo">Solicitar Demo</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="../index.html" data-i18n="nav_home">Inicio</a>
+  <a href="../index.html#apps" data-i18n="nav_apps">Aplicaciones</a>
+  <a href="../contacto.html" data-i18n="nav_contact">Contacto</a>
+  <a href="../contacto.html" class="btn btn-primary" style="text-align:center;border-radius:100px;margin-top:1rem" data-i18n="nav_demo">Solicitar Demo</a>
+</div>
+
+<section class="app-hero" style="--app-color:#4E90E0">
+  <div class="app-hero-glow" style="background:radial-gradient(ellipse,#4E90E0 0%,transparent 70%)"></div>
+  <div class="container">
+    <div data-reveal>
+      <div class="app-icon-lg" style="background:none;border:none;padding:0">
+        <img src="../assets/images/icons/guardcheck.png" width="72" height="72" style="border-radius:18px;display:block">
+      </div>
+      <div class="app-hero-badge" style="border-color:#4E90E0;color:#4E90E0" data-i18n="gc_badge">Vigilancia y Rondas</div>
+      <h1 data-i18n-html="gc_title">GuardCheck — <span style="color:#4E90E0">Vigilancia y Rondas.</span></h1>
+      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem" data-i18n="gc_desc">GuardCheck controla las rondas de vigilancia con puntos de verificación QR, turnos con antifraude y registro de visitantes, pensado para empresas de seguridad privada.</p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#4E90E0;box-shadow:0 0 32px #4E90E04d" data-i18n="app_btn_demo">Solicitar Demo</a>
+      </div>
+    </div>
+    <div data-reveal>
+      <img src="../assets/images/guardcheck-dashboard.png?v=1781732933" alt="Dashboard GuardCheck" style="width:100%;border-radius:16px;border:1px solid rgba(78,144,224,.2);display:block;box-shadow:0 20px 60px #4E90E01a">
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div style="background:rgba(78,144,224,.06);border-top:1px solid rgba(78,144,224,.15);border-bottom:1px solid rgba(78,144,224,.15);padding:2rem 0">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center">
+      <div><div style="font-size:2.25rem;font-weight:900;color:#4E90E0;font-family:var(--font-head)" data-counter data-target="100" data-suffix="%">0</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="gc_stat1">Trazabilidad de rondas</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#4E90E0;font-family:var(--font-head)">QR</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="gc_stat2">Verificación en cada punto</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#4E90E0;font-family:var(--font-head)">24/7</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="gc_stat3">Vigilancia en tiempo real</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#4E90E0;font-family:var(--font-head)">0</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="gc_stat4">Rondas sin registrar</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Features -->
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" style="color:#4E90E0" data-i18n="app_sec_features">Funcionalidades</span>
+      <h2 class="section-title" data-i18n="gc_feat_title">Control total de tu operación de vigilancia</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM21 14v3M14 21h3M21 21v.01"/></svg></div>
+        <h4 data-i18n="gc_f1t">Puntos de control por QR</h4>
+        <p data-i18n="gc_f1d">Cada punto se verifica escaneando un QR físico. El sistema registra fecha, hora y ubicación, y detecta si el guarda escanea fuera de zona.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4l2 1"/></svg></div>
+        <h4 data-i18n="gc_f2t">Turnos con verificación antifraude</h4>
+        <p data-i18n="gc_f2d">Control de entrada y salida de turnos con verificación que impide marcar desde otro lugar o dispositivo. Cada turno queda auditado.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h4 data-i18n="gc_f3t">Registro y control de visitantes</h4>
+        <p data-i18n="gc_f3d">Registra entradas y salidas de visitantes con documento, vehículo y destino. Historial completo de quién entró y cuándo.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+        <h4 data-i18n="gc_f4t">Novedades e incidentes con evidencia</h4>
+        <p data-i18n="gc_f4d">El guarda reporta novedades e incidentes con foto y descripción en el momento. La evidencia llega al supervisor al instante.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <h4 data-i18n="gc_f5t">Rondas programadas y seguimiento</h4>
+        <p data-i18n="gc_f5d">Programa los recorridos y horarios; el sistema sigue el cumplimiento punto por punto y avisa de rondas incompletas.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg></div>
+        <h4 data-i18n="gc_f6t">Reportes de cumplimiento y mapa</h4>
+        <p data-i18n="gc_f6d">Reporte de cumplimiento por punto y por ronda, con mapa de los puntos de control y recorridos realizados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Casos de uso -->
+<section class="section" style="background:var(--c-bg-2)">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" style="color:#4E90E0" data-i18n="app_sec_usecases">Casos de uso</span>
+      <h2 class="section-title" data-i18n="gc_uc_title">Para cualquier operación que cuida personas y bienes</h2>
+    </div>
+    <div class="industries-grid" data-reveal>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h4 data-i18n="gc_uc1t">Empresas de seguridad privada</h4>
+        <p data-i18n="gc_uc1d">Compañías de vigilancia que prestan servicio a múltiples clientes y sedes.</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13"/><path d="M10 21v-4h4v4"/></svg></div>
+        <h4 data-i18n="gc_uc2t">Conjuntos residenciales y edificios</h4>
+        <p data-i18n="gc_uc2d">Porterías y rondas en condominios, edificios y unidades cerradas.</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20V9l-7 4V9l-7 4V4H2z"/></svg></div>
+        <h4 data-i18n="gc_uc3t">Plantas industriales y bodegas</h4>
+        <p data-i18n="gc_uc3d">Recorridos de seguridad en instalaciones extensas con muchos puntos críticos.</p>
+      </div>
+      <div class="industry-card">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5M4 9v11h16V9M9 20v-6h6v6"/></svg></div>
+        <h4 data-i18n="gc_uc4t">Centros comerciales e instituciones</h4>
+        <p data-i18n="gc_uc4d">Control de visitantes y rondas en lugares de alto flujo de personas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section showcase" style="background:var(--c-bg-2)">
+  <div class="container">
+    <div class="section-head" data-reveal><span class="section-label" style="color:#4E90E0" data-i18n="app_sec_how">Cómo funciona</span><h2 class="section-title" data-i18n="gc_sc_title">GuardCheck en acción</h2></div>
+    <div class="showcase-wrap" data-reveal>
+      <div class="showcase-img"><img id="sc-img" src="../assets/images/guardcheck-dashboard.png?v=1781732933" alt="GuardCheck en acción"></div>
+      <div class="showcase-list"><button class="sc-feat active" data-img="../assets/images/guardcheck-dashboard.png?v=1781732933"><strong data-i18n="gc_sc1t">Dashboard de vigilancia</strong><span data-i18n="gc_sc1s">Cumplimiento y novedades del día</span></button><button class="sc-feat" data-img="../assets/images/guardcheck-puntos.png?v=1781732933"><strong data-i18n="gc_sc2t">Puntos de control</strong><span data-i18n="gc_sc2s">Recorridos con verificación por QR</span></button><button class="sc-feat" data-img="../assets/images/guardcheck-registros.png?v=1781732933"><strong data-i18n="gc_sc3t">Registros de ronda</strong><span data-i18n="gc_sc3s">Escaneos con verificación por QR y detección de fuera de zona</span></button><button class="sc-feat" data-img="../assets/images/guardcheck-turnos.png?v=1781732933"><strong data-i18n="gc_sc4t">Turnos</strong><span data-i18n="gc_sc4s">Control de turnos con antifraude</span></button><button class="sc-feat" data-img="../assets/images/guardcheck-visitantes.png?v=1781732933"><strong data-i18n="gc_sc5t">Control de visitantes</strong><span data-i18n="gc_sc5s">Entradas y salidas con documento y vehículo</span></button><button class="sc-feat" data-img="../assets/images/guardcheck-mapa.png?v=1781732933"><strong data-i18n="gc_sc6t">Mapa de puntos</strong><span data-i18n="gc_sc6s">Ubicación de puntos de control y rondas</span></button></div>
+    </div>
+  </div>
+  <script>(function(){var bs=document.querySelectorAll(".sc-feat"),im=document.getElementById("sc-img");bs.forEach(function(b){b.addEventListener("click",function(){bs.forEach(function(x){x.classList.remove("active")});b.classList.add("active");im.src=b.getAttribute("data-img");});});})();</script>
+</section>
+<section class="section" style="background:var(--c-bg-2)">
+  <div class="container" style="max-width:740px;text-align:center">
+    <h2 class="section-title" data-i18n="gc_cta_title">¿Listo para empezar con GuardCheck?</h2>
+    <p class="section-desc" data-i18n="gc_cta_desc">GuardCheck controla las rondas de vigilancia con puntos de verificación QR, turnos con antifraude y registro de visitantes, pensado para empresas de seguridad privada.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
+      <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#4E90E0;box-shadow:0 0 32px #4E90E04d" data-i18n="gc_cta_btn">Solicitar Demo de GuardCheck</a>
+      <a href="../index.html#apps" class="btn btn-outline btn-lg" data-i18n="gc_seeall">Ver todas las apps</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="caracteristicas-todas">
+<div class="container">
+<div class="section-head" data-reveal><span class="section-label" style="color:#4E90E0" data-i18n="app_sec_specs">Características</span><h2 class="section-title" data-i18n="gc_car_title">Todo lo que incluye GuardCheck</h2></div>
+<div style="columns:2;column-gap:3rem;max-width:920px;margin:0 auto" data-reveal><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4E90E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="gc_c1">Puntos de control verificados por QR</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4E90E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="gc_c2">Rondas programadas y su seguimiento</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4E90E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="gc_c3">Turnos con verificación antifraude</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4E90E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="gc_c4">Escaneos con fecha, hora y ubicación</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4E90E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="gc_c5">Registro y control de visitantes</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4E90E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="gc_c6">Novedades e incidentes con evidencia</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4E90E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="gc_c7">Reporte de cumplimiento por punto y por ronda</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4E90E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="gc_c8">Mapa de puntos y recorridos</span></div></div>
+</div>
+</section>
+
+<footer><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a><div class="footer-bottom-links"><a href="../index.html#apps" data-i18n="nav_apps">Aplicaciones</a></div></div></div></footer>
+
+<a class="wa-float" href="https://wa.me/573052292372?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20GuardCheck" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <div class="wa-float-btn">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.121 1.524 5.854L0 24l6.335-1.505A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.372l-.36-.213-3.728.885.939-3.63-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+  </div>
+</a>
+<div class="lang-float" id="lang-float">
+  <div class="lang-float-menu" id="lang-float-menu">
+    <button class="lang-float-option" data-lang="es" data-flag-class="fi-es"><span class="fi fi-es"></span><span>Español</span></button>
+    <button class="lang-float-option" data-lang="pt" data-flag-class="fi-br"><span class="fi fi-br"></span><span>Português</span></button>
+    <button class="lang-float-option" data-lang="en" data-flag-class="fi-us"><span class="fi fi-us"></span><span>English</span></button>
+  </div>
+  <button class="lang-float-btn" id="lang-float-trigger" aria-label="Cambiar idioma">
+    <span class="fi fi-es" id="float-flag"></span>
+  </button>
+</div>
+<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

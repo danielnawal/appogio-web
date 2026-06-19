@@ -5,71 +5,108 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CamFleet — Videovigilancia Vehicular Inteligente | Appogio</title>
   <meta name="description" content="CamFleet integra cámaras vehiculares con streaming en vivo, grabación continua, detección de eventos y alertas en tiempo real para tu flota.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23EF4444'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='900' font-size='12' fill='white'>CF</text></svg>">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/main.css">
-  <style>:root { --app-color: #EF4444; }</style>
+  <link rel="stylesheet" href="../assets/css/main.css?v=1781723488">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
+  <style>:root { --app-color: #7C3AED; }</style>
 </head>
 <body>
 
+<!-- Nav -->
 <nav class="navbar scrolled">
   <div class="container">
-    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.jpg" height="38" alt="Appogio" style="display:block;border-radius:6px"></a>
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a>
     <div class="nav-links">
-      <a href="../index.html#features" class="nav-link">Plataforma</a>
-      <a href="../index.html#apps" class="nav-link">Aplicaciones</a>
-      <a href="../manuales/index.html" class="nav-link">Manuales</a>
-      <a href="../contacto.html" class="nav-link">Contacto</a>
+      <a href="../index.html#features" class="nav-link" data-i18n="nav_platform">Plataforma</a>
+      <div class="nav-dropdown has-mega">
+        <a class="nav-link"><span data-i18n="nav_apps">Aplicaciones</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="dropdown-menu dropdown-mega">
+          <div class="mega-inner">
+          <div class="mega-head">Aplicaciones del ecosistema</div>
+          <div class="mega-grid">
+            <a href="driveiq.html" class="mega-item"><img src="../assets/images/icons/driveiq.svg"><div class="mi-text"><strong>DriveIQ</strong><span>Análisis de comportamiento vial</span></div></a>
+            <a href="inspectpro.html" class="mega-item"><img src="../assets/images/icons/inspectpro.png"><div class="mi-text"><strong>InspectPro</strong><span>Inspecciones digitales de vehículos</span></div></a>
+            <a href="pilotos.html" class="mega-item"><img src="../assets/images/icons/pilotos.png"><div class="mi-text"><strong>PilotOS</strong><span>Gestión de conductores</span></div></a>
+            <a href="camfleet.html" class="mega-item"><img src="../assets/images/icons/camfleet.svg"><div class="mi-text"><strong>CamFleet</strong><span>Cámaras y grabación vehicular</span></div></a>
+            <a href="tagradar.html" class="mega-item"><img src="../assets/images/icons/tagradar.svg"><div class="mi-text"><strong>TagRadar</strong><span>Rastreo de activos BLE</span></div></a>
+            <a href="notice.html" class="mega-item"><img src="../assets/images/icons/notice.png"><div class="mi-text"><strong>Notice</strong><span>Mensajería y comunicaciones</span></div></a>
+            <a href="fleetcare.html" class="mega-item"><img src="../assets/images/icons/fleetcare.png"><div class="mi-text"><strong>FleetCare</strong><span>Mantenimiento de flota</span></div></a>
+            <a href="workorders.html" class="mega-item"><img src="../assets/images/icons/workorders.png"><div class="mi-text"><strong>WorkOrders</strong><span>Órdenes de trabajo</span></div></a>
+            <a href="guardcheck.html" class="mega-item"><img src="../assets/images/icons/guardcheck.png"><div class="mi-text"><strong>GuardCheck</strong><span>Vigilancia y rondas</span></div></a>
+            <a href="fleetops.html" class="mega-item"><img src="../assets/images/icons/fleetops.png"><div class="mi-text"><strong>FleetOps</strong><span>Control operacional</span></div></a>
+            <a href="routeos.html" class="mega-item"><img src="../assets/images/icons/routeos.png"><div class="mi-text"><strong>RouteOS</strong><span>Rutas de transporte</span></div></a>
+            <a href="fleetsync.html" class="mega-item"><img src="../assets/images/icons/fleetsync.png"><div class="mi-text"><strong>FleetSync</strong><span>Integraciones GPS</span></div></a>
+            <a href="trackphone.html" class="mega-item"><img src="../assets/images/icons/trackphone.svg"><div class="mi-text"><strong>TrackPhone</strong><span>Rastreo por celular</span></div></a>
+            <a href="satlink.html" class="mega-item"><img src="../assets/images/icons/satlink.png"><div class="mi-text"><strong>SatLink</strong><span>Conexión satelital</span></div></a>
+            <a href="mailux.html" class="mega-item"><img src="../assets/images/icons/mailux.svg"><div class="mi-text"><strong>Mailux</strong><span>Email marketing</span></div></a>
+            <a href="developers.html" class="mega-item"><img src="../assets/images/icons/developers.png"><div class="mi-text"><strong>Developers</strong><span>API y documentación</span></div></a>
+          </div>
+          </div>
+        </div>
+      </div>
+      <a href="../contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
     </div>
-    <div class="nav-cta"><a href="../contacto.html" class="btn btn-outline btn-sm">Solicitar Demo</a></div>
-    <button class="nav-mobile-toggle" aria-label="Menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <div class="lang-switcher">
+      <button class="lang-btn" id="lang-trigger" aria-label="Cambiar idioma">
+        <span class="fi fi-es fis" id="lang-flag"></span>
+        <span id="lang-code">ES</span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="lang-menu" id="lang-menu">
+        <button class="lang-option" data-lang="es" data-flag-class="fi-es" data-code="ES"><span class="fi fi-es fis"></span> Español</button>
+        <button class="lang-option" data-lang="pt" data-flag-class="fi-br" data-code="PT"><span class="fi fi-br fis"></span> Português</button>
+        <button class="lang-option" data-lang="en" data-flag-class="fi-us" data-code="EN"><span class="fi fi-us fis"></span> English</button>
+      </div>
+    </div>
+    <div class="nav-cta">
+      <a href="../contacto.html" class="btn btn-outline btn-sm" data-i18n="nav_demo">Solicitar Demo</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
   </div>
 </nav>
 <div class="mobile-menu">
-  <a href="../index.html">Inicio</a><a href="../index.html#apps">Aplicaciones</a>
-  <a href="../manuales/index.html">Manuales</a><a href="../contacto.html">Contacto</a>
+  <a href="../index.html" data-i18n="nav_home">Inicio</a>
+  <a href="../index.html#apps" data-i18n="nav_apps">Aplicaciones</a>
+  <a href="../contacto.html" data-i18n="nav_contact">Contacto</a>
+  <a href="../contacto.html" class="btn btn-primary" style="text-align:center;border-radius:100px;margin-top:1rem" data-i18n="nav_demo">Solicitar Demo</a>
 </div>
 
 <!-- HERO -->
-<section class="app-hero" style="--app-color:#EF4444">
-  <div class="app-hero-glow" style="background:radial-gradient(ellipse,#EF4444 0%,transparent 70%)"></div>
+<section class="app-hero" style="--app-color:#7C3AED">
+  <div class="app-hero-glow" style="background:radial-gradient(ellipse,#7C3AED 0%,transparent 70%)"></div>
   <div class="container">
     <div data-reveal>
       <div class="app-icon-lg" style="background:none;border:none;padding:0">
         <img src="../assets/images/icons/camfleet.svg" width="72" height="72" style="border-radius:18px;display:block">
       </div>
-      <div class="app-hero-badge" style="border-color:#EF4444;color:#EF4444">Cámaras Vehiculares</div>
-      <h1>Tu flota, <span style="color:#EF4444">vista en tiempo real.</span></h1>
-      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem">CamFleet integra cámaras dashcam y de cabina con tu plataforma GPS. Streaming en vivo, grabación continua con respaldo en nube, detección automática de eventos (frenazos, colisiones, somnolencia) y evidencia legal instantánea ante cualquier incidente.</p>
+      <div class="app-hero-badge" style="border-color:#7C3AED;color:#7C3AED" data-i18n="cf_badge">Cámaras Vehiculares</div>
+      <h1 data-i18n-html="cf_title">Tu flota, <span style="color:#7C3AED">vista en tiempo real.</span></h1>
+      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem" data-i18n="cf_desc">CamFleet integra cámaras dashcam y de cabina con tu plataforma GPS. Streaming en vivo, grabación continua con respaldo en nube, detección automática de eventos (frenazos, colisiones, somnolencia) y evidencia legal instantánea ante cualquier incidente.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap">
-        <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#EF4444;box-shadow:0 0 32px rgba(239,68,68,.3)">Solicitar Demo</a>
-        <a href="../manuales/index.html#camfleet" class="btn btn-outline btn-lg">Ver Manual</a>
+        <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#7C3AED;box-shadow:0 0 32px rgba(124,58,237,.3)" data-i18n="app_btn_demo">Solicitar Demo</a>
       </div>
     </div>
     <div data-reveal>
-      <div class="media-placeholder" style="border-color:rgba(239,68,68,.2)">
-        <div class="media-placeholder-inner" style="aspect-ratio:16/10">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#EF4444" stroke-width="1.5" width="48" height="48" opacity=".3">
-            <path d="M6 12h24l6 6v14H6V12z"/><circle cx="18" cy="24" r="5"/><path d="M36 18l6-4v16l-6-4"/>
-          </svg>
-          <span style="color:#EF4444;opacity:.6">Dashboard CamFleet</span>
-          <span class="media-upload-label">Agrega: assets/images/camfleet-screenshot.png</span>
-        </div>
-      </div>
+      <img src="../assets/images/camfleet-screenshot.png" alt="Dashboard CamFleet" style="width:100%;border-radius:16px;border:1px solid rgba(124,58,237,.2);display:block">
     </div>
   </div>
 </section>
 
 <!-- Stats -->
-<div style="background:rgba(239,68,68,.06);border-top:1px solid rgba(239,68,68,.15);border-bottom:1px solid rgba(239,68,68,.15);padding:2rem 0">
+<div style="background:rgba(124,58,237,.06);border-top:1px solid rgba(124,58,237,.15);border-bottom:1px solid rgba(124,58,237,.15);padding:2rem 0">
   <div class="container">
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center">
-      <div><div style="font-size:2.25rem;font-weight:900;color:#EF4444;font-family:var(--font-head)">24/7</div><div style="font-size:.85rem;color:var(--c-text-3)">Grabación continua</div></div>
-      <div><div style="font-size:2.25rem;font-weight:900;color:#EF4444;font-family:var(--font-head)" data-counter data-target="5" data-suffix="s">0</div><div style="font-size:.85rem;color:var(--c-text-3)">Para acceder a grabación en vivo</div></div>
-      <div><div style="font-size:2.25rem;font-weight:900;color:#EF4444;font-family:var(--font-head)" data-counter data-target="95" data-suffix="%">0</div><div style="font-size:.85rem;color:var(--c-text-3)">Precisión en detección de eventos</div></div>
-      <div><div style="font-size:2.25rem;font-weight:900;color:#EF4444;font-family:var(--font-head)">SSD</div><div style="font-size:.85rem;color:var(--c-text-3)">Respaldo local + nube cifrada</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#7C3AED;font-family:var(--font-head)">24/7</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="cf_stat_1">Grabación continua</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#7C3AED;font-family:var(--font-head)" data-counter data-target="5" data-suffix="s">0</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="cf_stat_2">Para acceder a grabación en vivo</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#7C3AED;font-family:var(--font-head)" data-counter data-target="95" data-suffix="%">0</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="cf_stat_3">Precisión en detección de eventos</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#7C3AED;font-family:var(--font-head)">SSD</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="cf_stat_4">Respaldo local + nube cifrada</div></div>
     </div>
   </div>
 </div>
@@ -78,44 +115,44 @@
 <section class="section">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="section-label" style="color:#EF4444">Funcionalidades</span>
-      <h2 class="section-title">Más que una cámara. Un sistema de vigilancia completo.</h2>
+      <span class="section-label" style="color:#7C3AED" data-i18n="app_sec_features">Funcionalidades</span>
+      <h2 class="section-title" data-i18n="cf_feat_title">Más que una cámara. Un sistema de vigilancia completo.</h2>
     </div>
     <div class="features-grid">
-      <div class="feature-card" style="--card-color:#EF4444" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#EF4444"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
-        <h4>Streaming HLS / RTSP / WebRTC</h4>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <h4 data-i18n="cf_f1_title">Streaming HLS / RTSP / WebRTC</h4>
         <p>Ve en vivo todas las cámaras desde el navegador. El servidor MediaMTX retransmite el stream JT1078 de la dashcam en HLS, RTSP y WebRTC sin instalar plugins ni apps.</p>
       </div>
-      <div class="feature-card" style="--card-color:#F97316" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#F97316"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-        <h4>Protocolo nativo JT808 / JT1078</h4>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h4 data-i18n="cf_f2_title">Protocolo nativo JT808 / JT1078</h4>
         <p>Conexión directa con dashcams Jimi y Concox (JC181, JC450, DC600) por protocolo JT808/JT1078. Sin conversores externos: la cámara se conecta al servidor directo.</p>
       </div>
-      <div class="feature-card" style="--card-color:#8B5CF6" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#8B5CF6"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg></div>
-        <h4>Clips por evento + descarga</h4>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg></div>
+        <h4 data-i18n="cf_f3_title">Clips por evento + descarga</h4>
         <p>Cada evento genera un clip de video asociado: tipo de evento, vehículo, fecha y hora. Descarga cualquier clip desde el panel sin acceder al dispositivo físico.</p>
       </div>
-      <div class="feature-card" style="--card-color:#10B981" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#10B981"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/><path d="M3.08 12A19.79 19.79 0 012 3.32 2 2 0 014 1.18h3a2 2 0 012 1.72"/><line x1="1" y1="1" x2="23" y2="23"/></svg></div>
-        <h4>Alertas por WhatsApp con evidencia</h4>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/><path d="M3.08 12A19.79 19.79 0 012 3.32 2 2 0 014 1.18h3a2 2 0 012 1.72"/><line x1="1" y1="1" x2="23" y2="23"/></svg></div>
+        <h4 data-i18n="cf_f4_title">Alertas por WhatsApp con evidencia</h4>
         <p>Configura contactos de alerta por vehículo. Cuando ocurre un evento, el sistema envía el aviso por WhatsApp con el clip de video adjunto como evidencia inmediata.</p>
       </div>
-      <div class="feature-card" style="--card-color:#8840C8" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#8840C8"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#8840C8" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h4>GPS + conductores sincronizados</h4>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h4 data-i18n="cf_f5_title">GPS + conductores sincronizados</h4>
         <p>Cada cámara tiene asociado un vehículo y opcionalmente un conductor. El mapa muestra posición en tiempo real y puedes ver el stream directamente desde el pin del vehículo.</p>
       </div>
-      <div class="feature-card" style="--card-color:#F59E0B" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#F59E0B"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
-        <h4>Dashboard de eventos por tipo y día</h4>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+        <h4 data-i18n="cf_f6_title">Dashboard de eventos por tipo y día</h4>
         <p>Resumen ejecutivo con total de cámaras, streams activos, eventos por tipo y tendencia diaria. Identifica vehículos con más incidentes de un vistazo.</p>
       </div>
     </div>
@@ -126,9 +163,9 @@
 <section class="section" style="background:var(--c-bg-2)">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="section-label" style="color:#EF4444">Hardware compatible</span>
-      <h2 class="section-title">Funciona con los equipos que ya tienes</h2>
-      <p class="section-desc">CamFleet soporta los principales fabricantes de cámaras vehiculares. Si ya tienes hardware instalado, probablemente sea compatible.</p>
+      <span class="section-label" style="color:#7C3AED" data-i18n="app_sec_hardware">Hardware compatible</span>
+      <h2 class="section-title" data-i18n="cf_hw_title">Funciona con los equipos que ya tienes</h2>
+      <p class="section-desc" data-i18n="cf_hw_desc">CamFleet soporta los principales fabricantes de cámaras vehiculares. Si ya tienes hardware instalado, probablemente sea compatible.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem" data-reveal>
       <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.75rem;text-align:center">
@@ -144,27 +181,41 @@
       <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-lg);padding:1.75rem;text-align:center">
         <div style="font-size:2rem;margin-bottom:.75rem">🔌</div>
         <h4 style="margin-bottom:.375rem;font-size:1rem">GT06 / Coban</h4>
-        <p style="font-size:.85rem">Relay GPS hacia GPSwox, compatible via protocolo estándar</p>
+        <p style="font-size:.85rem">Relay GPS hacia Appogio, compatible via protocolo estándar</p>
       </div>
-      <div style="background:var(--c-bg-card);border:1px solid rgba(239,68,68,.3);border-radius:var(--radius-lg);padding:1.75rem;text-align:center">
+      <div style="background:var(--c-bg-card);border:1px solid rgba(124,58,237,.3);border-radius:var(--radius-lg);padding:1.75rem;text-align:center">
         <div style="font-size:2rem;margin-bottom:.75rem">❓</div>
-        <h4 style="margin-bottom:.375rem;font-size:1rem">¿Otro modelo?</h4>
-        <p style="font-size:.85rem">Consulta compatibilidad con tu hardware actual sin compromiso</p>
+        <h4 style="margin-bottom:.375rem;font-size:1rem" data-i18n="cf_hw4_title">¿Otro modelo?</h4>
+        <p style="font-size:.85rem" data-i18n="cf_hw4_desc">Consulta compatibilidad con tu hardware actual sin compromiso</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Screenshots -->
-<section class="section">
+<!-- Showcase interactivo -->
+<section class="section showcase" style="background:var(--c-bg-2)">
   <div class="container">
-    <div class="section-head" data-reveal><span class="section-label" style="color:#EF4444">Capturas de pantalla</span><h2 class="section-title">CamFleet en detalle</h2></div>
-    <div class="screenshots-gallery" data-reveal>
-      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><span style="font-size:.75rem">Vista multi-cámara en vivo</span><span style="font-size:.65rem;opacity:.5">assets/images/camfleet-live.png</span></div>
-      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/></svg><span style="font-size:.75rem">Panel de alertas y eventos</span><span style="font-size:.65rem;opacity:.5">assets/images/camfleet-eventos.png</span></div>
-      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/></svg><span style="font-size:.75rem">Reproductor + mapa GPS</span><span style="font-size:.65rem;opacity:.5">assets/images/camfleet-mapa.png</span></div>
-      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/></svg><span style="font-size:.75rem">Gestión de grabaciones</span><span style="font-size:.65rem;opacity:.5">assets/images/camfleet-grabaciones.png</span></div>
+    <div class="section-head" data-reveal>
+      <span class="section-label" style="color:#7C3AED">Cómo funciona</span>
+      <h2 class="section-title">CamFleet en acción</h2>
     </div>
+    <div class="showcase-wrap" data-reveal>
+      <div class="showcase-img"><img id="sc-img" src="../assets/images/camfleet-live.png" alt="CamFleet en acción"></div>
+      <div class="showcase-list">
+        <button class="sc-feat active" data-img="../assets/images/camfleet-live.png"><strong>Vista multi-cámara en vivo</strong><span>Todas las cámaras en tiempo real</span></button>
+        <button class="sc-feat" data-img="../assets/images/camfleet-eventos.png"><strong>Alertas y eventos</strong><span>Detección automática de incidentes</span></button>
+        <button class="sc-feat" data-img="../assets/images/camfleet-mapa.png"><strong>Reproductor + mapa GPS</strong><span>Video correlacionado con la ubicación</span></button>
+        <button class="sc-feat" data-img="../assets/images/camfleet-grabaciones.png"><strong>Grabaciones</strong><span>Búsqueda y descarga de clips</span></button>
+      </div>
+    </div>
+  </div>
+  <script>(function(){var bs=document.querySelectorAll(".sc-feat"),im=document.getElementById("sc-img");bs.forEach(function(b){b.addEventListener("click",function(){bs.forEach(function(x){x.classList.remove("active")});b.classList.add("active");im.src=b.getAttribute("data-img");});});})();</script>
+</section>
+
+<section class="section" style="background:var(--c-bg-2)">
+  <div class="container" style="max-width:900px">
+    <div class="section-head" data-reveal><span class="section-label" style="color:#7C3AED">Demo en video</span><h2 class="section-title">Ve CamFleet en acción</h2></div>
+    <video src="../assets/images/camfleet-demo.mp4" controls style="width:100%;border-radius:16px;display:block"></video>
   </div>
 </section>
 
@@ -173,13 +224,48 @@
     <h2 class="section-title">¿Listo para ver tu flota en tiempo real?</h2>
     <p>Instala CamFleet y ten evidencia visual de todo lo que ocurre en cada vehículo, las 24 horas del día.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
-      <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#EF4444;box-shadow:0 0 32px rgba(239,68,68,.3)">Solicitar Demo de CamFleet</a>
-      <a href="../manuales/index.html#camfleet" class="btn btn-outline btn-lg">Ver Manual Completo</a>
+      <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#7C3AED;box-shadow:0 0 32px rgba(124,58,237,.3)">Solicitar Demo de CamFleet</a>
     </div>
   </div>
 </section>
 
-<footer><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.jpg" height="38" alt="Appogio" style="display:block;border-radius:6px"></a><div class="footer-bottom-links"><a href="driveiq.html">DriveIQ</a><a href="inspectpro.html">InspectPro</a><a href="pilotos.html">PilotOS</a><a href="tagradar.html">TagRadar</a><a href="notice.html">Notice</a></div></div></div></footer>
+<section class="section" id="caracteristicas-todas">
+<div class="container">
+<div class="section-head" data-reveal><span class="section-label" style="color:#7C3AED">Características</span><h2 class="section-title">Todo lo que incluye CamFleet</h2></div>
+<div style="columns:2;column-gap:3rem;max-width:920px;margin:0 auto" data-reveal><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Transmisión en vivo (HLS, RTSP, WebRTC) sin instalar plugins</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Protocolo nativo JT808/JT1078 con cámaras Jimi y Concox</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Clips por evento con descarga desde el panel</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Alertas por WhatsApp con el clip como evidencia</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">GPS y conductores sincronizados con cada cámara</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Dashboard de eventos por tipo y día</span></div></div>
+</div>
+</section>
+
+<footer><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a><div class="footer-bottom-links"><a href="driveiq.html">DriveIQ</a><a href="inspectpro.html">InspectPro</a><a href="pilotos.html">PilotOS</a><a href="tagradar.html">TagRadar</a><a href="notice.html">Notice</a></div></div></div></footer>
+
+<a class="wa-float" href="https://wa.me/573052292372?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Appogio" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <div class="wa-float-btn">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.121 1.524 5.854L0 24l6.335-1.505A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.372l-.36-.213-3.728.885.939-3.63-.234-.373A9.818 9.818 0 1112 21.818z"/>
+    </svg>
+  </div>
+</a>
+<div class="lang-float" id="lang-float">
+  <div class="lang-float-menu" id="lang-float-menu">
+    <button class="lang-float-option" data-lang="es" data-flag-class="fi-es">
+      <span class="fi fi-es"></span>
+      <span>Español</span>
+    </button>
+    <button class="lang-float-option" data-lang="pt" data-flag-class="fi-br">
+      <span class="fi fi-br"></span>
+      <span>Português</span>
+    </button>
+    <button class="lang-float-option" data-lang="en" data-flag-class="fi-us">
+      <span class="fi fi-us"></span>
+      <span>English</span>
+    </button>
+  </div>
+  <button class="lang-float-btn" id="lang-float-trigger" aria-label="Cambiar idioma">
+    <span class="fi fi-es" id="float-flag"></span>
+  </button>
+</div>
+<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>

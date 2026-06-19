@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appogio — Plataforma Inteligente de Gestión de Flotas</title>
+  <meta name="description" content="Appogio unifica monitoreo GPS en tiempo real, inspecciones digitales, análisis de conducción, cámaras vehiculares y rastreo de activos en un único ecosistema diseñado para escalar.">
+  <meta property="og:title" content="Appogio — Plataforma Inteligente de Gestión de Flotas">
+  <meta property="og:description" content="Todo lo que tu operación necesita: GPS en tiempo real, inspecciones, conductores, cámaras y activos en un solo ecosistema.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css?v=6">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a>
+
+    <div class="nav-links">
+      <div class="nav-dropdown">
+        <a class="nav-link">
+          <span data-i18n="nav_platform">Plataforma</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#features" class="dropdown-item">
+            <div class="dropdown-item-icon" style="background:rgba(136,64,200,.12)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8840C8" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+            </div>
+            <div class="dropdown-item-text"><strong data-i18n="dd_gps_title">Monitoreo GPS</strong><span data-i18n="dd_gps_desc">Tiempo real, historial, alertas</span></div>
+          </a>
+          <a href="#features" class="dropdown-item">
+            <div class="dropdown-item-icon" style="background:rgba(16,185,129,.12)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="2"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </div>
+            <div class="dropdown-item-text"><strong data-i18n="dd_geo_title">Geocercas</strong><span data-i18n="dd_geo_desc">Zonas virtuales e inteligentes</span></div>
+          </a>
+          <a href="#features" class="dropdown-item">
+            <div class="dropdown-item-icon" style="background:rgba(139,92,246,.12)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div class="dropdown-item-text"><strong data-i18n="dd_reports_title">Reportes</strong><span data-i18n="dd_reports_desc">Analítica avanzada y exportación</span></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <a class="nav-link">
+          <span data-i18n="nav_apps">Aplicaciones</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="dropdown-menu" style="min-width:280px">
+          <a href="apps/driveiq.html" class="dropdown-item">
+            <div class="dropdown-item-icon" style="background:none;border:none;padding:0;overflow:hidden">
+              <img src="assets/images/icons/driveiq.svg" width="36" height="36" style="border-radius:9px;display:block">
+            </div>
+            <div class="dropdown-item-text"><strong>DriveIQ</strong><span data-i18n="dd_driveiq">Análisis de comportamiento vial</span></div>
+          </a>
+          <a href="apps/inspectpro.html" class="dropdown-item">
+            <div class="dropdown-item-icon" style="background:none;border:none;padding:0;overflow:hidden">
+              <img src="assets/images/icons/inspectpro.png" width="36" height="36" style="border-radius:9px;display:block">
+            </div>
+            <div class="dropdown-item-text"><strong>InspectPro</strong><span data-i18n="dd_inspectpro">Inspecciones digitales de vehículos</span></div>
+          </a>
+          <a href="apps/pilotos.html" class="dropdown-item">
+            <div class="dropdown-item-icon" style="background:none;border:none;padding:0;overflow:hidden">
+              <img src="assets/images/icons/pilotos.png" width="36" height="36" style="border-radius:9px;display:block">
+            </div>
+            <div class="dropdown-item-text"><strong>PilotOS</strong><span data-i18n="dd_pilotos">Gestión de conductores</span></div>
+          </a>
+          <a href="apps/camfleet.html" class="dropdown-item">
+            <div class="dropdown-item-icon" style="background:none;border:none;padding:0;overflow:hidden">
+              <img src="assets/images/icons/camfleet.svg" width="36" height="36" style="border-radius:9px;display:block">
+            </div>
+            <div class="dropdown-item-text"><strong>CamFleet</strong><span data-i18n="dd_camfleet">Cámaras y grabación vehicular</span></div>
+          </a>
+          <a href="apps/tagradar.html" class="dropdown-item">
+            <div class="dropdown-item-icon" style="background:none;border:none;padding:0;overflow:hidden">
+              <img src="assets/images/icons/tagradar.svg" width="36" height="36" style="border-radius:9px;display:block">
+            </div>
+            <div class="dropdown-item-text"><strong>TagRadar</strong><span data-i18n="dd_tagradar">Rastreo de activos BLE</span></div>
+          </a>
+          <a href="apps/notice.html" class="dropdown-item">
+            <div class="dropdown-item-icon" style="background:none;border:none;padding:0;overflow:hidden">
+              <img src="assets/images/icons/notice.png" width="36" height="36" style="border-radius:9px;display:block">
+            </div>
+            <div class="dropdown-item-text"><strong>Notice</strong><span data-i18n="dd_notice">Mensajería y comunicaciones</span></div>
+          </a>
+        </div>
+      </div>
+
+      <a href="contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
+    </div>
+
+    <!-- Language switcher navbar -->
+    <div class="lang-switcher">
+      <button class="lang-btn" id="lang-trigger" aria-label="Cambiar idioma">
+        <span class="fi fi-es fis" id="lang-flag"></span>
+        <span id="lang-code">ES</span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="lang-menu" id="lang-menu">
+        <button class="lang-option" data-lang="es" data-flag-class="fi-es" data-code="ES"><span class="fi fi-es fis"></span> Español</button>
+        <button class="lang-option" data-lang="pt" data-flag-class="fi-br" data-code="PT"><span class="fi fi-br fis"></span> Português</button>
+        <button class="lang-option" data-lang="en" data-flag-class="fi-us" data-code="EN"><span class="fi fi-us fis"></span> English</button>
+      </div>
+    </div>
+
+    <div class="nav-cta">
+      <a href="contacto.html" class="btn btn-outline btn-sm" data-i18n="nav_demo">Solicitar Demo</a>
+    </div>
+
+    <button class="nav-mobile-toggle" aria-label="Menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu">
+  <a href="#features" data-i18n="nav_platform">Plataforma</a>
+  <a href="apps/driveiq.html">DriveIQ</a>
+  <a href="apps/inspectpro.html">InspectPro</a>
+  <a href="apps/pilotos.html">PilotOS</a>
+  <a href="apps/camfleet.html">CamFleet</a>
+  <a href="apps/tagradar.html">TagRadar</a>
+  <a href="apps/notice.html">Notice</a>
+  <a href="contacto.html" data-i18n="nav_contact">Contacto</a>
+  <a href="contacto.html" class="btn btn-primary" style="text-align:center;border-radius:100px;margin-top:1rem" data-i18n="nav_demo">Solicitar Demo</a>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <canvas id="hero-canvas" style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+
+  <div class="container">
+    <!-- Left content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        <span data-i18n="hero_badge">Plataforma activa · Ecosistema completo</span>
+      </div>
+      <h1 class="hero-title" data-i18n-html="hero_title">
+        Vende tecnología vehicular, de personas y activos<br>
+        bajo tu <span class="gradient-text">propia marca</span>
+      </h1>
+      <p class="hero-desc" data-i18n="hero_desc">
+        Sin desarrollar, sin servidores, sin complicaciones. Ofrece una plataforma completa
+        de gestión vehicular, personas y activos con tu logo, tu dominio y tus precios —
+        respaldado por todo el ecosistema Appogio.
+      </p>
+      <div class="hero-actions">
+        <a href="contacto.html" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span data-i18n="hero_cta_primary">Quiero ser distribuidor</span>
+        </a>
+        <a href="#apps" class="btn btn-outline btn-lg">
+          <span data-i18n="hero_cta_secondary">Ver condiciones</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-value" data-counter data-target="13" data-suffix="M+">0</div>
+          <div class="hero-stat-label" data-i18n="hero_stat_1">Equipos conectados</div>
+        </div>
+        <div>
+          <div class="hero-stat-value" data-counter data-target="155" data-suffix="+">0</div>
+          <div class="hero-stat-label" data-i18n="hero_stat_2">Países activos</div>
+        </div>
+        <div>
+          <div class="hero-stat-value" data-counter data-target="500" data-suffix="+">0</div>
+          <div class="hero-stat-label" data-i18n="hero_stat_3">Empresas activas</div>
+        </div>
+        <div>
+          <div class="hero-stat-value" data-counter data-target="99" data-suffix="%">0</div>
+          <div class="hero-stat-label" data-i18n="hero_stat_4">Tiempo al aire</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right visual — reemplaza con captura real de la plataforma -->
+    <div class="hero-visual">
+      <div class="hero-screen">
+        <!-- ==================================================
+             ZONA DE IMAGEN/VIDEO PRINCIPAL DEL DASHBOARD
+             Reemplaza el div.hero-screen-placeholder por:
+             <img src="assets/images/dashboard-screenshot.png" alt="Dashboard Appogio" style="width:100%;height:100%;object-fit:cover">
+             O un <video autoplay muted loop> para video.
+             ================================================== -->
+        <div class="hero-screen-placeholder" style="background:transparent;border:none;box-shadow:none;"></div>
+      </div>
+
+      <div class="hero-float-card">
+        <span class="float-dot"></span>
+        <div>
+          <div style="font-weight:700;font-size:.85rem;color:var(--c-text)" data-i18n="hero_float_1_title">Vehículo activo</div>
+          <div style="font-size:.75rem;color:var(--c-text-2)" data-i18n="hero_float_1_sub">120 km/h · Ruta Norte</div>
+        </div>
+      </div>
+
+      <div class="hero-float-card">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+        <div>
+          <div style="font-weight:700;font-size:.85rem;color:var(--c-text)" data-i18n="hero_float_2_title">Inspección aprobada</div>
+          <div style="font-size:.75rem;color:var(--c-text-2)" data-i18n="hero_float_2_sub">Unidad 047 · Hace 2 min</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FEATURES
+     ============================================================ -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" data-i18n="feat_label">Capacidades de la plataforma</span>
+      <h2 class="section-title" data-i18n-html="feat_title">Una plataforma.<br>Todo lo que necesitas.</h2>
+      <p class="section-desc" data-i18n="feat_desc">Desde el seguimiento en tiempo real hasta analítica avanzada — cada herramienta diseñada para reducir costos y maximizar el control operacional.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal data-reveal-delay="1">
+        <div class="feature-icon-wrap">
+          <div class="feature-icon-bg"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/></svg>
+        </div>
+        <h4 data-i18n="feat_1_title">Monitoreo en tiempo real</h4>
+        <p data-i18n="feat_1_desc">Visualiza la posición exacta de cada unidad, velocidad, estado del motor y recorrido histórico desde cualquier dispositivo.</p>
+      </div>
+
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal data-reveal-delay="2">
+        <div class="feature-icon-wrap">
+          <div class="feature-icon-bg"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h4 data-i18n="feat_2_title">Geocercas inteligentes</h4>
+        <p data-i18n="feat_2_desc">Define zonas virtuales en el mapa y recibe alertas automáticas al ingreso o salida de cualquier unidad, en tiempo real.</p>
+      </div>
+
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal data-reveal-delay="3">
+        <div class="feature-icon-wrap">
+          <div class="feature-icon-bg"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="2" stroke-linecap="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        </div>
+        <h4 data-i18n="feat_3_title">Reportes y analítica</h4>
+        <p data-i18n="feat_3_desc">Reportes detallados de recorridos, tiempos, paradas, combustible y comportamiento del conductor. Exporta en PDF, Excel o CSV.</p>
+      </div>
+
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal data-reveal-delay="1">
+        <div class="feature-icon-wrap">
+          <div class="feature-icon-bg"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="2" stroke-linecap="round"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+        </div>
+        <h4 data-i18n="feat_4_title">Alertas automáticas</h4>
+        <p data-i18n="feat_4_desc">Notificaciones instantáneas por exceso de velocidad, inactividad, entradas a zonas restringidas y eventos críticos de la flota.</p>
+      </div>
+
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal data-reveal-delay="2">
+        <div class="feature-icon-wrap">
+          <div class="feature-icon-bg"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h4 data-i18n="feat_5_title">Multi-usuario y roles</h4>
+        <p data-i18n="feat_5_desc">Administra múltiples empresas, conductores, supervisores y operadores con permisos granulares por módulo y función.</p>
+      </div>
+
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal data-reveal-delay="3">
+        <div class="feature-icon-wrap">
+          <div class="feature-icon-bg"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/><path d="M9 6h6M9 10h6M9 14h4"/></svg>
+        </div>
+        <h4 data-i18n="feat_6_title">Acceso móvil</h4>
+        <p data-i18n="feat_6_desc">Aplicaciones nativas para iOS y Android. Conductores, supervisores e inspectores acceden desde cualquier dispositivo móvil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     APPS ECOSYSTEM
+     ============================================================ -->
+<section class="section apps-section" id="apps">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" data-i18n="apps_label">Ecosistema de aplicaciones</span>
+      <h2 class="section-title" data-i18n-html="apps_title">Seis herramientas.<br><span class="gradient-text">Un ecosistema unificado.</span></h2>
+      <p class="section-desc" data-i18n="apps_desc">Cada aplicación funciona de forma independiente o integrada. Activa solo las que necesitas y escala cuando quieras.</p>
+    </div>
+
+    <div class="apps-grid">
+
+      <!-- DriveIQ -->
+      <div class="app-card" style="--app-color:#F59E0B" data-reveal data-reveal-delay="1">
+        <div class="app-card-glow"></div>
+        <div class="app-card-logo" style="background:none;border:none;padding:0">
+          <img src="assets/images/icons/driveiq.svg" width="56" height="56" style="border-radius:14px;display:block">
+        </div>
+        <div class="app-card-name">DriveIQ</div>
+        <div class="app-card-tagline" data-i18n="driveiq_tagline">Comportamiento Vial</div>
+        <p data-i18n="driveiq_desc">Analiza el estilo de manejo de cada conductor: excesos de velocidad, frenadas bruscas, ralentí y más. Genera puntajes y alertas para mejorar la seguridad.</p>
+        <div class="app-card-features">
+          <div class="app-card-feat" data-i18n="driveiq_feat_1">Puntaje de conducción por conductor</div>
+          <div class="app-card-feat" data-i18n="driveiq_feat_2">Eventos: velocidad, frenadas, aceleración</div>
+          <div class="app-card-feat" data-i18n="driveiq_feat_3">Grupos de vehículos y analítica</div>
+          <div class="app-card-feat" data-i18n="driveiq_feat_4">Reducción de hasta 15% en combustible</div>
+        </div>
+        <a href="apps/driveiq.html" class="app-card-link">
+          <span data-i18n="driveiq_link">Conocer DriveIQ</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <!-- InspectPro -->
+      <div class="app-card" style="--app-color:#3B82F6" data-reveal data-reveal-delay="2">
+        <div class="app-card-glow"></div>
+        <div class="app-card-logo" style="background:none;border:none;padding:0">
+          <img src="assets/images/icons/inspectpro.png" width="56" height="56" style="border-radius:14px;display:block">
+        </div>
+        <div class="app-card-name">InspectPro</div>
+        <div class="app-card-tagline" data-i18n="inspectpro_tagline">Inspecciones Digitales</div>
+        <p data-i18n="inspectpro_desc">Digitaliza las inspecciones de tus vehículos y activos con formularios personalizables, firma digital, fotos y generación automática de reportes PDF.</p>
+        <div class="app-card-features">
+          <div class="app-card-feat" data-i18n="inspectpro_feat_1">Checklists personalizables con IA</div>
+          <div class="app-card-feat" data-i18n="inspectpro_feat_2">Aprobación y rechazo por supervisores</div>
+          <div class="app-card-feat" data-i18n="inspectpro_feat_3">Alertas de documentos por vencer</div>
+          <div class="app-card-feat" data-i18n="inspectpro_feat_4">OCR de placas y lector QR</div>
+        </div>
+        <a href="apps/inspectpro.html" class="app-card-link">
+          <span data-i18n="inspectpro_link">Conocer InspectPro</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <!-- PilotOS -->
+      <div class="app-card" style="--app-color:#8B5CF6" data-reveal data-reveal-delay="3">
+        <div class="app-card-glow"></div>
+        <div class="app-card-logo" style="background:none;border:none;padding:0">
+          <img src="assets/images/icons/pilotos.png" width="56" height="56" style="border-radius:14px;display:block">
+        </div>
+        <div class="app-card-name">PilotOS</div>
+        <div class="app-card-tagline" data-i18n="pilotos_tagline">Gestión de Conductores</div>
+        <p data-i18n="pilotos_desc">Centraliza el ciclo completo del conductor: registro, asignación de vehículos, control de turnos mediante QR, rastreo GPS y solicitudes de baja.</p>
+        <div class="app-card-features">
+          <div class="app-card-feat" data-i18n="pilotos_feat_1">Check-in / check-out por QR</div>
+          <div class="app-card-feat" data-i18n="pilotos_feat_2">Control de turnos y asignaciones</div>
+          <div class="app-card-feat" data-i18n="pilotos_feat_3">Carga masiva de hasta 500 conductores</div>
+          <div class="app-card-feat" data-i18n="pilotos_feat_4">Notificaciones push en tiempo real</div>
+        </div>
+        <a href="apps/pilotos.html" class="app-card-link">
+          <span data-i18n="pilotos_link">Conocer PilotOS</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <!-- CamFleet -->
+      <div class="app-card" style="--app-color:#EF4444" data-reveal data-reveal-delay="1">
+        <div class="app-card-glow"></div>
+        <div class="app-card-logo" style="background:none;border:none;padding:0">
+          <img src="assets/images/icons/camfleet.svg" width="56" height="56" style="border-radius:14px;display:block">
+        </div>
+        <div class="app-card-name">CamFleet</div>
+        <div class="app-card-tagline" data-i18n="camfleet_tagline">Video Vehicular</div>
+        <p data-i18n="camfleet_desc">Gestiona cámaras vehiculares con transmisión en vivo, grabación continua, descarga de clips por evento y alertas por WhatsApp. Soporte ONVIF, HLS y RTSP.</p>
+        <div class="app-card-features">
+          <div class="app-card-feat" data-i18n="camfleet_feat_1">Streaming en vivo HLS / RTSP</div>
+          <div class="app-card-feat" data-i18n="camfleet_feat_2">Grabación continua y por eventos</div>
+          <div class="app-card-feat" data-i18n="camfleet_feat_3">Descarga y gestión de clips</div>
+          <div class="app-card-feat" data-i18n="camfleet_feat_4">Alertas por WhatsApp con evidencia</div>
+        </div>
+        <a href="apps/camfleet.html" class="app-card-link">
+          <span data-i18n="camfleet_link">Conocer CamFleet</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <!-- TagRadar -->
+      <div class="app-card" style="--app-color:#10B981" data-reveal data-reveal-delay="2">
+        <div class="app-card-glow"></div>
+        <div class="app-card-logo" style="background:none;border:none;padding:0">
+          <img src="assets/images/icons/tagradar.svg" width="56" height="56" style="border-radius:14px;display:block">
+        </div>
+        <div class="app-card-name">TagRadar</div>
+        <div class="app-card-tagline" data-i18n="tagradar_tagline">Rastreo de Activos BLE</div>
+        <p data-i18n="tagradar_desc">Ubica y rastrea activos físicos sin GPS: herramientas, equipos, contenedores y personal mediante tecnología Bluetooth Low Energy con cobertura en tiempo real.</p>
+        <div class="app-card-features">
+          <div class="app-card-feat" data-i18n="tagradar_feat_1">Mapa de activos en tiempo real</div>
+          <div class="app-card-feat" data-i18n="tagradar_feat_2">Historial de movimientos y detecciones</div>
+          <div class="app-card-feat" data-i18n="tagradar_feat_3">Alertas de entrada y salida de zonas</div>
+          <div class="app-card-feat" data-i18n="tagradar_feat_4">Red de scanners Bluetooth</div>
+        </div>
+        <a href="apps/tagradar.html" class="app-card-link">
+          <span data-i18n="tagradar_link">Conocer TagRadar</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+
+      <!-- Notice -->
+      <div class="app-card" style="--app-color:#06B6D4" data-reveal data-reveal-delay="3">
+        <div class="app-card-glow"></div>
+        <div class="app-card-logo" style="background:none;border:none;padding:0">
+          <img src="assets/images/icons/notice.png" width="56" height="56" style="border-radius:14px;display:block">
+        </div>
+        <div class="app-card-name">Notice</div>
+        <div class="app-card-tagline" data-i18n="notice_tagline">Mensajería Interna</div>
+        <p data-i18n="notice_desc">Envía mensajes, avisos y notificaciones directamente a tus clientes y equipos desde el panel central. Popups, anuncios segmentados y comunicados operacionales.</p>
+        <div class="app-card-features">
+          <div class="app-card-feat" data-i18n="notice_feat_1">Mensajes segmentados por audiencia</div>
+          <div class="app-card-feat" data-i18n="notice_feat_2">Popups programados y recurrentes</div>
+          <div class="app-card-feat" data-i18n="notice_feat_3">Adjunta imágenes y videos</div>
+          <div class="app-card-feat" data-i18n="notice_feat_4">Widget embebido en el panel principal</div>
+        </div>
+        <a href="apps/notice.html" class="app-card-link">
+          <span data-i18n="notice_link">Conocer Notice</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PARTNERSHIP / DISTRIBUTION MODEL
+     ============================================================ -->
+<section class="section partner-section" style="background:var(--c-bg-2)">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label">Modelo de distribución</span>
+      <h2 class="section-title">Tú eres el dueño.<br><span class="gradient-text">Nosotros el motor.</span></h2>
+      <p class="section-desc">Appogio opera como motor tecnológico invisible. Tu marca está en el frente, tus clientes no saben que existe Appogio y la relación comercial es 100% tuya.</p>
+    </div>
+
+    <div class="partner-diagram" data-reveal>
+      <div class="partner-node">
+        <div class="partner-node-icon pn-blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="partner-node-label">Tú</div>
+        <div class="partner-node-sub">Distribuidor / Reseller</div>
+        <div class="partner-node-tags">
+          <span>Tu marca</span><span>Tus precios</span><span>Tus clientes</span>
+        </div>
+      </div>
+
+      <div class="partner-connector">
+        <div class="partner-connector-line"></div>
+        <div class="partner-connector-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          Motor tecnológico
+        </div>
+        <div class="partner-connector-line"></div>
+      </div>
+
+      <div class="partner-node partner-node--center">
+        <div class="partner-node-icon pn-purple">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><circle cx="12" cy="12" r="10"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
+        </div>
+        <div class="partner-node-label">Appogio</div>
+        <div class="partner-node-sub">Plataforma e infraestructura</div>
+        <div class="partner-node-tags">
+          <span>Servidores</span><span>Actualizaciones</span><span>Soporte</span>
+        </div>
+      </div>
+
+      <div class="partner-connector">
+        <div class="partner-connector-line"></div>
+        <div class="partner-connector-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          Bajo tu marca
+        </div>
+        <div class="partner-connector-line"></div>
+      </div>
+
+      <div class="partner-node">
+        <div class="partner-node-icon pn-green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="partner-node-label">Tus clientes</div>
+        <div class="partner-node-sub">Empresas / Flotas</div>
+        <div class="partner-node-tags">
+          <span>Tu plataforma</span><span>Tu soporte</span><span>Tu dominio</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="partner-pillars" data-reveal>
+      <div class="partner-pillar">
+        <div class="partner-pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>No competimos contigo</h4>
+        <p>Nunca contactamos a tus clientes finales. Tu cartera es tuya para siempre, sin excepciones.</p>
+      </div>
+      <div class="partner-pillar">
+        <div class="partner-pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h4>Soporte técnico incluido</h4>
+        <p>Equipo técnico dedicado para implementaciones, configuraciones y resolución de casos en tiempo real.</p>
+      </div>
+      <div class="partner-pillar">
+        <div class="partner-pillar-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h4>Escala sin límites</h4>
+        <p>De 10 a 50,000 vehículos. La plataforma crece con tu negocio sin migraciones ni cambios de proveedor.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem" data-reveal>
+      <a href="contacto.html" class="btn btn-primary btn-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        Quiero ser distribuidor
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLATFORM PREVIEW — VIDEO / SCREENSHOT
+     ============================================================ -->
+<section class="section preview-section" style="background:var(--c-bg-2)" id="preview">
+  <div class="container">
+    <div class="preview-content" data-reveal>
+      <span class="section-label" data-i18n="prev_label">La plataforma en acción</span>
+      <h2 class="section-title" data-i18n="prev_title">Diseñada para el control total de tu operación</h2>
+      <div class="preview-features-list">
+        <div class="preview-feat">
+          <div class="preview-feat-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="preview-feat-text">
+            <strong data-i18n="prev_feat_1_title">Panel unificado</strong>
+            <span data-i18n="prev_feat_1_desc">Todas las herramientas accesibles desde un solo punto de acceso seguro.</span>
+          </div>
+        </div>
+        <div class="preview-feat">
+          <div class="preview-feat-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div class="preview-feat-text">
+            <strong data-i18n="prev_feat_2_title">Actualizaciones en tiempo real</strong>
+            <span data-i18n="prev_feat_2_desc">Los datos se refrescan automáticamente sin necesidad de recargar la página.</span>
+          </div>
+        </div>
+        <div class="preview-feat">
+          <div class="preview-feat-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <div class="preview-feat-text">
+            <strong data-i18n="prev_feat_3_title">100% responsive y móvil</strong>
+            <span data-i18n="prev_feat_3_desc">Experiencia completa en escritorio, tablet y smartphone.</span>
+          </div>
+        </div>
+      </div>
+      <a href="contacto.html" class="btn btn-primary" data-i18n="prev_cta">Ver demostración en vivo</a>
+    </div>
+
+    <!-- ======================================================
+         ZONA DE VIDEO PRINCIPAL
+         Para agregar tu video:
+         1. Coloca el archivo en: assets/images/demo-video.mp4
+         2. Reemplaza el div.media-placeholder-inner por:
+            <video src="assets/images/demo-video.mp4" controls poster="assets/images/video-thumb.jpg"></video>
+         ====================================================== -->
+    <div class="media-placeholder video-placeholder" data-reveal>
+      <div class="media-placeholder-inner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><path d="m10 8 6 4-6 4V8z" fill="currentColor" opacity=".3"/>
+          <path d="M8 21h8M12 17v4"/>
+        </svg>
+        <span data-i18n="video_label">Video de demostración de la plataforma</span>
+        <span class="media-upload-label" data-i18n="video_hint">Coloca tu video en: assets/images/demo-video.mp4</span>
+      </div>
+      <div class="play-btn-overlay">
+        <div class="play-btn">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="m5 3 14 9-14 9V3z"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HOW IT WORKS
+     ============================================================ -->
+<section class="section how-section" id="como-funciona">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" data-i18n="how_label">Proceso de implementación</span>
+      <h2 class="section-title" data-i18n="how_title">Operacional en 3 pasos</h2>
+      <p class="section-desc" data-i18n="how_desc">Sin instalaciones complejas. Sin meses de implementación. Tu flota, conectada y monitoreada desde el primer día.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card" data-reveal data-reveal-delay="1">
+        <div class="step-number">1</div>
+        <h3 data-i18n="step_1_title">Conecta tu flota</h3>
+        <p data-i18n="step_1_desc">Instala los dispositivos GPS compatibles en tus vehículos. Soportamos más de 900 modelos. Nuestro equipo te guía en cada paso.</p>
+      </div>
+      <div class="step-card" data-reveal data-reveal-delay="2">
+        <div class="step-number">2</div>
+        <h3 data-i18n="step_2_title">Configura tu ecosistema</h3>
+        <p data-i18n="step_2_desc">Activa las aplicaciones que necesitas, carga tu equipo de conductores, define zonas y alertas. La plataforma se adapta a tu operación.</p>
+      </div>
+      <div class="step-card" data-reveal data-reveal-delay="3">
+        <div class="step-number">3</div>
+        <h3 data-i18n="step_3_title">Controla y optimiza</h3>
+        <p data-i18n="step_3_desc">Monitorea en tiempo real, revisa reportes, recibe alertas y toma decisiones con datos reales. Tu operación siempre bajo control.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INDUSTRIES
+     ============================================================ -->
+<section class="section" id="industrias">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" data-i18n="ind_label">Sectores que atendemos</span>
+      <h2 class="section-title" data-i18n="ind_title">Soluciones para cada industria</h2>
+      <p class="section-desc" data-i18n="ind_desc">Appogio se adapta a las necesidades específicas de cada sector con configuraciones, módulos y reportes especializados.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card" data-reveal data-reveal-delay="1">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h4 data-i18n="ind_1_title">Logística y transporte</h4>
+        <p data-i18n="ind_1_desc">Control de rutas, tiempos de entrega, conductores y eficiencia de carga en operaciones de distribución a gran escala.</p>
+      </div>
+      <div class="industry-card" data-reveal data-reveal-delay="2">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-7 8 7v10"/><path d="M9 20v-6h6v6"/><path d="M12 3v4"/></svg></div>
+        <h4 data-i18n="ind_2_title">Construcción</h4>
+        <p data-i18n="ind_2_desc">Rastreo de maquinaria pesada, activos de obra y personal. Control de horas de operación y mantenimiento preventivo.</p>
+      </div>
+      <div class="industry-card" data-reveal data-reveal-delay="3">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="13" rx="2"/><path d="M5 6V4a1 1 0 011-1h12a1 1 0 011 1v2"/><circle cx="7" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/><path d="M5 12h14M9 12v4M15 12v4"/></svg></div>
+        <h4 data-i18n="ind_3_title">Transporte de pasajeros</h4>
+        <p data-i18n="ind_3_desc">Gestión de flotas de buses y taxis: rutas, conductores, inspecciones y cumplimiento de normativas de seguridad.</p>
+      </div>
+      <div class="industry-card" data-reveal data-reveal-delay="4">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h4 data-i18n="ind_4_title">Industria y manufactura</h4>
+        <p data-i18n="ind_4_desc">Control de flotas internas, rastreo de activos en planta y coordinación de despachos en entornos industriales.</p>
+      </div>
+      <div class="industry-card" data-reveal data-reveal-delay="1">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h4 data-i18n="ind_5_title">Última milla</h4>
+        <p data-i18n="ind_5_desc">Optimización de rutas de entrega, trazabilidad de paquetes y gestión de repartidores en operaciones de e-commerce.</p>
+      </div>
+      <div class="industry-card" data-reveal data-reveal-delay="2">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 0-4 4-4 9a4 4 0 008 0c0-5-4-9-4-9z"/><path d="M12 11v5M9 19h6"/><path d="M5 21h14"/></svg></div>
+        <h4 data-i18n="ind_6_title">Oil &amp; Gas</h4>
+        <p data-i18n="ind_6_desc">Monitoreo de vehículos en zonas remotas, control de combustible y cumplimiento de protocolos de seguridad en campo.</p>
+      </div>
+      <div class="industry-card" data-reveal data-reveal-delay="3">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><rect x="2" y="9" width="20" height="9" rx="1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M9 13h6M12 11v4"/></svg></div>
+        <h4 data-i18n="ind_7_title">Emergencias y salud</h4>
+        <p data-i18n="ind_7_desc">Despacho en tiempo real, trazabilidad de ambulancias e inspecciones médicas de vehículos de emergencia.</p>
+      </div>
+      <div class="industry-card" data-reveal data-reveal-delay="4">
+        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="13" rx="2"/><path d="M5 6V4a1 1 0 011-1h12a1 1 0 011 1v2"/><circle cx="7" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/><path d="M5 12h14"/><path d="M12 9v6"/></svg></div>
+        <h4 data-i18n="ind_8_title">Transporte escolar</h4>
+        <p data-i18n="ind_8_desc">Rutas de estudiantes, inspecciones de seguridad vehicular y notificaciones automáticas a padres y administradores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     METRICS & WHY APPOGIO
+     ============================================================ -->
+<section class="section metrics-section" style="background:var(--c-bg-2)">
+  <div class="container">
+    <div class="metrics-grid" data-reveal>
+      <div class="metric-card">
+        <div class="metric-value" data-counter data-target="10000" data-suffix="+">0</div>
+        <div class="metric-label" data-i18n="metric_1">Vehículos monitoreados</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" data-counter data-target="500" data-suffix="+">0</div>
+        <div class="metric-label" data-i18n="metric_2">Empresas activas</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" data-counter data-target="15" data-suffix="+">0</div>
+        <div class="metric-label" data-i18n="metric_3">Países de operación</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" data-counter data-target="99.9" data-suffix="%">0</div>
+        <div class="metric-label" data-i18n="metric_4">Uptime de la plataforma</div>
+      </div>
+    </div>
+    <div>
+      <span class="section-label" data-reveal data-i18n="why_label">¿Por qué Appogio?</span>
+      <h2 class="section-title" data-reveal data-i18n-html="why_title">Construido para escalar,<br>diseñado para operar</h2>
+      <div class="why-list">
+        <div class="why-item" data-reveal data-reveal-delay="1">
+          <div class="why-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <strong data-i18n="why_1_title">Seguridad de nivel empresarial</strong>
+            <p data-i18n="why_1_desc">Autenticación por token, conexiones HTTPS cifradas y control de acceso por roles en cada aplicación.</p>
+          </div>
+        </div>
+        <div class="why-item" data-reveal data-reveal-delay="2">
+          <div class="why-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <strong data-i18n="why_2_title">Integración total del ecosistema</strong>
+            <p data-i18n="why_2_desc">Todas las aplicaciones comparten datos de forma automática: inspecciones, conductores, vehículos y alertas siempre sincronizados.</p>
+          </div>
+        </div>
+        <div class="why-item" data-reveal data-reveal-delay="3">
+          <div class="why-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <strong data-i18n="why_3_title">Soporte humano, no bots</strong>
+            <p data-i18n="why_3_desc">Acompañamiento técnico real con tiempos de respuesta definidos y equipo especializado en operaciones de flota.</p>
+          </div>
+        </div>
+        <div class="why-item" data-reveal data-reveal-delay="4">
+          <div class="why-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <div>
+            <strong data-i18n="why_4_title">Adaptable a cualquier operación</strong>
+            <p data-i18n="why_4_desc">Configura plantillas de inspección, geocercas, alertas y reportes según las necesidades específicas de tu empresa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECURITY & COMPLIANCE
+     ============================================================ -->
+<section class="section security-section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label">Seguridad y confiabilidad</span>
+      <h2 class="section-title">Infraestructura de <span class="gradient-text">nivel empresarial</span></h2>
+      <p class="section-desc">Tu operación y la de tus clientes están protegidas con los más altos estándares de disponibilidad, cifrado y control de acceso.</p>
+    </div>
+
+    <div class="security-stats" data-reveal>
+      <div class="security-stat">
+        <div class="security-stat-value">99.9%</div>
+        <div class="security-stat-label">Uptime garantizado</div>
+        <div class="security-stat-desc">SLA con monitoreo 24/7 y redundancia de infraestructura</div>
+      </div>
+      <div class="security-stat">
+        <div class="security-stat-value">256-bit</div>
+        <div class="security-stat-label">Cifrado TLS</div>
+        <div class="security-stat-desc">Todas las conexiones protegidas con cifrado de nivel bancario</div>
+      </div>
+      <div class="security-stat">
+        <div class="security-stat-value">Tier 3</div>
+        <div class="security-stat-label">Data Centers</div>
+        <div class="security-stat-desc">Infraestructura alojada en centros de datos certificados globalmente</div>
+      </div>
+      <div class="security-stat">
+        <div class="security-stat-value">GDPR</div>
+        <div class="security-stat-label">Cumplimiento normativo</div>
+        <div class="security-stat-desc">Alineado con regulaciones internacionales de protección de datos</div>
+      </div>
+    </div>
+
+    <div class="security-features" data-reveal>
+      <div class="security-feat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Autenticación de doble factor (2FA)
+      </div>
+      <div class="security-feat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Backups automáticos diarios
+      </div>
+      <div class="security-feat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Control de acceso por roles (RBAC)
+      </div>
+      <div class="security-feat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Logs de auditoría completos
+      </div>
+      <div class="security-feat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        API REST con autenticación JWT
+      </div>
+      <div class="security-feat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Aislamiento total de datos por cliente
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS (ZONA PARA AGREGAR)
+     ============================================================ -->
+<section class="section" id="testimonios">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="section-label" data-i18n="test_label">Casos de éxito</span>
+      <h2 class="section-title" data-i18n="test_title">Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="apps-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="app-card" style="--app-color:#8840C8" data-reveal data-reveal-delay="1">
+        <div style="display:flex;gap:.75rem;align-items:center;margin-bottom:1.25rem">
+          <div style="width:48px;height:48px;border-radius:50%;background:var(--c-bg-card-2);border:1px dashed var(--c-border-2);display:flex;align-items:center;justify-content:center;color:var(--c-text-3);font-size:.7rem;font-weight:700">FOTO</div>
+          <div>
+            <div style="font-weight:700;font-size:.9rem" data-i18n="test_1_name">Nombre del Cliente</div>
+            <div style="font-size:.8rem;color:var(--c-text-3)" data-i18n="test_1_role">Gerente de Operaciones · Empresa A</div>
+          </div>
+        </div>
+        <p style="font-size:.95rem;font-style:italic;color:var(--c-text-2)" data-i18n="test_1_quote">"Desde que implementamos Appogio, redujimos el tiempo de inspecciones en un 60% y los incidentes en ruta bajaron considerablemente."</p>
+        <div style="display:flex;gap:.25rem;margin-top:1rem">
+          <span style="color:#F59E0B">★★★★★</span>
+        </div>
+      </div>
+      <div class="app-card" style="--app-color:#10B981" data-reveal data-reveal-delay="2">
+        <div style="display:flex;gap:.75rem;align-items:center;margin-bottom:1.25rem">
+          <div style="width:48px;height:48px;border-radius:50%;background:var(--c-bg-card-2);border:1px dashed var(--c-border-2);display:flex;align-items:center;justify-content:center;color:var(--c-text-3);font-size:.7rem;font-weight:700">FOTO</div>
+          <div>
+            <div style="font-weight:700;font-size:.9rem" data-i18n="test_2_name">Nombre del Cliente</div>
+            <div style="font-size:.8rem;color:var(--c-text-3)" data-i18n="test_2_role">Director de Flota · Empresa B</div>
+          </div>
+        </div>
+        <p style="font-size:.95rem;font-style:italic;color:var(--c-text-2)" data-i18n="test_2_quote">"La integración entre PilotOS y las inspecciones de InspectPro nos dio visibilidad completa de cada turno y cada conductor."</p>
+        <div style="display:flex;gap:.25rem;margin-top:1rem">
+          <span style="color:#F59E0B">★★★★★</span>
+        </div>
+      </div>
+      <div class="app-card" style="--app-color:#8B5CF6" data-reveal data-reveal-delay="3">
+        <div style="display:flex;gap:.75rem;align-items:center;margin-bottom:1.25rem">
+          <div style="width:48px;height:48px;border-radius:50%;background:var(--c-bg-card-2);border:1px dashed var(--c-border-2);display:flex;align-items:center;justify-content:center;color:var(--c-text-3);font-size:.7rem;font-weight:700">FOTO</div>
+          <div>
+            <div style="font-weight:700;font-size:.9rem" data-i18n="test_3_name">Nombre del Cliente</div>
+            <div style="font-size:.8rem;color:var(--c-text-3)" data-i18n="test_3_role">CEO · Empresa C</div>
+          </div>
+        </div>
+        <p style="font-size:.95rem;font-style:italic;color:var(--c-text-2)" data-i18n="test_3_quote">"CamFleet nos permitió resolver disputas con clientes en horas gracias a las grabaciones vehiculares. Una herramienta indispensable."</p>
+        <div style="display:flex;gap:.25rem;margin-top:1rem">
+          <span style="color:#F59E0B">★★★★★</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA SECTION
+     ============================================================ -->
+<section class="section cta-section" id="contacto-cta">
+  <div class="container">
+    <span class="section-label" style="justify-content:center;color:rgba(255,255,255,.7)" data-i18n="cta_label">Empieza hoy</span>
+    <h2 class="section-title" style="color:#FFFFFF" data-i18n-html="cta_title">¿Listo para transformar<br>tu operación?</h2>
+    <p style="color:rgba(255,255,255,.75)" data-i18n="cta_desc">Solicita una demostración gratuita y conoce cómo Appogio puede adaptarse a tu flota, sea de 5 o de 5,000 vehículos.</p>
+    <form class="cta-form" action="contacto.html" method="get">
+      <input type="email" class="cta-input" placeholder="tu@empresa.com" data-i18n-placeholder="cta_placeholder" required>
+      <button type="submit" class="btn btn-primary btn-lg" data-i18n="cta_btn">Solicitar Demo</button>
+    </form>
+    <p style="margin-top:1rem;font-size:.8rem;color:rgba(255,255,255,.45)" data-i18n="cta_footnote">Sin compromisos. Sin tarjeta de crédito. Respuesta en menos de 24 horas.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRESENCIA GLOBAL
+     ============================================================ -->
+<section class="section offices-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge" data-i18n="offices_badge">Presencia global</span>
+      <h2 data-i18n="offices_title">Oficinas en todo el mundo</h2>
+      <p data-i18n="offices_desc">Equipos locales listos para acompañar tu operación donde estés.</p>
+    </div>
+
+    <div class="offices-grid">
+
+      <div class="office-card office-hq">
+        <div class="office-badge" data-i18n="office_hq_badge">Sede Principal</div>
+        <div class="office-flag">🇬🇧</div>
+        <h4 data-i18n="office_london_name">Londres, Reino Unido</h4>
+        <p data-i18n-html="office_london_addr">1 Canada Square, Level 18<br>Canary Wharf, London E14 5AB</p>
+        <a href="tel:+442079460532">+44 20 7946 0532</a>
+      </div>
+
+      <div class="office-card">
+        <div class="office-flag">🇨🇴</div>
+        <h4 data-i18n="office_bogota_name">Bogotá, Colombia</h4>
+        <p data-i18n-html="office_bogota_addr">Calle 93 # 14-20, Oficina 302<br>Parque de la 93, Bogotá D.C.</p>
+        <a href="tel:+573052292372">+57 305 229 2372</a>
+      </div>
+
+      <div class="office-card">
+        <div class="office-flag">🇺🇸</div>
+        <h4 data-i18n="office_boston_name">Boston, EE.UU.</h4>
+        <p data-i18n-html="office_boston_addr">155 Federal Street, Suite 1800<br>Boston, MA 02110</p>
+        <a href="tel:+16175550184">+1 617 555 0184</a>
+      </div>
+
+      <div class="office-card">
+        <div class="office-flag">🇦🇷</div>
+        <h4 data-i18n="office_baires_name">Buenos Aires, Argentina</h4>
+        <p data-i18n-html="office_baires_addr">Av. del Libertador 2374, Piso 7<br>Buenos Aires C1425AAD</p>
+      </div>
+
+      <div class="office-card">
+        <div class="office-flag">🇫🇷</div>
+        <h4 data-i18n="office_paris_name">París, Francia</h4>
+        <p data-i18n-html="office_paris_addr">114 Av. des Champs-Élysées, Oficina 509<br>75008 París</p>
+        <a href="tel:+33187442109">+33 1 87 44 21 09</a>
+      </div>
+
+      <div class="office-card">
+        <div class="office-flag">🇷🇺</div>
+        <h4 data-i18n="office_moscow_name">Moscú, Rusia</h4>
+        <p data-i18n-html="office_moscow_addr">Novy Arbat 19, Piso 8<br>Moskva 119019</p>
+        <a href="tel:+74956412837">+7 495 641 2837</a>
+      </div>
+
+      <div class="office-card">
+        <div class="office-flag">🇦🇪</div>
+        <h4 data-i18n="office_dubai_name">Dubái, EAU</h4>
+        <p data-i18n-html="office_dubai_addr">Oficina 3407, Emirates Towers<br>Sheikh Zayed Road, Dubái</p>
+        <a href="tel:+97143881247">+971 4 388 1247</a>
+      </div>
+
+      <div class="office-card">
+        <div class="office-flag">🇰🇷</div>
+        <h4 data-i18n="office_seoul_name">Seúl, Corea del Sur</h4>
+        <p data-i18n-html="office_seoul_addr">322 Teheran-ro, Gangnam-gu<br>Seúl 06211</p>
+        <a href="tel:+82262529103">+82 2 6252 9103</a>
+      </div>
+
+      <div class="office-card">
+        <div class="office-flag">🇮🇳</div>
+        <h4 data-i18n="office_delhi_name">Nueva Delhi, India</h4>
+        <p data-i18n-html="office_delhi_addr">C-14 Connaught Place<br>Nueva Delhi 110001</p>
+        <a href="tel:+911140583726">+91 11 4058 3726</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:.5rem"><img src="assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a>
+        <p data-i18n="footer_desc">La plataforma inteligente que unifica el control de tu flota, conductores y activos en un solo ecosistema digital.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter/X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h6 data-i18n="footer_platform">Plataforma</h6>
+        <ul>
+          <li><a href="#features" data-i18n="footer_gps">Monitoreo GPS</a></li>
+          <li><a href="#features" data-i18n="footer_geo">Geocercas</a></li>
+          <li><a href="#features" data-i18n="footer_alerts">Alertas</a></li>
+          <li><a href="#features" data-i18n="footer_reports">Reportes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h6 data-i18n="footer_apps_h">Aplicaciones</h6>
+        <ul>
+          <li><a href="apps/driveiq.html">DriveIQ</a></li>
+          <li><a href="apps/inspectpro.html">InspectPro</a></li>
+          <li><a href="apps/pilotos.html">PilotOS</a></li>
+          <li><a href="apps/camfleet.html">CamFleet</a></li>
+          <li><a href="apps/tagradar.html">TagRadar</a></li>
+          <li><a href="apps/notice.html">Notice</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col">
+        <h6 data-i18n="footer_company">Empresa</h6>
+        <ul>
+          <li><a href="contacto.html" data-i18n="footer_contact">Contacto</a></li>
+          <li><a href="contacto.html" data-i18n="footer_support">Soporte</a></li>
+          <li><a href="contacto.html" data-i18n="footer_demo">Demo</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer_copyright">© 2025 Appogio. Todos los derechos reservados.</span>
+      <div class="footer-bottom-links">
+        <a href="#" data-i18n="footer_privacy">Privacidad</a>
+        <a href="#" data-i18n="footer_terms">Términos</a>
+        <a href="#" data-i18n="footer_cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING LANGUAGE SWITCHER (corner)
+     ============================================================ -->
+<a class="wa-float" href="https://wa.me/573052292372?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Appogio" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <div class="wa-float-btn">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.121 1.524 5.854L0 24l6.335-1.505A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.372l-.36-.213-3.728.885.939-3.63-.234-.373A9.818 9.818 0 1112 21.818z"/>
+    </svg>
+  </div>
+</a>
+<div class="lang-float" id="lang-float">
+  <div class="lang-float-menu" id="lang-float-menu">
+    <button class="lang-float-option" data-lang="es" data-flag-class="fi-es">
+      <span class="fi fi-es"></span>
+      <span>Español</span>
+    </button>
+    <button class="lang-float-option" data-lang="pt" data-flag-class="fi-br">
+      <span class="fi fi-br"></span>
+      <span>Português</span>
+    </button>
+    <button class="lang-float-option" data-lang="en" data-flag-class="fi-us">
+      <span class="fi fi-us"></span>
+      <span>English</span>
+    </button>
+  </div>
+  <button class="lang-float-btn" id="lang-float-trigger" aria-label="Cambiar idioma">
+    <span class="fi fi-es" id="float-flag"></span>
+  </button>
+</div>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

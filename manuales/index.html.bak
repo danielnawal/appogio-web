@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manuales y Documentación — Appogio</title>
+  <meta name="description" content="Documentación completa de todas las aplicaciones Appogio: guías de inicio, manuales de usuario y tutoriales paso a paso.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230EA5E9'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='900' font-size='18' fill='white'>A</text></svg>">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <style>
+    .search-highlight { background: rgba(14,165,233,.2); border-radius: 3px; padding: 0 2px; }
+    .manual-card { display: block; text-decoration: none; }
+    .manual-card:hover .manual-card-title { color: var(--c-text); }
+    .manual-card-title { font-size: 1.25rem; font-weight: 800; font-family: var(--font-head); margin-bottom: .375rem; color: var(--c-text); transition: var(--t-fast); }
+    .tag {
+      display: inline-flex;
+      padding: .2rem .6rem;
+      border-radius: 100px;
+      font-size: .7rem;
+      font-weight: 700;
+      background: rgba(255,255,255,.06);
+      color: var(--c-text-3);
+      margin-bottom: .875rem;
+    }
+    .section-tabs {
+      display: flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .section-tab {
+      padding: .5rem 1.25rem;
+      border-radius: 100px;
+      font-size: .825rem;
+      font-weight: 700;
+      border: 1.5px solid var(--c-border-2);
+      color: var(--c-text-2);
+      cursor: pointer;
+      transition: var(--t-fast);
+    }
+    .section-tab.active, .section-tab:hover {
+      border-color: var(--c-accent);
+      color: var(--c-accent);
+      background: var(--c-accent-glow);
+    }
+
+    /* ── Manual Drawer ── */
+    .manual-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      z-index: 9000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+    }
+    .manual-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .manual-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 480px;
+      max-width: 100vw;
+      background: #0F172A;
+      border-left: 1px solid rgba(255,255,255,.08);
+      z-index: 9001;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform .3s cubic-bezier(.4,0,.2,1);
+      overflow: hidden;
+    }
+    .manual-drawer.open {
+      transform: translateX(0);
+    }
+    .drawer-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.75rem 1.75rem 1.25rem;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      flex-shrink: 0;
+    }
+    .drawer-app-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .drawer-header-text { flex: 1; }
+    .drawer-app-name {
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--c-text-3);
+      margin-bottom: .25rem;
+    }
+    .drawer-topic-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      font-family: var(--font-head, system-ui);
+      color: #F1F5F9;
+      line-height: 1.3;
+    }
+    .drawer-close {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: none;
+      color: #94A3B8;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background .15s, color .15s;
+    }
+    .drawer-close:hover { background: rgba(255,255,255,.06); color: #F1F5F9; }
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.75rem;
+    }
+    .drawer-steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.25rem; }
+    .drawer-step {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      font-size: .8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: .05rem;
+      color: #fff;
+    }
+    .step-text {
+      font-size: .925rem;
+      line-height: 1.65;
+      color: #CBD5E1;
+      padding-top: .2rem;
+    }
+    .drawer-footer {
+      padding: 1.25rem 1.75rem;
+      border-top: 1px solid rgba(255,255,255,.07);
+      flex-shrink: 0;
+    }
+    .drawer-footer p {
+      font-size: .8rem;
+      color: var(--c-text-3);
+      margin: 0 0 .75rem;
+    }
+    .drawer-footer a {
+      font-size: .825rem;
+      font-weight: 700;
+      color: var(--c-accent, #0EA5E9);
+      text-decoration: none;
+    }
+    .drawer-footer a:hover { text-decoration: underline; }
+    @media (max-width: 520px) {
+      .manual-drawer { width: 100vw; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar scrolled">
+  <div class="container">
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a>
+    <div class="nav-links">
+      <a href="../index.html#features" class="nav-link">Plataforma</a>
+      <a href="../index.html#apps" class="nav-link">Aplicaciones</a>
+      <a href="index.html" class="nav-link" style="color:var(--c-text)">Manuales</a>
+      <a href="../contacto.html" class="nav-link">Contacto</a>
+    </div>
+    <div class="nav-cta"><a href="../contacto.html" class="btn btn-outline btn-sm">Solicitar Demo</a></div>
+    <button class="nav-mobile-toggle" aria-label="Menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="../index.html">Inicio</a><a href="../index.html#apps">Aplicaciones</a>
+  <a href="index.html">Manuales</a><a href="../contacto.html">Contacto</a>
+</div>
+
+<!-- Hero -->
+<section class="manuals-hero">
+  <div class="container">
+    <div data-reveal>
+      <span class="section-label" style="display:inline-flex">Documentación</span>
+      <h1>Manuales y <span class="gradient-text">Guías</span></h1>
+      <p style="font-size:1.125rem;color:var(--c-text-2);max-width:500px;margin:.75rem auto 0">Todo lo que necesitas para configurar, operar y sacar el máximo provecho de cada aplicación Appogio.</p>
+    </div>
+    <div class="manuals-search" data-reveal>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--c-text-3);flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" placeholder="Buscar en los manuales… (ej: &quot;firma digital&quot;, &quot;geocerca&quot;)" id="search-input" oninput="filterManuals(this.value)">
+    </div>
+  </div>
+</section>
+
+<!-- Tabs de categoría -->
+<section class="section" style="padding-top:3rem">
+  <div class="container">
+    <div class="section-tabs">
+      <button class="section-tab active" onclick="filterCategory('all', this)">Todos</button>
+      <button class="section-tab" onclick="filterCategory('plataforma', this)">Plataforma GPS</button>
+      <button class="section-tab" onclick="filterCategory('inspectpro', this)">InspectPro</button>
+      <button class="section-tab" onclick="filterCategory('driveiq', this)">DriveIQ</button>
+      <button class="section-tab" onclick="filterCategory('pilotos', this)">PilotOS</button>
+      <button class="section-tab" onclick="filterCategory('camfleet', this)">CamFleet</button>
+      <button class="section-tab" onclick="filterCategory('tagradar', this)">TagRadar</button>
+      <button class="section-tab" onclick="filterCategory('notice', this)">Notice</button>
+    </div>
+
+    <!-- Cards de manuales -->
+    <div class="manuals-grid" id="manuals-grid">
+
+      <!-- Plataforma GPS -->
+      <div class="manual-card" data-category="plataforma" id="plataforma">
+        <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-xl);padding:2rem;transition:var(--t-base)">
+          <div style="display:flex;align-items:center;gap:.875rem;margin-bottom:1.25rem">
+            <div style="width:48px;height:48px;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+            </div>
+            <div>
+              <div class="tag" style="color:#0EA5E9">Plataforma</div>
+              <div class="manual-card-title">Monitoreo GPS</div>
+            </div>
+          </div>
+          <div class="manual-sections">
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#0EA5E9" onclick="openManual('plataforma',0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Primeros pasos y configuración</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#0EA5E9" onclick="openManual('plataforma',1)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Agregar vehículos y dispositivos</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#0EA5E9" onclick="openManual('plataforma',2)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Configurar geocercas y alertas</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#0EA5E9" onclick="openManual('plataforma',3)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Generar reportes de recorridos</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#0EA5E9" onclick="openManual('plataforma',4)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Gestión de usuarios y permisos</a>
+          </div>
+          <a href="../contacto.html" class="app-card-link" style="--app-color:#0EA5E9">Ver manual completo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- InspectPro -->
+      <div class="manual-card" data-category="inspectpro" id="inspectpro">
+        <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-xl);padding:2rem;transition:var(--t-base)">
+          <div style="display:flex;align-items:center;gap:.875rem;margin-bottom:1.25rem">
+            <div style="width:48px;height:48px;border-radius:var(--radius);overflow:hidden;flex-shrink:0">
+              <img src="../assets/images/icons/inspectpro.png" width="48" height="48" alt="InspectPro" style="display:block;object-fit:cover;width:100%;height:100%">
+            </div>
+            <div>
+              <div class="tag" style="color:#3B82F6">Aplicación</div>
+              <div class="manual-card-title">InspectPro</div>
+            </div>
+          </div>
+          <div class="manual-sections">
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#3B82F6" onclick="openManual('inspectpro',0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Crear tu primera plantilla</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#3B82F6" onclick="openManual('inspectpro',1)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Completar inspecciones (conductor)</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#3B82F6" onclick="openManual('inspectpro',2)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Flujo de aprobación (supervisor)</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#3B82F6" onclick="openManual('inspectpro',3)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Firma digital y reporte PDF</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#3B82F6" onclick="openManual('inspectpro',4)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Dashboard de cumplimiento</a>
+          </div>
+          <a href="../apps/inspectpro.html" class="app-card-link" style="--app-color:#3B82F6">Ver página de InspectPro <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- DriveIQ -->
+      <div class="manual-card" data-category="driveiq" id="driveiq">
+        <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-xl);padding:2rem;transition:var(--t-base)">
+          <div style="display:flex;align-items:center;gap:.875rem;margin-bottom:1.25rem">
+            <div style="width:48px;height:48px;border-radius:var(--radius);overflow:hidden;flex-shrink:0">
+              <img src="../assets/images/icons/driveiq.svg" width="48" height="48" alt="DriveIQ" style="display:block;object-fit:cover;width:100%;height:100%">
+            </div>
+            <div>
+              <div class="tag" style="color:#F59E0B">Aplicación</div>
+              <div class="manual-card-title">DriveIQ</div>
+            </div>
+          </div>
+          <div class="manual-sections">
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#F59E0B" onclick="openManual('driveiq',0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Configurar análisis de conducción</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#F59E0B" onclick="openManual('driveiq',1)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Entender el score de conductor</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#F59E0B" onclick="openManual('driveiq',2)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Tipos de eventos registrados</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#F59E0B" onclick="openManual('driveiq',3)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Ranking y comparativas</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#F59E0B" onclick="openManual('driveiq',4)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Exportar reportes de comportamiento</a>
+          </div>
+          <a href="../apps/driveiq.html" class="app-card-link" style="--app-color:#F59E0B">Ver página de DriveIQ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- PilotOS -->
+      <div class="manual-card" data-category="pilotos" id="pilotos">
+        <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-xl);padding:2rem;transition:var(--t-base)">
+          <div style="display:flex;align-items:center;gap:.875rem;margin-bottom:1.25rem">
+            <div style="width:48px;height:48px;border-radius:var(--radius);overflow:hidden;flex-shrink:0">
+              <img src="../assets/images/icons/pilotos.png" width="48" height="48" alt="PilotOS" style="display:block;object-fit:cover;width:100%;height:100%">
+            </div>
+            <div>
+              <div class="tag" style="color:#8B5CF6">Aplicación</div>
+              <div class="manual-card-title">PilotOS</div>
+            </div>
+          </div>
+          <div class="manual-sections">
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#8B5CF6" onclick="openManual('pilotos',0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Registrar un conductor</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#8B5CF6" onclick="openManual('pilotos',1)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Check-in y check-out por QR</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#8B5CF6" onclick="openManual('pilotos',2)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Gestionar documentos y vencimientos</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#8B5CF6" onclick="openManual('pilotos',3)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Enviar mensajes a conductores</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#8B5CF6" onclick="openManual('pilotos',4)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Reportes de asistencia y turnos</a>
+          </div>
+          <a href="../apps/pilotos.html" class="app-card-link" style="--app-color:#8B5CF6">Ver página de PilotOS <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- CamFleet -->
+      <div class="manual-card" data-category="camfleet" id="camfleet">
+        <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-xl);padding:2rem;transition:var(--t-base)">
+          <div style="display:flex;align-items:center;gap:.875rem;margin-bottom:1.25rem">
+            <div style="width:48px;height:48px;border-radius:var(--radius);overflow:hidden;flex-shrink:0">
+              <img src="../assets/images/icons/camfleet.svg" width="48" height="48" alt="CamFleet" style="display:block;object-fit:cover;width:100%;height:100%">
+            </div>
+            <div>
+              <div class="tag" style="color:#EF4444">Aplicación</div>
+              <div class="manual-card-title">CamFleet</div>
+            </div>
+          </div>
+          <div class="manual-sections">
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#EF4444" onclick="openManual('camfleet',0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Instalar y configurar cámaras</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#EF4444" onclick="openManual('camfleet',1)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Ver streaming en vivo</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#EF4444" onclick="openManual('camfleet',2)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Reproducir y descargar grabaciones</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#EF4444" onclick="openManual('camfleet',3)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Configurar alertas de eventos</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#EF4444" onclick="openManual('camfleet',4)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Exportar evidencia con metadatos</a>
+          </div>
+          <a href="../apps/camfleet.html" class="app-card-link" style="--app-color:#EF4444">Ver página de CamFleet <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- TagRadar -->
+      <div class="manual-card" data-category="tagradar" id="tagradar">
+        <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-xl);padding:2rem;transition:var(--t-base)">
+          <div style="display:flex;align-items:center;gap:.875rem;margin-bottom:1.25rem">
+            <div style="width:48px;height:48px;border-radius:var(--radius);overflow:hidden;flex-shrink:0">
+              <img src="../assets/images/icons/tagradar.svg" width="48" height="48" alt="TagRadar" style="display:block;object-fit:cover;width:100%;height:100%">
+            </div>
+            <div>
+              <div class="tag" style="color:#10B981">Aplicación</div>
+              <div class="manual-card-title">TagRadar</div>
+            </div>
+          </div>
+          <div class="manual-sections">
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#10B981" onclick="openManual('tagradar',0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Registrar activos y asignar tags</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#10B981" onclick="openManual('tagradar',1)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Configurar lectores BLE</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#10B981" onclick="openManual('tagradar',2)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Crear zonas y geocercas de activos</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#10B981" onclick="openManual('tagradar',3)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Alertas de salida y batería baja</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#10B981" onclick="openManual('tagradar',4)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Reportes de utilización</a>
+          </div>
+          <a href="../apps/tagradar.html" class="app-card-link" style="--app-color:#10B981">Ver página de TagRadar <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Notice -->
+      <div class="manual-card" data-category="notice" id="notice">
+        <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-xl);padding:2rem;transition:var(--t-base)">
+          <div style="display:flex;align-items:center;gap:.875rem;margin-bottom:1.25rem">
+            <div style="width:48px;height:48px;border-radius:var(--radius);overflow:hidden;flex-shrink:0">
+              <img src="../assets/images/icons/notice.png" width="48" height="48" alt="Notice" style="display:block;object-fit:cover;width:100%;height:100%">
+            </div>
+            <div>
+              <div class="tag" style="color:#06B6D4">Aplicación</div>
+              <div class="manual-card-title">Notice</div>
+            </div>
+          </div>
+          <div class="manual-sections">
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#06B6D4" onclick="openManual('notice',0)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Conectar WhatsApp Business</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#06B6D4" onclick="openManual('notice',1)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Crear reglas de alerta GPS</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#06B6D4" onclick="openManual('notice',2)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Enviar mensajes masivos</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#06B6D4" onclick="openManual('notice',3)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Crear plantillas de mensajes</a>
+            <a href="javascript:void(0)" class="manual-section-link" style="--app-color:#06B6D4" onclick="openManual('notice',4)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>Revisar historial de envíos</a>
+          </div>
+          <a href="../apps/notice.html" class="app-card-link" style="--app-color:#06B6D4">Ver página de Notice <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+    </div><!-- /manuals-grid -->
+
+    <!-- No encuentras lo que buscas -->
+    <div style="background:var(--c-bg-card);border:1px solid var(--c-border);border-radius:var(--radius-xl);padding:3rem;text-align:center;margin-top:3rem" data-reveal>
+      <div style="width:48px;height:48px;background:rgba(14,165,233,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      </div>
+      <h3 style="margin-bottom:.625rem">¿No encuentras lo que buscas?</h3>
+      <p style="max-width:440px;margin:0 auto 1.75rem">Nuestro equipo de soporte responde en menos de 4 horas hábiles. También puedes contactarnos directamente.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="../contacto.html" class="btn btn-primary">Contactar soporte</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:0;border-top:none">
+      <a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a>
+      <span style="font-size:.825rem;color:var(--c-text-3)">© 2025 Appogio. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Manual Drawer ── -->
+<div class="manual-overlay" id="manual-overlay" onclick="closeManual()"></div>
+<div class="manual-drawer" id="manual-drawer" role="dialog" aria-modal="true">
+  <div class="drawer-header">
+    <div class="drawer-app-icon" id="drawer-icon"></div>
+    <div class="drawer-header-text">
+      <div class="drawer-app-name" id="drawer-app-name"></div>
+      <div class="drawer-topic-title" id="drawer-topic-title"></div>
+    </div>
+    <button class="drawer-close" onclick="closeManual()" aria-label="Cerrar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body">
+    <ol class="drawer-steps" id="drawer-steps"></ol>
+  </div>
+  <div class="drawer-footer">
+    <p>¿Necesitas ayuda adicional con este tema?</p>
+    <a href="../contacto.html">Contactar a soporte técnico &rarr;</a>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script>
+/* ── Manual content ── */
+const MANUALS = {
+  plataforma: {
+    name: 'Monitoreo GPS',
+    color: '#0EA5E9',
+    icon: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>',
+    topics: [
+      { title: 'Primeros pasos y configuración', steps: ['Inicia sesión en el panel con las credenciales que te proporcionó Appogio.','Desde el menú principal, selecciona "Configuración" > "Cuenta" y completa el perfil de tu empresa.','Ve a "Dispositivos" y haz clic en "Agregar dispositivo". Ingresa el IMEI o serial del tracker GPS.','Asigna el dispositivo a un vehículo existente o crea uno nuevo con placa, marca y modelo.','Guarda los cambios. El vehículo aparecerá en el mapa dentro de los siguientes 2–5 minutos al recibir señal.','Activa las notificaciones por correo en "Configuración" > "Alertas" para recibir avisos en tiempo real.'] },
+      { title: 'Agregar vehículos y dispositivos', steps: ['Dirígete a "Vehículos" en el menú lateral y haz clic en el botón "+ Nuevo vehículo".','Completa los campos: placa, alias, marca, modelo, año y tipo de vehículo.','En el campo "Dispositivo GPS", selecciona el tracker ya registrado o ingresa su IMEI para asociarlo.','Opcionalmente agrega foto del vehículo, número de motor y capacidad de combustible.','Guarda. El vehículo quedará activo y visible en el mapa cuando el dispositivo envíe su primera posición.','Para carga masiva, usa "Importar" y descarga la plantilla Excel con el formato requerido.'] },
+      { title: 'Configurar geocercas y alertas', steps: ['Abre la sección "Geocercas" desde el menú y haz clic en "+ Nueva geocerca".','En el mapa, dibuja la zona usando la herramienta de polígono o círculo. También puedes buscar por dirección.','Asigna un nombre descriptivo a la geocerca (ej: "Bodega Central", "Zona Restringida Norte").','Selecciona los vehículos o grupos a los que aplica esta geocerca.','Activa las alertas deseadas: "Entrada", "Salida", o ambas. Define si se envía por email, SMS o push.','Guarda. Desde ese momento recibirás notificaciones automáticas cada vez que un vehículo cruce esa zona.'] },
+      { title: 'Generar reportes de recorridos', steps: ['Ve a "Reportes" en el menú principal y selecciona "Recorridos".','Elige el vehículo o grupo de vehículos que quieres analizar.','Define el rango de fechas: puedes seleccionar día, semana, mes o un rango personalizado.','Haz clic en "Generar". Verás la ruta en el mapa y una tabla con paradas, distancias y tiempos.','Usa los filtros de "Paradas" para ver cuánto tiempo estuvo detenido cada vehículo y en qué ubicación.','Exporta el reporte en PDF o Excel con el botón "Descargar" en la parte superior del resultado.'] },
+      { title: 'Gestión de usuarios y permisos', steps: ['Ve a "Configuración" > "Usuarios" y haz clic en "+ Nuevo usuario".','Ingresa el nombre, correo electrónico y número de teléfono del usuario.','Selecciona el rol: Administrador (acceso total), Supervisor (solo lectura de grupos asignados) u Operador.','Si el rol es Supervisor, asigna los grupos de vehículos que podrá ver.','El usuario recibirá un correo con instrucciones para crear su contraseña.','Puedes suspender o eliminar usuarios en cualquier momento desde esta misma pantalla.'] }
+    ]
+  },
+  inspectpro: {
+    name: 'InspectPro',
+    color: '#3B82F6',
+    icon: '<img src="../assets/images/icons/inspectpro.png" width="44" height="44" alt="InspectPro" style="display:block;border-radius:10px;object-fit:cover">',
+    topics: [
+      { title: 'Crear tu primera plantilla', steps: ['Ingresa a InspectPro desde el panel de Appogio y ve a "Plantillas" > "+ Nueva plantilla".','Escribe el nombre de la plantilla (ej: "Inspección Pre-viaje") y selecciona el tipo de vehículo al que aplica.','Agrega secciones (ej: Motor, Frenos, Iluminación) usando el botón "+ Sección".','Dentro de cada sección, agrega ítems usando "+ Ítem". Define el tipo: checkbox, foto, texto o firma.','Marca como "Obligatorio" los ítems críticos. Si un conductor los omite, la inspección no podrá enviarse.','Activa la plantilla con el botón "Publicar". Los conductores la verán desde su app de inmediato.'] },
+      { title: 'Completar inspecciones (conductor)', steps: ['Abre la app InspectPro en tu celular. Las inspecciones pendientes aparecen en la pantalla principal.','Selecciona la plantilla que corresponde al vehículo que vas a inspeccionar.','Completa cada sección de manera ordenada. Para ítems de foto, toca el icono de cámara y toma la imagen.','Si encuentras una falla, selecciona "No conforme" y agrega una nota descriptiva con foto de evidencia.','Al terminar, revisa el resumen y toca "Enviar inspección". Se pedirá tu firma digital antes de enviar.','Recibirás una confirmación y el supervisor será notificado automáticamente para revisión.'] },
+      { title: 'Flujo de aprobación (supervisor)', steps: ['El supervisor recibe una notificación push o email cuando un conductor envía una inspección.','Abre la inspección desde la app o desde el panel web de InspectPro.','Revisa cada sección. Los ítems marcados como "No conforme" aparecen destacados en rojo.','Si todo está correcto, toca "Aprobar" y agrega tu firma digital. Se genera el PDF automáticamente.','Si hay observaciones, selecciona "Requiere corrección", agrega un comentario y el conductor recibirá la notificación.','El historial completo de aprobaciones queda registrado con fecha, hora y firma de cada parte.'] },
+      { title: 'Firma digital y reporte PDF', steps: ['La firma digital se solicita al conductor al enviar la inspección y al supervisor al aprobar.','El campo de firma aparece como un canvas en blanco donde se firma directamente con el dedo o stylus.','Una vez firmada, la firma queda vinculada de manera permanente a esa inspección.','El PDF se genera automáticamente al completarse el flujo de aprobación.','El PDF incluye: datos del vehículo, inspector, supervisor, fotos de evidencia, firmas y fecha/hora.','Puedes descargar el PDF desde el panel web en "Inspecciones" > selecciona la inspección > "Descargar PDF".'] },
+      { title: 'Dashboard de cumplimiento', steps: ['Accede al Dashboard desde el menú principal de InspectPro.','El dashboard muestra el porcentaje de cumplimiento por vehículo, conductor y periodo de tiempo.','El indicador "Tasa de conformidad" muestra qué porcentaje de inspecciones no tienen ítems fallidos.','Filtra por fecha, supervisor, conductor o tipo de plantilla para análisis específicos.','El gráfico de tendencias muestra la evolución del cumplimiento semana a semana.','Exporta el dashboard en PDF para presentaciones o reportes de auditoría.'] }
+    ]
+  },
+  driveiq: {
+    name: 'DriveIQ',
+    color: '#F59E0B',
+    icon: '<img src="../assets/images/icons/driveiq.svg" width="44" height="44" alt="DriveIQ" style="display:block;border-radius:10px;object-fit:cover">',
+    topics: [
+      { title: 'Configurar análisis de conducción', steps: ['Ve a DriveIQ en el panel de Appogio y accede a "Configuración de análisis".','Define los umbrales: velocidad máxima permitida, fuerza de frenada brusca y aceleración brusca.','Activa o desactiva el monitoreo de ralentí excesivo y establece el tiempo mínimo de ralentí a registrar.','Asigna grupos de vehículos al módulo DriveIQ. Solo los vehículos en estos grupos serán analizados.','Define el periodo de cálculo del score: diario, semanal o mensual según tu operación.','Guarda y activa. DriveIQ comenzará a procesar los datos del GPS en tiempo real.'] },
+      { title: 'Entender el score de conductor', steps: ['El score DriveIQ va de 0 a 100 puntos. Un conductor con 100 tiene conducción perfecta.','Se descuentan puntos por cada evento de riesgo: exceso de velocidad, frenada brusca, aceleración brusca y ralentí.','Cada categoría tiene un peso configurable. Por defecto: velocidad 40%, frenadas 30%, aceleración 20%, ralentí 10%.','El score se recalcula automáticamente al finalizar cada jornada o según el periodo configurado.','Un score menor a 60 genera una alerta automática al supervisor del conductor.','Consulta el score individual en "Conductores" > nombre del conductor > pestaña "DriveIQ".'] },
+      { title: 'Tipos de eventos registrados', steps: ['Exceso de velocidad: se registra cuando el vehículo supera el umbral configurado por más de 5 segundos.','Frenada brusca: detectada cuando la desaceleración supera 0.4g en menos de 2 segundos.','Aceleración brusca: cuando la aceleración supera 0.4g desde velocidad baja o parada.','Ralentí excesivo: motor encendido sin movimiento por más del tiempo configurado (por defecto 10 minutos).','Uso fuera de horario: movimiento del vehículo fuera del horario de operación definido.','Todos los eventos se almacenan con coordenadas GPS, velocidad real, fecha y hora exacta.'] },
+      { title: 'Ranking y comparativas', steps: ['Ve a "Ranking" en el menú de DriveIQ para ver la tabla comparativa de todos los conductores.','El ranking se ordena por score de mayor a menor. Los conductores con mejor comportamiento aparecen primero.','Puedes filtrar el ranking por grupo de vehículos, periodo de tiempo o tipo de evento.','El gráfico de comparativa muestra side-by-side los eventos de dos conductores seleccionados.','Usa los datos del ranking para reconocer a los mejores conductores e identificar los que necesitan capacitación.','Exporta el ranking completo en Excel para compartirlo en reuniones de operaciones.'] },
+      { title: 'Exportar reportes de comportamiento', steps: ['Ve a "Reportes" > "Comportamiento vial" en DriveIQ.','Selecciona el conductor o grupo de conductores a incluir en el reporte.','Define el rango de fechas. Puedes seleccionar periodos predefinidos o un rango personalizado.','El reporte incluye: score, número de eventos por tipo, mapa de eventos y tendencia de mejora.','Haz clic en "Generar reporte" y espera la preview en pantalla.','Descarga en PDF para auditorías o en Excel para análisis adicional. Puedes programar el envío automático por email.'] }
+    ]
+  },
+  pilotos: {
+    name: 'PilotOS',
+    color: '#8B5CF6',
+    icon: '<img src="../assets/images/icons/pilotos.png" width="44" height="44" alt="PilotOS" style="display:block;border-radius:10px;object-fit:cover">',
+    topics: [
+      { title: 'Registrar un conductor', steps: ['Accede a PilotOS desde el panel de Appogio y ve a "Conductores" > "+ Nuevo conductor".','Completa los datos personales: nombre completo, número de identificación, teléfono y correo electrónico.','Sube una foto de perfil del conductor (JPG o PNG, mínimo 200×200 px).','Ingresa los datos de la licencia: número, categoría, fecha de vencimiento y país emisor.','Opcionalmente agrega documentos adicionales: certificado médico, seguro, etc. con sus fechas de vencimiento.','Guarda. El conductor recibirá sus credenciales por correo para acceder a la app PilotOS.'] },
+      { title: 'Check-in y check-out por QR', steps: ['El conductor abre la app PilotOS en su celular e inicia sesión con sus credenciales.','En la pantalla principal toca "Check-in". La app solicitará acceso a la cámara.','El conductor escanea el código QR del vehículo que está en el tablero o puerta.','Se registra automáticamente: conductor, vehículo, hora, fecha y ubicación GPS del check-in.','Al terminar su turno, el conductor toca "Check-out" y escanea nuevamente el código QR.','El supervisor ve el registro en tiempo real en el panel PilotOS con duración del turno y km recorridos.'] },
+      { title: 'Gestionar documentos y vencimientos', steps: ['En el perfil del conductor, ve a la pestaña "Documentos".','Haz clic en "+ Agregar documento". Selecciona el tipo (licencia, médico, seguro, etc.).','Sube el archivo PDF o imagen del documento y especifica la fecha de vencimiento.','Configura con cuántos días de anticipación quieres recibir la alerta de vencimiento (ej: 30, 15 y 5 días).','PilotOS enviará notificaciones automáticas al conductor y al supervisor cuando se acerque el vencimiento.','Los documentos vencidos se marcan en rojo y el sistema puede bloquear el check-in del conductor.'] },
+      { title: 'Enviar mensajes a conductores', steps: ['Ve a "Mensajes" en el panel de PilotOS y haz clic en "+ Nuevo mensaje".','Selecciona el destinatario: un conductor específico, un grupo o todos los activos.','Escribe el mensaje. Puedes incluir texto, una imagen adjunta o un PDF.','El mensaje llegará como notificación push a la app PilotOS del conductor.','El conductor puede responder desde la app. La respuesta aparece en el hilo de mensajes del panel.','Todos los mensajes quedan registrados con fecha, hora y estado de lectura.'] },
+      { title: 'Reportes de asistencia y turnos', steps: ['Ve a "Reportes" > "Asistencia y turnos" en PilotOS.','Selecciona el conductor, grupo o toda la flota.','Define el periodo: semana, mes o rango de fechas personalizado.','El reporte muestra: días trabajados, horas por turno, vehículos conducidos y km recorridos.','La columna "Puntualidad" indica si el check-in se realizó dentro del horario programado.','Exporta en Excel para integración con nómina o en PDF para reportes de RRHH.'] }
+    ]
+  },
+  camfleet: {
+    name: 'CamFleet',
+    color: '#EF4444',
+    icon: '<img src="../assets/images/icons/camfleet.svg" width="44" height="44" alt="CamFleet" style="display:block;border-radius:10px;object-fit:cover">',
+    topics: [
+      { title: 'Instalar y configurar cámaras', steps: ['Conecta la cámara vehicular al cableado de energía del vehículo y asegúrate de que el LED de estado esté activo.','En el panel de CamFleet ve a "Dispositivos" > "+ Agregar cámara".','Ingresa el IMEI o ID del dispositivo (lo encuentras en la etiqueta posterior de la cámara).','Asigna la cámara a un vehículo existente y define la posición: frontal, trasera, cabina o lateral.','Configura el modo de grabación: continua, por eventos o por horario definido.','La cámara aparecerá en el listado. El indicador verde confirma que está en línea y enviando datos.'] },
+      { title: 'Ver streaming en vivo', steps: ['Ve a "Live" o "En vivo" en el menú de CamFleet.','Verás el listado de vehículos con cámaras activas. El punto verde indica que están en línea.','Haz clic en el vehículo para abrir la vista de streaming. El video comienza en segundos.','Si el vehículo tiene múltiples cámaras, usa las pestañas superiores para cambiar entre canales.','Puedes abrir hasta 4 streams simultáneos en la vista de mosaico para monitoreo en paralelo.','Para dispositivos móviles, usa la app CamFleet o cualquier navegador compatible con HLS.'] },
+      { title: 'Reproducir y descargar grabaciones', steps: ['Ve a "Grabaciones" en CamFleet y selecciona el vehículo y la cámara.','Elige el rango de fechas y horas que quieres revisar.','El sistema mostrará la línea de tiempo con los segmentos disponibles. Los eventos aparecen marcados.','Haz clic en el segmento que quieres reproducir. La reproducción inicia en el navegador.','Para descargar, selecciona el clip, define el intervalo exacto (de X a Y) y haz clic en "Descargar clip".','El archivo se descargará en formato MP4 con metadatos: fecha, hora, velocidad y coordenadas GPS.'] },
+      { title: 'Configurar alertas de eventos', steps: ['Ve a "Alertas" en CamFleet y haz clic en "+ Nueva alerta".','Selecciona el tipo de evento: frenada brusca, conductor sin cinturón, somnolencia o uso de celular.','Elige el vehículo o grupo al que aplica la alerta.','Define el canal de notificación: push a la app, email al supervisor, o mensaje WhatsApp.','Activa si quieres que se adjunte automáticamente el clip de video al momento del evento.','Guarda. Las alertas comenzarán a dispararse en tiempo real cuando la cámara detecte el evento.'] },
+      { title: 'Exportar evidencia con metadatos', steps: ['Ve a "Grabaciones" y localiza el clip que necesitas exportar como evidencia.','Haz clic en "Exportar con metadatos" en lugar del botón de descarga estándar.','El sistema generará un MP4 con overlay visible de: fecha/hora, velocidad, coordenadas GPS y conductor.','Adicionalmente se genera un PDF con la cadena de custodia del archivo y su hash SHA-256.','Estos archivos son admisibles como evidencia digital en procesos legales o ante aseguradoras.','Puedes compartirlos directamente por email desde la plataforma seleccionando "Enviar por correo".'] }
+    ]
+  },
+  tagradar: {
+    name: 'TagRadar',
+    color: '#10B981',
+    icon: '<img src="../assets/images/icons/tagradar.svg" width="44" height="44" alt="TagRadar" style="display:block;border-radius:10px;object-fit:cover">',
+    topics: [
+      { title: 'Registrar activos y asignar tags', steps: ['Accede a TagRadar desde el panel de Appogio y ve a "Activos" > "+ Nuevo activo".','Ingresa el nombre del activo (ej: "Generador #4"), tipo y descripción.','Enciende el tag BLE y espera que aparezca en la lista de "Tags disponibles". Selecciónalo.','Asigna el tag al activo. El sistema registrará el ID único del tag y lo vinculará permanentemente.','Agrega una foto del activo y el número de serie o código interno de tu inventario.','El activo quedará rastreado. Su ubicación se actualizará cada vez que un lector BLE lo detecte.'] },
+      { title: 'Configurar lectores BLE', steps: ['Conecta el lector BLE a energía (220V o PoE) en la ubicación donde quieres cubrir detección.','En TagRadar ve a "Infraestructura" > "Lectores" > "+ Nuevo lector".','Ingresa el MAC address del lector (en la etiqueta del dispositivo) y un nombre descriptivo.','Define la ubicación del lector en el mapa o ingresa latitud/longitud manualmente.','Configura el radio de detección estimado en metros según las condiciones del lugar.','El lector aparecerá activo en el mapa. Los activos en su rango se registrarán automáticamente.'] },
+      { title: 'Crear zonas y geocercas de activos', steps: ['Ve a "Zonas" en TagRadar y haz clic en "+ Nueva zona".','Dibuja la zona en el mapa o asigna uno o más lectores BLE como delimitadores de la zona.','Ponle un nombre descriptivo a la zona (ej: "Taller mecánico", "Almacén Norte").','Define qué activos deben estar en esa zona. Los que salgan sin autorización dispararán alertas.','Activa las alertas de entrada y salida con el canal preferido (push, email o WhatsApp).','La zona quedará activa y recibirás notificaciones cuando un activo entre o salga sin autorización.'] },
+      { title: 'Alertas de salida y batería baja', steps: ['Ve a "Alertas" en TagRadar y revisa las alertas predefinidas disponibles.','La alerta "Salida de zona" se activa cuando un activo cruza el límite de su zona asignada.','La alerta "Batería baja" se activa cuando la batería del tag BLE baja del 20%.','La alerta "No detectado" se activa si un activo lleva más de X horas sin ser visto por ningún lector.','Para cada alerta, define el canal: notificación push, email al responsable, o SMS.','Puedes crear alertas personalizadas combinando condiciones en "Alertas" > "+ Alerta avanzada".'] },
+      { title: 'Reportes de utilización', steps: ['Ve a "Reportes" > "Utilización de activos" en TagRadar.','Selecciona el activo o grupo de activos a analizar.','Define el periodo de tiempo. El reporte mostrará en qué zonas estuvo el activo y por cuánto tiempo.','El indicador "Tiempo activo" muestra cuántas horas el activo fue detectado vs. tiempo fuera de zona.','El gráfico de movimientos muestra los desplazamientos entre zonas durante el periodo seleccionado.','Exporta en Excel para cruce con inventario o en PDF para auditorías de activos.'] }
+    ]
+  },
+  notice: {
+    name: 'Notice',
+    color: '#06B6D4',
+    icon: '<img src="../assets/images/icons/notice.png" width="44" height="44" alt="Notice" style="display:block;border-radius:10px;object-fit:cover">',
+    topics: [
+      { title: 'Conectar WhatsApp Business', steps: ['En Notice ve a "Configuración" > "Canales" > "WhatsApp Business".','Haz clic en "Conectar cuenta". Se abrirá una pantalla con un código QR.','Desde tu celular, abre WhatsApp Business, ve a "Dispositivos vinculados" y escanea el código QR.','La conexión se confirma con un indicador verde y el número de teléfono vinculado.','Configura el horario de atención automática y el mensaje de bienvenida para horarios fuera de servicio.','Una vez conectado, todas las alertas GPS y mensajes enviados desde Notice usarán este número.'] },
+      { title: 'Crear reglas de alerta GPS', steps: ['Ve a "Reglas de alerta" en Notice y haz clic en "+ Nueva regla".','Selecciona el tipo de evento GPS que dispara la alerta: exceso de velocidad, salida de geocerca, motor apagado, etc.','Define a quién se notifica: conductor del vehículo, supervisor asignado, o número WhatsApp específico.','Escribe el mensaje de alerta. Puedes usar variables dinámicas como {vehiculo}, {velocidad}, {ubicacion}.','Activa la regla y selecciona los vehículos o grupos a los que aplica.','Desde ese momento, cada vez que ocurra el evento, Notice enviará el mensaje automáticamente por WhatsApp.'] },
+      { title: 'Enviar mensajes masivos', steps: ['Ve a "Mensajes" > "Nuevo mensaje masivo" en Notice.','Selecciona la audiencia: todos los conductores, un grupo específico, o filtra por vehículo o ruta.','Escribe el mensaje. Puedes personalizar con el nombre del conductor usando la variable {nombre}.','Adjunta una imagen o PDF si necesitas incluir documentos (reglamento, ruta del día, etc.).','Revisa la preview del mensaje y la lista de destinatarios antes de enviar.','Haz clic en "Enviar". Recibirás un reporte de entrega mostrando cuántos mensajes fueron recibidos.'] },
+      { title: 'Crear plantillas de mensajes', steps: ['Ve a "Plantillas" en Notice y haz clic en "+ Nueva plantilla".','Asigna un nombre interno a la plantilla (ej: "Alerta velocidad", "Recordatorio ruta").','Escribe el contenido usando variables: {conductor}, {vehiculo}, {placa}, {velocidad}, {ubicacion}, {hora}.','Define el tipo: alerta automática o mensaje manual. Las automáticas se vinculan a reglas de eventos.','Guarda la plantilla. Estará disponible al redactar mensajes o configurar reglas.','Puedes duplicar plantillas existentes para crear variaciones rápidamente.'] },
+      { title: 'Revisar historial de envíos', steps: ['Ve a "Historial" en Notice para ver todos los mensajes enviados.','Filtra por fecha, canal (WhatsApp, push, email), destinatario o estado (entregado, fallido, pendiente).','Haz clic en cualquier mensaje para ver el contenido exacto enviado y el estado de entrega.','La columna "Leído" indica si el destinatario abrió el mensaje (cuando el canal lo soporta).','En la pestaña "Estadísticas" verás la tasa de entrega y apertura por periodo y tipo de mensaje.','Exporta el historial en CSV para reportes de comunicación o auditorías de cumplimiento.'] }
+    ]
+  }
+};
+
+/* ── Drawer logic ── */
+function openManual(appKey, topicIndex) {
+  const app = MANUALS[appKey];
+  if (!app) return;
+  const topic = app.topics[topicIndex];
+  if (!topic) return;
+
+  const overlay = document.getElementById('manual-overlay');
+  const drawer  = document.getElementById('manual-drawer');
+  const icon    = document.getElementById('drawer-icon');
+  const appName = document.getElementById('drawer-app-name');
+  const title   = document.getElementById('drawer-topic-title');
+  const steps   = document.getElementById('drawer-steps');
+
+  icon.style.background = '';
+  icon.style.border = '';
+  icon.innerHTML = app.icon;
+
+  appName.textContent = app.name;
+  title.textContent   = topic.title;
+
+  steps.innerHTML = topic.steps.map((s, i) =>
+    `<li class="drawer-step">
+      <span class="step-num" style="background:${app.color}">${i + 1}</span>
+      <span class="step-text">${s}</span>
+    </li>`
+  ).join('');
+
+  drawer.scrollTop = 0;
+  overlay.classList.add('open');
+  drawer.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeManual() {
+  document.getElementById('manual-overlay').classList.remove('open');
+  document.getElementById('manual-drawer').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeManual();
+});
+
+/* ── Category + search filter ── */
+function filterCategory(cat, btn) {
+  document.querySelectorAll('.section-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#manuals-grid .manual-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.category === cat) ? '' : 'none';
+  });
+}
+
+function filterManuals(query) {
+  const q = query.toLowerCase().trim();
+  document.querySelectorAll('#manuals-grid .manual-card').forEach(card => {
+    card.style.display = (!q || card.textContent.toLowerCase().includes(q)) ? '' : 'none';
+  });
+}
+
+/* ── Scroll to anchor from URL hash ── */
+if (location.hash) {
+  const el = document.getElementById(location.hash.slice(1));
+  if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'center' }), 400);
+}
+</script>
+</body>
+</html>

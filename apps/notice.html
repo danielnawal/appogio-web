@@ -5,31 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notice — Comunicación y Alertas para Flotas | Appogio</title>
   <meta name="description" content="Notice centraliza la comunicación con conductores, alertas operacionales y notificaciones inteligentes. WhatsApp, push, SMS y email desde una sola plataforma.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2306B6D4'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='900' font-size='14' fill='white'>N</text></svg>">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/main.css?v=1781723488">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
   <style>:root { --app-color: #06B6D4; }</style>
 </head>
 <body>
 
+<!-- Nav -->
 <nav class="navbar scrolled">
   <div class="container">
-    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.jpg" height="38" alt="Appogio" style="display:block;border-radius:6px"></a>
+    <a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.png?v=2" height="38" alt="Appogio" style="display:block;"></a>
     <div class="nav-links">
-      <a href="../index.html#features" class="nav-link">Plataforma</a>
-      <a href="../index.html#apps" class="nav-link">Aplicaciones</a>
-      <a href="../manuales/index.html" class="nav-link">Manuales</a>
-      <a href="../contacto.html" class="nav-link">Contacto</a>
+      <a href="../index.html#features" class="nav-link" data-i18n="nav_platform">Plataforma</a>
+      <div class="nav-dropdown has-mega">
+        <a class="nav-link"><span data-i18n="nav_apps">Aplicaciones</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="dropdown-menu dropdown-mega">
+          <div class="mega-inner">
+          <div class="mega-head">Aplicaciones del ecosistema</div>
+          <div class="mega-grid">
+            <a href="driveiq.html" class="mega-item"><img src="../assets/images/icons/driveiq.svg"><div class="mi-text"><strong>DriveIQ</strong><span>Análisis de comportamiento vial</span></div></a>
+            <a href="inspectpro.html" class="mega-item"><img src="../assets/images/icons/inspectpro.png"><div class="mi-text"><strong>InspectPro</strong><span>Inspecciones digitales de vehículos</span></div></a>
+            <a href="pilotos.html" class="mega-item"><img src="../assets/images/icons/pilotos.png"><div class="mi-text"><strong>PilotOS</strong><span>Gestión de conductores</span></div></a>
+            <a href="camfleet.html" class="mega-item"><img src="../assets/images/icons/camfleet.svg"><div class="mi-text"><strong>CamFleet</strong><span>Cámaras y grabación vehicular</span></div></a>
+            <a href="tagradar.html" class="mega-item"><img src="../assets/images/icons/tagradar.svg"><div class="mi-text"><strong>TagRadar</strong><span>Rastreo de activos BLE</span></div></a>
+            <a href="notice.html" class="mega-item"><img src="../assets/images/icons/notice.png"><div class="mi-text"><strong>Notice</strong><span>Mensajería y comunicaciones</span></div></a>
+            <a href="fleetcare.html" class="mega-item"><img src="../assets/images/icons/fleetcare.png"><div class="mi-text"><strong>FleetCare</strong><span>Mantenimiento de flota</span></div></a>
+            <a href="workorders.html" class="mega-item"><img src="../assets/images/icons/workorders.png"><div class="mi-text"><strong>WorkOrders</strong><span>Órdenes de trabajo</span></div></a>
+            <a href="guardcheck.html" class="mega-item"><img src="../assets/images/icons/guardcheck.png"><div class="mi-text"><strong>GuardCheck</strong><span>Vigilancia y rondas</span></div></a>
+            <a href="fleetops.html" class="mega-item"><img src="../assets/images/icons/fleetops.png"><div class="mi-text"><strong>FleetOps</strong><span>Control operacional</span></div></a>
+            <a href="routeos.html" class="mega-item"><img src="../assets/images/icons/routeos.png"><div class="mi-text"><strong>RouteOS</strong><span>Rutas de transporte</span></div></a>
+            <a href="fleetsync.html" class="mega-item"><img src="../assets/images/icons/fleetsync.png"><div class="mi-text"><strong>FleetSync</strong><span>Integraciones GPS</span></div></a>
+            <a href="trackphone.html" class="mega-item"><img src="../assets/images/icons/trackphone.svg"><div class="mi-text"><strong>TrackPhone</strong><span>Rastreo por celular</span></div></a>
+            <a href="satlink.html" class="mega-item"><img src="../assets/images/icons/satlink.png"><div class="mi-text"><strong>SatLink</strong><span>Conexión satelital</span></div></a>
+            <a href="mailux.html" class="mega-item"><img src="../assets/images/icons/mailux.svg"><div class="mi-text"><strong>Mailux</strong><span>Email marketing</span></div></a>
+            <a href="developers.html" class="mega-item"><img src="../assets/images/icons/developers.png"><div class="mi-text"><strong>Developers</strong><span>API y documentación</span></div></a>
+          </div>
+          </div>
+        </div>
+      </div>
+      <a href="../contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
     </div>
-    <div class="nav-cta"><a href="../contacto.html" class="btn btn-outline btn-sm">Solicitar Demo</a></div>
-    <button class="nav-mobile-toggle" aria-label="Menú"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    <div class="lang-switcher">
+      <button class="lang-btn" id="lang-trigger" aria-label="Cambiar idioma">
+        <span class="fi fi-es fis" id="lang-flag"></span>
+        <span id="lang-code">ES</span>
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="lang-menu" id="lang-menu">
+        <button class="lang-option" data-lang="es" data-flag-class="fi-es" data-code="ES"><span class="fi fi-es fis"></span> Español</button>
+        <button class="lang-option" data-lang="pt" data-flag-class="fi-br" data-code="PT"><span class="fi fi-br fis"></span> Português</button>
+        <button class="lang-option" data-lang="en" data-flag-class="fi-us" data-code="EN"><span class="fi fi-us fis"></span> English</button>
+      </div>
+    </div>
+    <div class="nav-cta">
+      <a href="../contacto.html" class="btn btn-outline btn-sm" data-i18n="nav_demo">Solicitar Demo</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Menú">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
   </div>
 </nav>
 <div class="mobile-menu">
-  <a href="../index.html">Inicio</a><a href="../index.html#apps">Aplicaciones</a>
-  <a href="../manuales/index.html">Manuales</a><a href="../contacto.html">Contacto</a>
+  <a href="../index.html" data-i18n="nav_home">Inicio</a>
+  <a href="../index.html#apps" data-i18n="nav_apps">Aplicaciones</a>
+  <a href="../contacto.html" data-i18n="nav_contact">Contacto</a>
+  <a href="../contacto.html" class="btn btn-primary" style="text-align:center;border-radius:100px;margin-top:1rem" data-i18n="nav_demo">Solicitar Demo</a>
 </div>
 
 <!-- HERO -->
@@ -37,28 +77,16 @@
   <div class="app-hero-glow" style="background:radial-gradient(ellipse,#06B6D4 0%,transparent 70%)"></div>
   <div class="container">
     <div data-reveal>
-      <div class="app-icon-lg" style="background:none;border:none;padding:0">
-        <img src="../assets/images/icons/notice.png" width="72" height="72" style="border-radius:18px;display:block">
-      </div>
-      <div class="app-hero-badge" style="border-color:#06B6D4;color:#06B6D4">Mensajería & Popups</div>
-      <h1>El aviso correcto, <span style="color:#06B6D4">a quien lo necesita.</span></h1>
-      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem">Notice es la herramienta de comunicación interna de GPS Software. Envía mensajes y popups a todos tus clientes, a un gerente específico o a una cuenta en particular — con imágenes, videos y registro de lectura. Aparece directamente dentro del panel GPS, sin salir de la plataforma.</p>
+      <div class="app-icon-lg" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.3)">🔔</div>
+      <div class="app-hero-badge" style="border-color:#06B6D4;color:#06B6D4" data-i18n="no_badge">Comunicación & Alertas</div>
+      <h1 data-i18n-html="no_title">El mensaje correcto, <span style="color:#06B6D4">al canal correcto.</span></h1>
+      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem" data-i18n="no_desc">Notice unifica la comunicación operacional de tu flota: alertas automáticas de GPS, mensajes a conductores por WhatsApp o push, notificaciones de vencimiento y avisos masivos. Todo desde un solo panel, con historial completo.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap">
-        <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#06B6D4;box-shadow:0 0 32px rgba(6,182,212,.3)">Solicitar Demo</a>
-        <a href="../manuales/index.html#notice" class="btn btn-outline btn-lg">Ver Manual</a>
+        <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#06B6D4;box-shadow:0 0 32px rgba(6,182,212,.3)" data-i18n="app_btn_demo">Solicitar Demo</a>
       </div>
     </div>
     <div data-reveal>
-      <div class="media-placeholder" style="border-color:rgba(6,182,212,.2)">
-        <div class="media-placeholder-inner" style="aspect-ratio:16/10">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#06B6D4" stroke-width="1.5" width="48" height="48" opacity=".3">
-            <path d="M44 24c0 11.046-8.954 20-20 20H4l4-8C5.464 33.02 4 28.676 4 24 4 12.954 12.954 4 24 4s20 8.954 20 20z"/>
-            <path d="M15 22h18M15 29h12"/>
-          </svg>
-          <span style="color:#06B6D4;opacity:.6">Dashboard Notice</span>
-          <span class="media-upload-label">Agrega: assets/images/notice-screenshot.png</span>
-        </div>
-      </div>
+      <img src="../assets/images/notice-screenshot.png" alt="Dashboard Notice" style="width:100%;border-radius:16px;border:1px solid rgba(6,182,212,.2);display:block">
     </div>
   </div>
 </section>
@@ -67,10 +95,10 @@
 <div style="background:rgba(6,182,212,.06);border-top:1px solid rgba(6,182,212,.15);border-bottom:1px solid rgba(6,182,212,.15);padding:2rem 0">
   <div class="container">
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center">
-      <div><div style="font-size:2.25rem;font-weight:900;color:#06B6D4;font-family:var(--font-head)">4</div><div style="font-size:.85rem;color:var(--c-text-3)">Audiencias (todos, gerentes, usuarios, específicos)</div></div>
-      <div><div style="font-size:2.25rem;font-weight:900;color:#06B6D4;font-family:var(--font-head)">50 MB</div><div style="font-size:.85rem;color:var(--c-text-3)">Tamaño máximo por imagen o video</div></div>
-      <div><div style="font-size:2.25rem;font-weight:900;color:#06B6D4;font-family:var(--font-head)">100%</div><div style="font-size:.85rem;color:var(--c-text-3)">Historial auditable de mensajes</div></div>
-      <div><div style="font-size:2.25rem;font-weight:900;color:#06B6D4;font-family:var(--font-head)">Live</div><div style="font-size:.85rem;color:var(--c-text-3)">Widget embebido en el panel GPS</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#06B6D4;font-family:var(--font-head)" data-counter data-target="5" data-suffix=" canales">0</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="no_stat_1">De comunicación integrados</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#06B6D4;font-family:var(--font-head)"><3s</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="no_stat_2">Tiempo de entrega de alertas</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#06B6D4;font-family:var(--font-head)">100%</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="no_stat_3">Historial auditable de mensajes</div></div>
+      <div><div style="font-size:2.25rem;font-weight:900;color:#06B6D4;font-family:var(--font-head)">Auto</div><div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="no_stat_4">Alertas sin intervención manual</div></div>
     </div>
   </div>
 </div>
@@ -79,128 +107,171 @@
 <section class="section">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="section-label" style="color:#06B6D4">Funcionalidades</span>
-      <h2 class="section-title">Mensajes que llegan donde importa</h2>
+      <span class="section-label" style="color:#06B6D4" data-i18n="app_sec_features">Funcionalidades</span>
+      <h2 class="section-title" data-i18n="no_feat_title">Comunicación operacional que realmente funciona</h2>
     </div>
     <div class="features-grid">
-      <div class="feature-card" style="--card-color:#06B6D4" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#06B6D4"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <h4>Audiencias segmentadas</h4>
-        <p>Elige a quién llega el mensaje: todos los clientes, los clientes de un gerente específico, usuarios individuales o una cuenta puntual. Nunca llega a quien no corresponde.</p>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2z"/></svg></div>
+        <h4 data-i18n="no_f1_title">WhatsApp integrado</h4>
+        <p>Envía alertas, reportes y mensajes directamente al WhatsApp del conductor. Sin apps adicionales: el conductor lo recibe en el teléfono que ya usa.</p>
       </div>
-      <div class="feature-card" style="--card-color:#8B5CF6" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#8B5CF6"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <h4>Popups en el panel GPS</h4>
-        <p>El mensaje aparece como popup directamente dentro del panel GPS cuando el cliente abre sesión. Sin correos ni WhatsApp: lo ve ahí donde ya trabaja.</p>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <h4 data-i18n="no_f2_title">Push notifications</h4>
+        <p>Notificaciones push segmentadas por conductor, vehículo, ruta o zona. Con acuse de recibo y confirmación de lectura desde la app PilotOS.</p>
       </div>
-      <div class="feature-card" style="--card-color:#EF4444" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#EF4444"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <h4>Popups programados y recurrentes</h4>
-        <p>Publica un mensaje ahora o programa la fecha y hora de publicación. Crea reglas recurrentes para avisos que se repiten periódicamente de forma automática.</p>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <h4 data-i18n="no_f3_title">Alertas GPS automáticas</h4>
+        <p>Dispara mensajes automáticos por geocerca, exceso de velocidad, parada no programada o vehículo fuera de ruta — sin configuración por evento.</p>
       </div>
-      <div class="feature-card" style="--card-color:#F59E0B" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#F59E0B"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-        <h4>Imágenes y videos adjuntos</h4>
-        <p>Acompaña cada mensaje con imágenes o videos (hasta 50 MB). Ideal para comunicados visuales, manuales, actualizaciones de servicio o campañas internas.</p>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <h4 data-i18n="no_f4_title">Email y SMS</h4>
+        <p>Canal de respaldo para alertas críticas. Configura reglas de escalación: si el conductor no responde en X minutos, escala al supervisor por email.</p>
       </div>
-      <div class="feature-card" style="--card-color:#10B981" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#10B981"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
-        <h4>Widget embebido en GPS</h4>
-        <p>Notice vive dentro del panel GPS Software como un widget nativo. Los clientes lo ven sin cambiar de pestaña y el administrador publica desde el mismo ecosistema.</p>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <h4 data-i18n="no_f5_title">Plantillas de mensajes</h4>
+        <p>Crea plantillas reutilizables con variables dinámicas ({nombre}, {vehículo}, {velocidad}) para agilizar el envío de mensajes operacionales recurrentes.</p>
       </div>
-      <div class="feature-card" style="--card-color:#EC4899" data-reveal>
-        <div class="feature-icon-wrap"><div class="feature-icon-bg" style="background:#EC4899"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="#EC4899" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-        <h4>Acuses de lectura y auditoría</h4>
-        <p>Registra quién leyó cada mensaje y cuándo. Historial completo por mensaje: quién lo creó, a qué audiencia, cuántas cuentas lo recibieron y cuántas lo abrieron.</p>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h4 data-i18n="no_f6_title">Historial y auditoría</h4>
+        <p>Registro completo de todas las comunicaciones: quién envió, a quién, cuándo y si fue entregado. Exportable para auditorías y reportes de cumplimiento.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Popup flow highlight -->
+<!-- Canales highlight -->
 <section class="section" style="background:var(--c-bg-2)">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
       <div data-reveal>
-        <span class="section-label" style="color:#06B6D4">Cómo funciona</span>
-        <h2 class="section-title">El admin publica. El cliente lo ve.</h2>
-        <p style="margin-bottom:2rem">Notice no requiere que el cliente instale nada. El popup aparece directamente dentro del panel GPS al abrir sesión. Así de simple.</p>
+        <span class="section-label" style="color:#06B6D4" data-i18n="app_sec_multichannel">Multi-canal</span>
+        <h2 class="section-title" data-i18n="no_mc_title">Un mensaje, todos los canales</h2>
+        <p style="margin-bottom:2rem" data-i18n="no_mc_desc">Define una regla de alerta una sola vez y Notice decide automáticamente el mejor canal según el tipo de evento, la urgencia y las preferencias del destinatario.</p>
         <div class="preview-features-list">
           <div class="preview-feat">
             <div class="preview-feat-icon" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.2);color:#06B6D4">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/><path d="M14.05 2.93A20 20 0 0122 12"/></svg>
             </div>
             <div class="preview-feat-text">
-              <strong>1. Admin redacta el mensaje</strong>
-              <span>Elige audiencia, agrega imagen/video, publica o programa</span>
+              <strong>Alertas críticas → WhatsApp</strong>
+              <span>Mayor tasa de apertura que cualquier otro canal</span>
             </div>
           </div>
           <div class="preview-feat">
             <div class="preview-feat-icon" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.2);color:#06B6D4">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
             </div>
             <div class="preview-feat-text">
-              <strong>2. El cliente abre el panel GPS</strong>
-              <span>El popup aparece automáticamente al iniciar sesión</span>
+              <strong>Notificaciones operativas → Push</strong>
+              <span>Entrega instantánea al dispositivo del conductor</span>
             </div>
           </div>
           <div class="preview-feat">
             <div class="preview-feat-icon" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.2);color:#06B6D4">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>
             </div>
             <div class="preview-feat-text">
-              <strong>3. El sistema registra la lectura</strong>
-              <span>El admin ve quién lo abrió y cuándo, en tiempo real</span>
+              <strong>Reportes y resúmenes → Email</strong>
+              <span>Informes diarios/semanales automáticos para gerentes</span>
             </div>
           </div>
         </div>
       </div>
       <div data-reveal>
-        <div class="media-placeholder" style="border-color:rgba(6,182,212,.2)">
-          <div class="media-placeholder-inner" style="aspect-ratio:4/3">
-            <svg viewBox="0 0 48 48" fill="none" stroke="#06B6D4" stroke-width="1.5" width="40" height="40" opacity=".25">
-              <rect x="4" y="8" width="40" height="32" rx="3"/><path d="M12 20h24M12 28h16"/>
-            </svg>
-            <span style="color:#06B6D4;opacity:.5">Popup en panel GPS</span>
-            <span class="media-upload-label">Agrega: assets/images/notice-popup.png</span>
-          </div>
-        </div>
+        <img src="../assets/images/notice-centro.png" alt="Centro de notificaciones" style="width:100%;border-radius:16px;border:1px solid rgba(6,182,212,.2);display:block">
       </div>
     </div>
   </div>
 </section>
 
-<!-- Screenshots -->
-<section class="section">
+<!-- Showcase interactivo -->
+<section class="section showcase" style="background:var(--c-bg-2)">
   <div class="container">
-    <div class="section-head" data-reveal><span class="section-label" style="color:#06B6D4">Capturas de pantalla</span><h2 class="section-title">Notice en detalle</h2></div>
-    <div class="screenshots-gallery" data-reveal>
-      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><span style="font-size:.75rem">Panel de mensajes</span><span style="font-size:.65rem;opacity:.5">assets/images/notice-mensajes.png</span></div>
-      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span style="font-size:.75rem">Popup en panel GPS</span><span style="font-size:.65rem;opacity:.5">assets/images/notice-popup.png</span></div>
-      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-size:.75rem">Reglas recurrentes</span><span style="font-size:.65rem;opacity:.5">assets/images/notice-recurrentes.png</span></div>
-      <div class="screenshot-slot"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span style="font-size:.75rem">Acuses de lectura</span><span style="font-size:.65rem;opacity:.5">assets/images/notice-historial.png</span></div>
+    <div class="section-head" data-reveal>
+      <span class="section-label" style="color:#06B6D4">Cómo funciona</span>
+      <h2 class="section-title">Notice en acción</h2>
+    </div>
+    <div class="showcase-wrap" data-reveal>
+      <div class="showcase-img"><img id="sc-img" src="../assets/images/notice-mensajes.png" alt="Notice en acción"></div>
+      <div class="showcase-list">
+        <button class="sc-feat active" data-img="../assets/images/notice-mensajes.png"><strong>Mensajes</strong><span>Comunicados enviados a clientes y equipos</span></button>
+        <button class="sc-feat" data-img="../assets/images/notice-alertas.png"><strong>Popups y alertas</strong><span>Avisos emergentes segmentados</span></button>
+        <button class="sc-feat" data-img="../assets/images/notice-plantillas.png"><strong>Programados</strong><span>Mensajes recurrentes y programados</span></button>
+        <button class="sc-feat" data-img="../assets/images/notice-historial.png"><strong>Historial</strong><span>Trazabilidad de los envíos</span></button>
+      </div>
+    </div>
+  </div>
+  <script>(function(){var bs=document.querySelectorAll(".sc-feat"),im=document.getElementById("sc-img");bs.forEach(function(b){b.addEventListener("click",function(){bs.forEach(function(x){x.classList.remove("active")});b.classList.add("active");im.src=b.getAttribute("data-img");});});})();</script>
+</section>
+
+<section class="section" style="background:var(--c-bg-2)">
+  <div class="container" style="max-width:900px">
+    <div class="section-head" data-reveal><span class="section-label" style="color:#06B6D4" data-i18n="app_sec_video">Demo en video</span><h2 class="section-title" data-i18n="no_video_title">Ve Notice en acción</h2></div>
+    <div class="media-placeholder video-placeholder" data-reveal style="border-color:rgba(6,182,212,.2)">
+      <video src="../assets/images/notice-demo.mp4" controls style="width:100%;border-radius:16px;display:block"></video>
     </div>
   </div>
 </section>
 
 <section class="section cta-section">
   <div class="container">
-    <h2 class="section-title">¿Listo para que tus mensajes lleguen donde importa?</h2>
-    <p>Comunica actualizaciones, avisos de mantenimiento o cambios de servicio directamente en el panel GPS. Tus clientes lo ven cuando abren sesión — sin correos ignorados ni llamadas perdidas.</p>
+    <h2 class="section-title">¿Listo para comunicarte mejor con tu flota?</h2>
+    <p>Elimina las llamadas perdidas, los mensajes informales y las alertas que nadie ve. Con Notice, cada aviso llega al canal correcto.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
       <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#06B6D4;box-shadow:0 0 32px rgba(6,182,212,.3)">Solicitar Demo de Notice</a>
-      <a href="../manuales/index.html#notice" class="btn btn-outline btn-lg">Ver Manual Completo</a>
     </div>
   </div>
 </section>
 
-<footer><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><a href="../index.html" class="nav-logo"><img src="../assets/images/logo-appogio.jpg" height="38" alt="Appogio" style="display:block;border-radius:6px"></a><div class="footer-bottom-links"><a href="driveiq.html">DriveIQ</a><a href="inspectpro.html">InspectPro</a><a href="pilotos.html">PilotOS</a><a href="camfleet.html">CamFleet</a><a href="tagradar.html">TagRadar</a></div></div></div></footer>
+<section class="section" id="caracteristicas-todas">
+<div class="container">
+<div class="section-head" data-reveal><span class="section-label" style="color:#06B6D4">Características</span><h2 class="section-title">Todo lo que incluye Notice</h2></div>
+<div style="columns:2;column-gap:3rem;max-width:920px;margin:0 auto" data-reveal><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Comunicados segmentados por audiencia</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Avisos emergentes (popups) programados y recurrentes</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Notificaciones push (FCM) y Web Push</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Adjuntar imágenes y videos</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Widget embebido en el panel principal</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Historial y trazabilidad de los envíos</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Roles y permisos</span></div></div>
+</div>
+</section>
+
+<footer><div class="container"><div class="footer-bottom" style="border-top:none;padding-top:0"><a href="../index.html" class="nav-logo"><div class="nav-logo-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5" fill="white" stroke="none"/></svg></div></a><div class="footer-bottom-links"><a href="driveiq.html">DriveIQ</a><a href="inspectpro.html">InspectPro</a><a href="pilotos.html">PilotOS</a><a href="camfleet.html">CamFleet</a><a href="tagradar.html">TagRadar</a></div></div></div></footer>
+
+<a class="wa-float" href="https://wa.me/573052292372?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Appogio" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <div class="wa-float-btn">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.121 1.524 5.854L0 24l6.335-1.505A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.372l-.36-.213-3.728.885.939-3.63-.234-.373A9.818 9.818 0 1112 21.818z"/>
+    </svg>
+  </div>
+</a>
+<div class="lang-float" id="lang-float">
+  <div class="lang-float-menu" id="lang-float-menu">
+    <button class="lang-float-option" data-lang="es" data-flag-class="fi-es">
+      <span class="fi fi-es"></span>
+      <span>Español</span>
+    </button>
+    <button class="lang-float-option" data-lang="pt" data-flag-class="fi-br">
+      <span class="fi fi-br"></span>
+      <span>Português</span>
+    </button>
+    <button class="lang-float-option" data-lang="en" data-flag-class="fi-us">
+      <span class="fi fi-us"></span>
+      <span>English</span>
+    </button>
+  </div>
+  <button class="lang-float-btn" id="lang-float-trigger" aria-label="Cambiar idioma">
+    <span class="fi fi-es" id="float-flag"></span>
+  </button>
+</div>
+<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
