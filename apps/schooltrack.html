@@ -95,9 +95,9 @@
       <div class="app-icon-lg" style="background:none;border:none;padding:0">
         <img src="../assets/images/icons/schooltrack.png" width="72" height="72" style="border-radius:18px;display:block">
       </div>
-      <div class="app-hero-badge">Transporte Escolar</div>
-      <h1>Transporte escolar seguro, con los <span style="color:#F59E0B">papás tranquilos</span></h1>
-      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem">Rutas, paradas y estudiantes en un solo lugar. Los papás ven el bus en vivo y el tiempo estimado de llegada; el conductor y el monitor marcan la asistencia a bordo con QR, tarjeta o geocerca; y todo queda registrado para auditar.</p>
+      <div class="app-hero-badge" data-i18n="sct_badge">Transporte Escolar</div>
+      <h1 data-i18n-html="sct_title">Transporte escolar seguro, con los <span style="color:#F59E0B">papás tranquilos</span></h1>
+      <p style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem" data-i18n="sct_desc">Rutas, paradas y estudiantes en un solo lugar. Los papás ven el bus en vivo y el tiempo estimado de llegada; el conductor y el monitor marcan la asistencia a bordo con QR, tarjeta o geocerca; y todo queda registrado para auditar.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap">
         <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#F59E0B;box-shadow:0 0 32px rgba(245,158,11,.3)" data-i18n="app_btn_demo">Solicitar Demo</a>
       </div>
@@ -115,19 +115,19 @@
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center">
       <div>
         <div style="font-size:2.25rem;font-weight:900;color:#F59E0B;font-family:var(--font-head)" data-counter data-target="100" data-suffix="%">0</div>
-        <div style="font-size:.85rem;color:var(--c-text-3)">Niños verificados</div>
+        <div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="sct_stat1">Niños verificados</div>
       </div>
       <div>
-        <div style="font-size:2.25rem;font-weight:900;color:#F59E0B;font-family:var(--font-head)">En vivo</div>
-        <div style="font-size:.85rem;color:var(--c-text-3)">Bus y tiempo de llegada</div>
+        <div style="font-size:2.25rem;font-weight:900;color:#F59E0B;font-family:var(--font-head)" data-i18n="sct_stat2_v">En vivo</div>
+        <div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="sct_stat2">Bus y tiempo de llegada</div>
       </div>
       <div>
         <div style="font-size:2.25rem;font-weight:900;color:#F59E0B;font-family:var(--font-head)" data-counter data-target="3">0</div>
-        <div style="font-size:.85rem;color:var(--c-text-3)">Métodos: QR · RFID · Geocerca</div>
+        <div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="sct_stat3">Métodos: QR · RFID · Geocerca</div>
       </div>
       <div>
-        <div style="font-size:2.25rem;font-weight:900;color:#F59E0B;font-family:var(--font-head)">Cero</div>
-        <div style="font-size:.85rem;color:var(--c-text-3)">Niños olvidados</div>
+        <div style="font-size:2.25rem;font-weight:900;color:#F59E0B;font-family:var(--font-head)" data-i18n="sct_stat4_v">Cero</div>
+        <div style="font-size:.85rem;color:var(--c-text-3)" data-i18n="sct_stat4">Niños olvidados</div>
       </div>
     </div>
   </div>
@@ -138,53 +138,68 @@
   <div class="container">
     <div class="section-head" data-reveal>
       <span class="section-label" style="color:#F59E0B" data-i18n="app_sec_features">Funcionalidades</span>
-      <h2 class="section-title">Todo lo que necesitas para el transporte escolar</h2>
+      <h2 class="section-title" data-i18n="sct_feat_title">Todo lo que necesitas para el transporte escolar</h2>
     </div>
     <div class="features-grid">
       <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
         <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 5.4 8 12 8 12s8-6.6 8-12a8 8 0 00-8-8z"/></svg></div>
-        <h4>Rutas y paradas</h4>
-        <p>Organiza rutas por turno, paradas en orden con hora de recogida y coordenadas. Cada parada queda ubicada en el mapa para que todo el recorrido sea claro y predecible.</p>
+        <h4 data-i18n="sct_f1t">Rutas y paradas</h4>
+        <p data-i18n="sct_f1d">Organiza rutas por turno, paradas en orden con hora de recogida y coordenadas. Cada parada queda ubicada en el mapa para que todo el recorrido sea claro y predecible.</p>
       </div>
       <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
         <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <h4>Portal del padre</h4>
-        <p>El papá ve el bus en vivo, el tiempo estimado de llegada a su parada, avisa si su hijo va o no hoy y recibe notificaciones en cada momento clave del recorrido.</p>
+        <h4 data-i18n="sct_f2t">Portal del padre</h4>
+        <p data-i18n="sct_f2d">El papá ve el bus en vivo, el tiempo estimado de llegada a su parada, avisa si su hijo va o no hoy y recibe notificaciones en cada momento clave del recorrido.</p>
       </div>
       <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
         <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M7 21h10M9 17v4M15 17v4M6 7h6M6 11h4"/></svg></div>
-        <h4>App de a bordo unificada</h4>
-        <p>El conductor ve su ruta y próximas paradas con quién aborda; el monitor marca abordó/bajó/ausente, hace el child-check y tiene botón SOS para cualquier emergencia.</p>
+        <h4 data-i18n="sct_f3t">App de a bordo unificada</h4>
+        <p data-i18n="sct_f3d">El conductor ve su ruta y próximas paradas con quién aborda; el monitor marca abordó/bajó/ausente, hace el child-check y tiene botón SOS para cualquier emergencia.</p>
       </div>
       <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
         <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <h4>Asistencia flexible</h4>
-        <p>QR del carné, tarjeta RFID o geocerca automática, con doble verificación por GPS: el bus debe estar realmente en la parada para que la marcación sea válida.</p>
+        <h4 data-i18n="sct_f4t">Asistencia flexible</h4>
+        <p data-i18n="sct_f4d">QR del carné, tarjeta RFID o geocerca automática, con doble verificación por GPS: el bus debe estar realmente en la parada para que la marcación sea válida.</p>
       </div>
       <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
         <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v7h-7"/></svg></div>
-        <h4>Carné QR por alumno</h4>
-        <p>Credencial con nombre, grado, ruta y código QR/barras, listo para imprimir. Cada estudiante tiene su identificación única para una verificación rápida y segura.</p>
+        <h4 data-i18n="sct_f5t">Carné QR por alumno</h4>
+        <p data-i18n="sct_f5d">Credencial con nombre, grado, ruta y código QR/barras, listo para imprimir. Cada estudiante tiene su identificación única para una verificación rápida y segura.</p>
       </div>
       <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
         <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
-        <h4>Reportes y revisión final</h4>
-        <p>Asistencia por día y ruta, detalle de cada marcación, exportar CSV/Excel/PDF y confirmación de "ningún niño olvidado" al cerrar cada recorrido.</p>
+        <h4 data-i18n="sct_f6t">Reportes y revisión final</h4>
+        <p data-i18n="sct_f6d">Asistencia por día y ruta, detalle de cada marcación, exportar CSV/Excel/PDF y confirmación de "ningún niño olvidado" al cerrar cada recorrido.</p>
       </div>
       <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
         <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></div>
-        <h4>Calendario de asistencia (omite la parada)</h4>
-        <p>El papá marca en un <strong>calendario</strong> los días que su hijo no viaja — hoy o con anticipación (vacaciones, citas). El conductor ve esas paradas como "OMITIR" y no se detiene en vano: la ruta del día se ajusta sola a quién realmente viaja.</p>
+        <h4 data-i18n="sct_f7t">Calendario de asistencia (omite la parada)</h4>
+        <p data-i18n-html="sct_f7d">El papá marca en un <strong>calendario</strong> los días que su hijo no viaja — hoy o con anticipación (vacaciones, citas). El conductor ve esas paradas como "OMITIR" y no se detiene en vano: la ruta del día se ajusta sola a quién realmente viaja.</p>
       </div>
       <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
         <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
-        <h4>Notificaciones y botón SOS</h4>
-        <p>El papá recibe un aviso cuando su hijo <strong>aborda, desciende o el bus se acerca</strong> a la parada. El monitor cuenta con un botón de pánico (SOS) que alerta al colegio con la posición exacta del bus.</p>
+        <h4 data-i18n="sct_f8t">Notificaciones y botón SOS</h4>
+        <p data-i18n-html="sct_f8d">El papá recibe un aviso cuando su hijo <strong>aborda, desciende o el bus se acerca</strong> a la parada. El monitor cuenta con un botón de pánico (SOS) que alerta al colegio con la posición exacta del bus.</p>
       </div>
       <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
         <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></div>
-        <h4>Mensajería con el colegio</h4>
-        <p>Canal directo entre el acudiente y la institución dentro de la misma app, para coordinar cambios, dudas o avisos sin llamadas ni grupos de WhatsApp.</p>
+        <h4 data-i18n="sct_f9t">Mensajería con el colegio</h4>
+        <p data-i18n="sct_f9d">Canal directo entre el acudiente y la institución dentro de la misma app, para coordinar cambios, dudas o avisos sin llamadas ni grupos de WhatsApp.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20 3 17V4l6 3 6-3 6 3v13l-6-3-6 3z"/><path d="M9 7v13M15 4v13"/></svg></div>
+        <h4 data-i18n="sct_f10t">Mapa en vivo multi-ruta</h4>
+        <p data-i18n="sct_f10d">Ve una ruta, varias o todas a la vez en el mismo mapa. Cada ruta se dibuja con su propio color, con sus paradas y el trazo del recorrido, para que el colegio supervise toda la operación de un vistazo.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><circle cx="17.5" cy="14.5" r="2.5"/><path d="M12 2a10 10 0 1 0 0 20 2 2 0 0 0 0-4 1.5 1.5 0 0 1 0-3h2.5a4.5 4.5 0 0 0 4.5-4.5C21 5.4 16.97 2 12 2z"/></svg></div>
+        <h4 data-i18n="sct_f11t">Marca blanca por institución</h4>
+        <p data-i18n="sct_f11d">Cada colegio tiene su propia identidad: nombre, color y logo en toda la plataforma y las apps. La experiencia se siente como una app del colegio, no como un sistema genérico.</p>
+      </div>
+      <div class="feature-card" style="--card-color:#1E3A7A" data-reveal>
+        <div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 5h4M9 18h6"/></svg></div>
+        <h4 data-i18n="sct_f12t">Apariencia de app nativa</h4>
+        <p data-i18n="sct_f12d">Se instala en el teléfono y se usa con un menú inferior como cualquier app nativa, sin barras de navegador. Instalable desde Android y desde el navegador como PWA.</p>
       </div>
     </div>
   </div>
@@ -194,15 +209,15 @@
 <section class="section showcase" style="background:var(--c-bg-2)">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="section-label" style="color:#F59E0B">Cómo funciona</span>
-      <h2 class="section-title">SchoolTrack en acción</h2>
+      <span class="section-label" style="color:#F59E0B" data-i18n="sct_sc_label">Cómo funciona</span>
+      <h2 class="section-title" data-i18n="sct_sc_title">SchoolTrack en acción</h2>
     </div>
     <div class="showcase-wrap" data-reveal>
       <div class="showcase-img"><img id="sc-img" src="../assets/images/schooltrack-admin.png" alt="SchoolTrack"></div>
       <div class="showcase-list">
-        <button class="sc-feat active" data-img="../assets/images/schooltrack-admin.png"><strong>Administración</strong><span>Gestión de rutas, paradas y estudiantes</span></button>
-        <button class="sc-feat" data-img="../assets/images/schooltrack-reporte.png"><strong>Reportes de asistencia</strong><span>Resumen, detalle y exportación CSV/PDF</span></button>
-        <button class="sc-feat" data-img="../assets/images/schooltrack-carnes.png"><strong>Carnés QR</strong><span>Credencial por alumno con código QR</span></button>
+        <button class="sc-feat active" data-img="../assets/images/schooltrack-admin.png"><strong data-i18n="sct_sc1t">Administración</strong><span data-i18n="sct_sc1s">Gestión de rutas, paradas y estudiantes</span></button>
+        <button class="sc-feat" data-img="../assets/images/schooltrack-reporte.png"><strong data-i18n="sct_sc2t">Reportes de asistencia</strong><span data-i18n="sct_sc2s">Resumen, detalle y exportación CSV/PDF</span></button>
+        <button class="sc-feat" data-img="../assets/images/schooltrack-carnes.png"><strong data-i18n="sct_sc3t">Carnés QR</strong><span data-i18n="sct_sc3s">Credencial por alumno con código QR</span></button>
       </div>
     </div>
   </div>
@@ -213,25 +228,25 @@
 <section class="section" style="background:var(--c-bg-2)">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="section-label" style="color:#F59E0B">Para cada rol</span>
-      <h2 class="section-title">Una vista distinta para cada persona</h2>
-      <p style="max-width:640px;margin:.75rem auto 0;color:var(--c-text-3)">Los papás, el conductor y el monitor abren la plataforma desde el celular y ven exactamente lo que necesitan.</p>
+      <span class="section-label" style="color:#F59E0B" data-i18n="sct_roles_label">Para cada rol</span>
+      <h2 class="section-title" data-i18n="sct_roles_title">Una vista distinta para cada persona</h2>
+      <p style="max-width:640px;margin:.75rem auto 0;color:var(--c-text-3)" data-i18n="sct_roles_desc">Los papás, el conductor y el monitor abren la plataforma desde el celular y ven exactamente lo que necesitan.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem;max-width:980px;margin:3rem auto 0">
       <div data-reveal style="text-align:center">
         <img src="../assets/images/schooltrack-padre.png?v=20260623d" alt="Vista del padre" style="width:100%;max-width:258px;border-radius:24px;border:1px solid rgba(245,158,11,.25);box-shadow:0 18px 50px rgba(0,0,0,.28);display:block;margin:0 auto">
-        <h4 style="margin:1.2rem 0 .35rem">Papás</h4>
-        <p style="color:var(--c-text-3);font-size:.9rem;max-width:260px;margin:0 auto">Bus en vivo y tiempo estimado de llegada, calendario de asistencia para marcar los días que su hijo no viaja y notificaciones cuando aborda o se acerca.</p>
+        <h4 style="margin:1.2rem 0 .35rem" data-i18n="sct_role1t">Papás</h4>
+        <p style="color:var(--c-text-3);font-size:.9rem;max-width:260px;margin:0 auto" data-i18n="sct_role1d">Bus en vivo y tiempo estimado de llegada, calendario de asistencia para marcar los días que su hijo no viaja y notificaciones cuando aborda o se acerca.</p>
       </div>
       <div data-reveal data-reveal-delay="1" style="text-align:center">
         <img src="../assets/images/schooltrack-conductor.png?v=20260623d" alt="Vista del conductor" style="width:100%;max-width:258px;border-radius:24px;border:1px solid rgba(245,158,11,.25);box-shadow:0 18px 50px rgba(0,0,0,.28);display:block;margin:0 auto">
-        <h4 style="margin:1.2rem 0 .35rem">Conductor</h4>
-        <p style="color:var(--c-text-3);font-size:.9rem;max-width:260px;margin:0 auto">Su ruta con las paradas en orden, quién aborda en cada parada y navegación hasta la siguiente.</p>
+        <h4 style="margin:1.2rem 0 .35rem" data-i18n="sct_role2t">Conductor</h4>
+        <p style="color:var(--c-text-3);font-size:.9rem;max-width:260px;margin:0 auto" data-i18n="sct_role2d">Su ruta con las paradas en orden, quién aborda en cada parada y navegación hasta la siguiente.</p>
       </div>
       <div data-reveal data-reveal-delay="2" style="text-align:center">
         <img src="../assets/images/schooltrack-monitor.png?v=20260623d" alt="Vista del monitor" style="width:100%;max-width:258px;border-radius:24px;border:1px solid rgba(245,158,11,.25);box-shadow:0 18px 50px rgba(0,0,0,.28);display:block;margin:0 auto">
-        <h4 style="margin:1.2rem 0 .35rem">Monitor</h4>
-        <p style="color:var(--c-text-3);font-size:.9rem;max-width:260px;margin:0 auto">Manifiesto para marcar abordó / bajó / ausente, child-check, escanear el carné y botón de pánico (SOS).</p>
+        <h4 style="margin:1.2rem 0 .35rem" data-i18n="sct_role3t">Monitor</h4>
+        <p style="color:var(--c-text-3);font-size:.9rem;max-width:260px;margin:0 auto" data-i18n="sct_role3d">Manifiesto para marcar abordó / bajó / ausente, child-check, escanear el carné y botón de pánico (SOS).</p>
       </div>
     </div>
   </div>
@@ -240,10 +255,10 @@
 <!-- CTA -->
 <section class="section cta-section">
   <div class="container">
-    <h2 class="section-title">¿Listo para un transporte escolar más seguro?</h2>
-    <p>Solicita una demo de SchoolTrack y muéstrales a los papás el bus en vivo.</p>
+    <h2 class="section-title" data-i18n="sct_cta_title">¿Listo para un transporte escolar más seguro?</h2>
+    <p data-i18n="sct_cta_desc">Solicita una demo de SchoolTrack y muéstrales a los papás el bus en vivo.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
-      <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#F59E0B;box-shadow:0 0 32px rgba(245,158,11,.3)">Solicitar Demo de SchoolTrack</a>
+      <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#F59E0B;box-shadow:0 0 32px rgba(245,158,11,.3)" data-i18n="sct_cta_btn">Solicitar Demo de SchoolTrack</a>
     </div>
   </div>
 </section>
@@ -251,8 +266,8 @@
 <!-- Footer -->
 <section class="section" id="caracteristicas-todas">
 <div class="container">
-<div class="section-head" data-reveal><span class="section-label" style="color:#F59E0B">Características</span><h2 class="section-title">Todo lo que incluye SchoolTrack</h2></div>
-<div style="columns:2;column-gap:3rem;max-width:920px;margin:0 auto" data-reveal><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Rutas, paradas y turnos</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Portal del padre con bus en vivo y ETA</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">App de a bordo conductor+monitor</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Asistencia QR / RFID / geocerca</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Doble verificación por GPS</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Carné QR por alumno</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Reportes de asistencia exportables</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Revisión final del bus</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Calendario de asistencia: marca días futuros que el niño no viaja y el conductor omite la parada</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Notificaciones push: aborda, desciende y bus acercándose</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Botón de pánico (SOS) con la posición del bus</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Mensajería padre ↔ colegio y avisos del colegio</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Bus en vivo con posición real del GPS y tiempo de llegada</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Monitor/acompañante con su propio acceso (exigido en varios países)</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Instalable como app de Android y desde el navegador (PWA)</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem">Multi-tenant: cada colegio ve solo sus datos</span></div></div>
+<div class="section-head" data-reveal><span class="section-label" style="color:#F59E0B" data-i18n="app_sec_specs">Características</span><h2 class="section-title" data-i18n="sct_car_title">Todo lo que incluye SchoolTrack</h2></div>
+<div style="columns:2;column-gap:3rem;max-width:920px;margin:0 auto" data-reveal><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c1">Rutas, paradas y turnos</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c2">Portal del padre con bus en vivo y ETA</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c3">App de a bordo conductor+monitor</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c4">Asistencia QR / RFID / geocerca</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c5">Doble verificación por GPS</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c6">Carné QR por alumno</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c7">Reportes de asistencia exportables</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c8">Revisión final del bus</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c9">Calendario de asistencia: marca días futuros que el niño no viaja y el conductor omite la parada</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c10">Notificaciones push: aborda, desciende y bus acercándose</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c11">Botón de pánico (SOS) con la posición del bus</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c12">Mensajería padre ↔ colegio y avisos del colegio</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c13">Bus en vivo con posición real del GPS y tiempo de llegada</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c14">Monitor/acompañante con su propio acceso (exigido en varios países)</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c15">Instalable como app de Android y desde el navegador (PWA)</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span style="color:var(--c-text-2);font-size:.95rem" data-i18n="sct_c16">Multi-tenant: cada colegio ve solo sus datos</span></div></div>
 </div>
 </section>
 
@@ -299,7 +314,7 @@
     <span class="fi fi-es" id="float-flag"></span>
   </button>
 </div>
-<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/i18n.js?v=20260623"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
