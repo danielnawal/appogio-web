@@ -239,7 +239,9 @@
 <!-- App móvil highlight -->
 <section class="section" style="background:var(--c-bg-2)">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
+    <!-- OJO: al reactivar la vista movil de abajo, devolver grid-template-columns a "1fr 1fr"
+         y quitar el max-width; hoy va a 1 columna porque la imagen esta oculta. -->
+    <div style="display:grid;grid-template-columns:1fr;gap:5rem;align-items:center;max-width:760px;margin:0 auto">
       <div data-reveal>
         <span class="section-label" style="color:#DE6510" data-i18n="app_sec_mobileapp">App Móvil</span>
         <h2 class="section-title" data-i18n="po_mobile_title">En el bolsillo de cada conductor</h2>
@@ -275,6 +277,18 @@
         </div>
         <a href="../contacto.html" class="btn btn-primary btn-lg" style="background:#DE6510;box-shadow:0 0 32px rgba(222,101,16,.25);margin-top:1rem" data-i18n="po_mobile_btn">Ver Demo en Vivo</a>
       </div>
+      <!-- ============================================================
+           VISTA MOVIL DE LA APP — OCULTA hasta tener la captura.
+           Estaba mostrando al publico una caja vacia con el texto interno
+           "Agrega: assets/images/pilotos-app.png".
+
+           PARA ACTIVARLA cuando llegue la captura del telefono:
+           1. Coloca la imagen en assets/images/pilotos-app.png
+           2. Descomenta el bloque y cambia media-placeholder-inner por:
+              [img src="../assets/images/pilotos-app.png" alt="App PilotOS"
+               style="width:100%;border-radius:16px;display:block"]
+              (usa < > en vez de [ ])
+
       <div data-reveal>
         <div class="media-placeholder" style="border-color:rgba(222,101,16,.2)">
           <div class="media-placeholder-inner" style="aspect-ratio:9/16;max-height:520px">
@@ -286,6 +300,7 @@
           </div>
         </div>
       </div>
+           ============================================================ -->
     </div>
   </div>
 </section>

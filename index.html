@@ -20,11 +20,11 @@
   <meta property="og:url" content="https://appogio.com/">
   <meta property="og:title" content="Software de rastreo GPS en marca blanca">
   <meta property="og:description" content="Plataforma de rastreo GPS en marca blanca: su marca, su dominio y sus clientes. Rastreo en vivo, cámaras, inspecciones, conductores y 25 aplicaciones.">
-  <meta property="og:image" content="https://appogio.com/assets/images/dashboard-screenshot.png">
+  <meta property="og:image" content="https://appogio.com/assets/images/logo-appogio.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Software de rastreo GPS en marca blanca">
   <meta name="twitter:description" content="Plataforma de rastreo GPS en marca blanca: su marca, su dominio y sus clientes. Rastreo en vivo, cámaras, inspecciones, conductores y 25 aplicaciones.">
-  <meta name="twitter:image" content="https://appogio.com/assets/images/dashboard-screenshot.png">
+  <meta name="twitter:image" content="https://appogio.com/assets/images/logo-appogio.png">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -875,7 +875,9 @@
      PLATFORM PREVIEW — VIDEO / SCREENSHOT
      ============================================================ -->
 <section class="section preview-section" style="background:var(--c-bg-2)" id="preview">
-  <div class="container">
+  <!-- OJO: al reactivar el video de abajo, QUITAR el style de este .container
+       para que vuelva a la rejilla de 2 columnas (texto | video) de main.css. -->
+  <div class="container" style="grid-template-columns:1fr;max-width:820px">
     <div class="preview-content" data-reveal>
       <span class="section-label" data-i18n="prev_label">La plataforma en acción</span>
       <h2 class="section-title" data-i18n="prev_title">Diseñada para el control total de tu operación</h2>
@@ -912,12 +914,20 @@
     </div>
 
     <!-- ======================================================
-         ZONA DE VIDEO PRINCIPAL
-         Para agregar tu video:
-         1. Coloca el archivo en: assets/images/demo-video.mp4
-         2. Reemplaza el div.media-placeholder-inner por:
-            <video src="assets/images/demo-video.mp4" controls poster="assets/images/video-thumb.jpg"></video>
-         ====================================================== -->
+         ZONA DE VIDEO PRINCIPAL — OCULTA hasta tener el video.
+         Estaba mostrando al público una caja gris vacía con un botón de
+         reproducir que no hacía nada y el texto interno
+         "Coloca tu video en: assets/images/demo-video.mp4".
+
+         PARA ACTIVARLA cuando llegue el video:
+         1. Coloca el archivo en assets/images/demo-video.mp4
+         2. Descomenta el bloque de abajo y deja SOLO esta línea dentro
+            de div.media-placeholder (borrando media-placeholder-inner
+            y play-btn-overlay):
+            [video src="assets/images/demo-video.mp4" controls
+             style="width:100%;border-radius:16px;display:block"]
+            (usa < > en vez de [ ] — así lo hacen notice/tagradar/inspectpro)
+
     <div class="media-placeholder video-placeholder" data-reveal>
       <div class="media-placeholder-inner">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -933,6 +943,7 @@
         </div>
       </div>
     </div>
+         ====================================================== -->
   </div>
 </section>
 
@@ -1153,57 +1164,15 @@
 </section>
 
 <!-- ============================================================
-     TESTIMONIALS (ZONA PARA AGREGAR)
+     TESTIMONIOS — SECCION OCULTA (2026-07-29)
+     Mostraba al publico 3 testimonios de relleno: "Nombre del Cliente",
+     circulos "FOTO", empresas "A/B/C" y frases inventadas con un "60%".
+     El HTML original completo esta guardado en:
+       /root/backups/appogio-web-defectos-20260729/testimonios-seccion-original.html
+     PARA REACTIVARLA: pegar de vuelta ese archivo aqui y reemplazar los
+     textos de las claves test_1_* / test_2_* / test_3_* en ES, PT y EN
+     dentro de assets/js/i18n.js por testimonios reales.
      ============================================================ -->
-<section class="section" id="testimonios">
-  <div class="container">
-    <div class="section-head" data-reveal>
-      <span class="section-label" data-i18n="test_label">Casos de éxito</span>
-      <h2 class="section-title" data-i18n="test_title">Lo que dicen nuestros clientes</h2>
-    </div>
-    <div class="apps-grid" style="grid-template-columns:repeat(3,1fr)">
-      <div class="app-card" style="--app-color:#8840C8" data-reveal data-reveal-delay="1">
-        <div style="display:flex;gap:.75rem;align-items:center;margin-bottom:1.25rem">
-          <div style="width:48px;height:48px;border-radius:50%;background:var(--c-bg-card-2);border:1px dashed var(--c-border-2);display:flex;align-items:center;justify-content:center;color:var(--c-text-3);font-size:.7rem;font-weight:700" data-i18n="wc_3">FOTO</div>
-          <div>
-            <div style="font-weight:700;font-size:.9rem" data-i18n="test_1_name">Nombre del Cliente</div>
-            <div style="font-size:.8rem;color:var(--c-text-3)" data-i18n="test_1_role">Gerente de Operaciones · Empresa A</div>
-          </div>
-        </div>
-        <p style="font-size:.95rem;font-style:italic;color:var(--c-text-2)" data-i18n="test_1_quote">"Desde que implementamos Appogio, redujimos el tiempo de inspecciones en un 60% y los incidentes en ruta bajaron considerablemente."</p>
-        <div style="display:flex;gap:.25rem;margin-top:1rem">
-          <span style="color:#F59E0B">★★★★★</span>
-        </div>
-      </div>
-      <div class="app-card" style="--app-color:#10B981" data-reveal data-reveal-delay="2">
-        <div style="display:flex;gap:.75rem;align-items:center;margin-bottom:1.25rem">
-          <div style="width:48px;height:48px;border-radius:50%;background:var(--c-bg-card-2);border:1px dashed var(--c-border-2);display:flex;align-items:center;justify-content:center;color:var(--c-text-3);font-size:.7rem;font-weight:700" data-i18n="wc_3">FOTO</div>
-          <div>
-            <div style="font-weight:700;font-size:.9rem" data-i18n="test_2_name">Nombre del Cliente</div>
-            <div style="font-size:.8rem;color:var(--c-text-3)" data-i18n="test_2_role">Director de Flota · Empresa B</div>
-          </div>
-        </div>
-        <p style="font-size:.95rem;font-style:italic;color:var(--c-text-2)" data-i18n="test_2_quote">"La integración entre PilotOS y las inspecciones de InspectPro nos dio visibilidad completa de cada turno y cada conductor."</p>
-        <div style="display:flex;gap:.25rem;margin-top:1rem">
-          <span style="color:#F59E0B">★★★★★</span>
-        </div>
-      </div>
-      <div class="app-card" style="--app-color:#8B5CF6" data-reveal data-reveal-delay="3">
-        <div style="display:flex;gap:.75rem;align-items:center;margin-bottom:1.25rem">
-          <div style="width:48px;height:48px;border-radius:50%;background:var(--c-bg-card-2);border:1px dashed var(--c-border-2);display:flex;align-items:center;justify-content:center;color:var(--c-text-3);font-size:.7rem;font-weight:700" data-i18n="wc_3">FOTO</div>
-          <div>
-            <div style="font-weight:700;font-size:.9rem" data-i18n="test_3_name">Nombre del Cliente</div>
-            <div style="font-size:.8rem;color:var(--c-text-3)" data-i18n="test_3_role">CEO · Empresa C</div>
-          </div>
-        </div>
-        <p style="font-size:.95rem;font-style:italic;color:var(--c-text-2)" data-i18n="test_3_quote">"CamFleet nos permitió resolver disputas con clientes en horas gracias a las grabaciones vehiculares. Una herramienta indispensable."</p>
-        <div style="display:flex;gap:.25rem;margin-top:1rem">
-          <span style="color:#F59E0B">★★★★★</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============================================================
      CTA SECTION
