@@ -4,6 +4,10 @@
 
 const translations = {
   es: {
+    sc_at_al_t:'Alertas',
+    sc_at_al_d:'Robo, batería baja, inactividad y equipos sin señal',
+    sc_cc_exc_t:'Excursiones',
+    sc_cc_exc_d:'Registro de cuándo la temperatura salió del rango',
     tab_index:'Software de rastreo GPS en marca blanca | Appogio',
     tab_contacto:'Solicitar demo del software de rastreo GPS | Appogio',
     tab_assettrack:'Rastreo de remolques y contenedores GPS | AssetTrack',
@@ -1607,6 +1611,10 @@ const translations = {
   },
 
   pt: {
+    sc_at_al_t:'Alertas',
+    sc_at_al_d:'Roubo, bateria fraca, inatividade e equipamentos sem sinal',
+    sc_cc_exc_t:'Excursões',
+    sc_cc_exc_d:'Registro de quando a temperatura saiu da faixa',
     tab_index:'Software de rastreamento GPS em marca branca | Appogio',
     tab_contacto:'Solicitar demonstração do software de rastreamento GPS | Appogio',
     tab_assettrack:'Rastreamento de reboques e contêineres GPS | AssetTrack',
@@ -3210,6 +3218,10 @@ const translations = {
   },
 
   en: {
+    sc_at_al_t:'Alerts',
+    sc_at_al_d:'Theft, low battery, inactivity and units with no signal',
+    sc_cc_exc_t:'Excursions',
+    sc_cc_exc_d:'Log of when temperature went out of range',
     tab_index:'White-label GPS tracking software | Appogio',
     tab_contacto:'Request a demo of the GPS tracking software | Appogio',
     tab_assettrack:'Trailer and container GPS tracking | AssetTrack',
