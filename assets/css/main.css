@@ -136,6 +136,18 @@ p { color: var(--c-text-2); line-height: 1.75; }
 .section-head .section-label::before { display: none; }
 .section-head .section-desc { margin: 0 auto 3rem; }
 
+/* Bajada de sección (texto de apoyo bajo el título): legible y en negro, no en gris tímido */
+.section-sub {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--c-text);
+  max-width: 760px;
+  margin: .875rem auto 0;
+}
+/* Aire entre el encabezado y las tarjetas, con o sin bajada */
+.section-head .section-sub { margin-bottom: 2.5rem; }
+.section-head .section-title:last-child { margin-bottom: 2.25rem; }
+
 /* --- Buttons --- */
 .btn {
   display: inline-flex;
@@ -321,7 +333,7 @@ p { color: var(--c-text-2); line-height: 1.75; }
 /* Showcase interactivo (estilo Wialon): imagen + características que cambian la imagen */
 .showcase-wrap { display: grid; grid-template-columns: 1.85fr 1fr; gap: 3.25rem; align-items: center; }
 /* Espaciado más compacto entre secciones en las páginas internas de apps (no afecta el inicio) */
-.app-hero ~ .section { padding-top: 4rem; padding-bottom: 4rem; }
+.app-hero ~ .section { padding-top: 3.25rem; padding-bottom: 3.25rem; }
 #caracteristicas-todas { padding-top: 3.5rem; padding-bottom: 3.5rem; }
 .showcase-img { border: 1px solid var(--c-border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); background: var(--c-bg-card); aspect-ratio: 16 / 10; }
 .showcase-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .25s ease; }
@@ -631,7 +643,8 @@ p { color: var(--c-text-2); line-height: 1.75; }
   color: #64748B;
 }
 .feature-card h4 { margin-bottom: .5rem; font-size: 1rem; color: var(--c-text); }
-.feature-card p { font-size: .9rem; }
+/* Explicación de cada funcionalidad: legible y en negro; el color queda en el icono */
+.feature-card p { font-size: .95rem; line-height: 1.65; color: var(--c-text); }
 
 /* ============================================================
    APPS ECOSYSTEM
@@ -892,8 +905,9 @@ p { color: var(--c-text-2); line-height: 1.75; }
   box-shadow: var(--shadow-card-hover);
 }
 .industry-icon { width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;flex-shrink:0; }
-.industry-card h4 { margin-bottom: .375rem; color: var(--c-text); }
-.industry-card p { font-size: .875rem; }
+.industry-card h4 { margin-bottom: .5rem; color: var(--c-text); font-size: 1.15rem; }
+/* Argumento de venta: debe leerse. Tamaño normal y negro; el color queda solo en el icono */
+.industry-card p { font-size: 1rem; line-height: 1.6; color: var(--c-text); }
 
 /* ============================================================
    METRICS

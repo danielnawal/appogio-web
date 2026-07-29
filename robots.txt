@@ -1,0 +1,10 @@
+# appogio.com
+User-agent: *
+Allow: /
+
+# copias de respaldo y reportes internos: no indexar
+Disallow: /bot_screenshots/
+Disallow: /*.bak-apps-20260617
+Disallow: /*.bak-og-20260617
+
+Sitemap: https://appogio.com/sitemap.xml

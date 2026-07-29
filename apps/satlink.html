@@ -3,17 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="tab_satlink">SatLink — Conexión Satelital | Appogio</title>
-  <meta name="description" content="SatLink recibe las posiciones que tus equipos envían por red satelital (Iridium, Globalstar y otras) y las reinyecta automáticamente en tu software GPS, para que tus unidades sigan en el mapa incluso donde no hay señal celular.">
+  <title data-i18n="tab_satlink">Rastreo satelital Iridium y Globalstar | SatLink</title>
+  <meta name="description" content="Rastreo satelital donde no llega la señal celular: recibe posiciones de Iridium y Globalstar y las reinyecta en su software GPS automáticamente.">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon-64.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/main.css?v=1781723488">
+  <link rel="stylesheet" href="../assets/css/main.css?v=1785343476">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
   <style>:root { --app-color: #E50515; }</style>
+  <link rel="canonical" href="https://appogio.com/apps/satlink.html">
+  <meta property="og:site_name" content="Appogio">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://appogio.com/apps/satlink.html">
+  <meta property="og:title" content="Rastreo satelital Iridium y Globalstar">
+  <meta property="og:description" content="Rastreo satelital donde no llega la señal celular: recibe posiciones de Iridium y Globalstar y las reinyecta en su software GPS automáticamente.">
+  <meta property="og:image" content="https://appogio.com/assets/images/satlink-panel.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rastreo satelital Iridium y Globalstar">
+  <meta name="twitter:description" content="Rastreo satelital donde no llega la señal celular: recibe posiciones de Iridium y Globalstar y las reinyecta en su software GPS automáticamente.">
+  <meta name="twitter:image" content="https://appogio.com/assets/images/satlink-panel.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SatLink",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Software de gestión de flotas y rastreo GPS",
+  "operatingSystem": "Web",
+  "url": "https://appogio.com/apps/satlink.html",
+  "description": "Rastreo satelital donde no llega la señal celular: recibe posiciones de Iridium y Globalstar y las reinyecta en su software GPS automáticamente.",
+  "inLanguage": [
+    "es",
+    "pt-BR",
+    "en"
+  ],
+  "featureList": [
+    "Rastreo donde no llega la red celular",
+    "Compatible con Iridium y Globalstar",
+    "Reinyección automática al software GPS",
+    "Bitácora completa del relay"
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Appogio",
+    "url": "https://appogio.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Appogio",
+    "url": "https://appogio.com/",
+    "logo": "https://appogio.com/assets/images/logo-appogio.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://appogio.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Aplicaciones",
+      "item": "https://appogio.com/#apps"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SatLink",
+      "item": "https://appogio.com/apps/satlink.html"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 <nav class="navbar scrolled">
@@ -24,27 +96,27 @@
       <a href="webservices.html" class="nav-link nav-link-ws" style="display:inline-flex;align-items:center;gap:.4rem;font-weight:700"><span style="background:linear-gradient(135deg,#6366f1,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">WebService</span><span style="background:rgba(99,102,241,.12);color:#6366f1;font-size:.62rem;font-weight:800;letter-spacing:.4px;padding:2px 6px;border-radius:6px;line-height:1.4">+380</span></a><div class="nav-dropdown has-mega">
         <a class="nav-link"><span data-i18n="nav_apps">Aplicaciones</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="dropdown-menu dropdown-mega"><div class="mega-inner"><div class="mega-head" data-i18n="apps_eco">Aplicaciones del ecosistema</div><div class="mega-grid">
-          <a href="driveiq.html" class="mega-item"><img src="../assets/images/icons/driveiq.svg"><div class="mi-text"><strong>DriveIQ</strong><span data-i18n="dm_driveiq">Análisis de comportamiento vial</span></div></a>
-          <a href="inspectpro.html" class="mega-item"><img src="../assets/images/icons/inspectpro.png"><div class="mi-text"><strong>InspectPro</strong><span data-i18n="dm_inspectpro">Inspecciones digitales de vehículos</span></div></a>
-          <a href="pilotos.html" class="mega-item"><img src="../assets/images/icons/pilotos.png"><div class="mi-text"><strong>PilotOS</strong><span data-i18n="dm_pilotos">Gestión de conductores</span></div></a>
-          <a href="pesv.html" class="mega-item"><img src="../assets/images/icons/pesv.png"><div class="mi-text"><strong>PESV</strong><span data-i18n="dm_pesv">Plan de Seguridad Vial</span></div></a>
-          <a href="camfleet.html" class="mega-item"><img src="../assets/images/icons/camfleet.svg"><div class="mi-text"><strong>CamFleet</strong><span data-i18n="dm_camfleet">Cámaras y grabación vehicular</span></div></a>
-          <a href="tagradar.html" class="mega-item"><img src="../assets/images/icons/tagradar.svg"><div class="mi-text"><strong>TagRadar</strong><span data-i18n="dm_tagradar">Rastreo de activos BLE</span></div></a>
-          <a href="notice.html" class="mega-item"><img src="../assets/images/icons/notice.png"><div class="mi-text"><strong>Notice</strong><span data-i18n="dm_notice">Mensajería y comunicaciones</span></div></a>
-          <a href="fleetcare.html" class="mega-item"><img src="../assets/images/icons/fleetcare.png"><div class="mi-text"><strong>FleetCare</strong><span data-i18n="dm_fleetcare">Mantenimiento de flota</span></div></a>
-          <a href="workorders.html" class="mega-item"><img src="../assets/images/icons/workorders.png"><div class="mi-text"><strong>WorkOrders</strong><span data-i18n="dm_workorders">Órdenes de trabajo</span></div></a>
-          <a href="guardcheck.html" class="mega-item"><img src="../assets/images/icons/guardcheck.png"><div class="mi-text"><strong>GuardCheck</strong><span data-i18n="dm_guardcheck">Vigilancia y rondas</span></div></a>
-          <a href="fleetops.html" class="mega-item"><img src="../assets/images/icons/fleetops.png"><div class="mi-text"><strong>FleetOps</strong><span data-i18n="dm_fleetops">Control operacional</span></div></a>
-          <a href="routeos.html" class="mega-item"><img src="../assets/images/icons/routeos.png"><div class="mi-text"><strong>RouteOS</strong><span data-i18n="dm_routeos">Rutas de transporte</span></div></a>
-          <a href="fleetsync.html" class="mega-item"><img src="../assets/images/icons/fleetsync.png"><div class="mi-text"><strong>FleetSync</strong><span data-i18n="dm_fleetsync">Integraciones GPS</span></div></a>
-          <a href="trackphone.html" class="mega-item"><img src="../assets/images/icons/trackphone.png"><div class="mi-text"><strong>TrackPhone</strong><span data-i18n="dm_trackphone">Rastreo por celular</span></div></a>
-          <a href="satlink.html" class="mega-item"><img src="../assets/images/icons/satlink.png"><div class="mi-text"><strong>SatLink</strong><span data-i18n="dm_satlink">Conexión satelital</span></div></a>
-          <a href="mailux.html" class="mega-item"><img src="../assets/images/icons/mailux.svg"><div class="mi-text"><strong>Mailux</strong><span data-i18n="dm_mailux">Email marketing</span></div></a>
-          <a href="developers.html" class="mega-item"><img src="../assets/images/icons/developers.png"><div class="mi-text"><strong>Developers</strong><span data-i18n="dm_developers">API y documentación</span></div></a>
-            <a href="schooltrack.html" class="mega-item"><img src="../assets/images/icons/schooltrack.png"><div class="mi-text"><strong>SchoolTrack</strong><span data-i18n="dm_schooltrack">Transporte escolar inteligente</span></div></a>
-            <a href="coldchain.html" class="mega-item"><img src="../assets/images/icons/coldchain.png"><div class="mi-text"><strong>ColdChain</strong><span data-i18n="dm_coldchain">Monitoreo de cadena de frío</span></div></a>
-            <a href="assettrack.html" class="mega-item"><img src="../assets/images/icons/assettrack.png"><div class="mi-text"><strong>AssetTrack</strong><span data-i18n="dm_assettrack">Rastreo de activos y remolques</span></div></a>
-        <a href="fleetwatch.html" class="mega-item"><img src="../assets/images/icons/fleetwatch.png"><div class="mi-text"><strong>FleetWatch</strong><span data-i18n="dm_fleetwatch">Equipos que dejan de reportar</span></div></a><a href="remindo.html" class="mega-item"><img src="../assets/images/icons/remindo.png"><div class="mi-text"><strong>Remindo</strong><span data-i18n="dm_remindo">Tareas y vencimientos de GPS</span></div></a><a href="fuec.html" class="mega-item"><img src="../assets/images/icons/fuec.png"><div class="mi-text"><strong>FUEC</strong><span data-i18n="dm_fuec">Extracto del contrato (transporte especial)</span></div></a><a href="whatstar.html" class="mega-item"><img src="../assets/images/icons/whatstar.svg"><div class="mi-text"><strong>WhatStar</strong><span data-i18n="dm_whatstar">Alertas y campañas por WhatsApp</span></div></a><a href="webservices.html" class="mega-item"><img src="../assets/images/icons/webservices.svg"><div class="mi-text"><strong>WebService</strong><span data-i18n="dm_webservices">Más de 380 aplicaciones conectadas</span></div></a></div></div></div>
+          <a href="driveiq.html" class="mega-item"><img src="../assets/images/icons/driveiq.svg" alt=""><div class="mi-text"><strong>DriveIQ</strong><span data-i18n="dm_driveiq">Análisis de comportamiento vial</span></div></a>
+          <a href="inspectpro.html" class="mega-item"><img src="../assets/images/icons/inspectpro.png" alt=""><div class="mi-text"><strong>InspectPro</strong><span data-i18n="dm_inspectpro">Inspecciones digitales de vehículos</span></div></a>
+          <a href="pilotos.html" class="mega-item"><img src="../assets/images/icons/pilotos.png" alt=""><div class="mi-text"><strong>PilotOS</strong><span data-i18n="dm_pilotos">Gestión de conductores</span></div></a>
+          <a href="pesv.html" class="mega-item"><img src="../assets/images/icons/pesv.png" alt=""><div class="mi-text"><strong>PESV</strong><span data-i18n="dm_pesv">Plan de Seguridad Vial</span></div></a>
+          <a href="camfleet.html" class="mega-item"><img src="../assets/images/icons/camfleet.svg" alt=""><div class="mi-text"><strong>CamFleet</strong><span data-i18n="dm_camfleet">Cámaras y grabación vehicular</span></div></a>
+          <a href="tagradar.html" class="mega-item"><img src="../assets/images/icons/tagradar.svg" alt=""><div class="mi-text"><strong>TagRadar</strong><span data-i18n="dm_tagradar">Rastreo de activos BLE</span></div></a>
+          <a href="notice.html" class="mega-item"><img src="../assets/images/icons/notice.png" alt=""><div class="mi-text"><strong>Notice</strong><span data-i18n="dm_notice">Mensajería y comunicaciones</span></div></a>
+          <a href="fleetcare.html" class="mega-item"><img src="../assets/images/icons/fleetcare.png" alt=""><div class="mi-text"><strong>FleetCare</strong><span data-i18n="dm_fleetcare">Mantenimiento de flota</span></div></a>
+          <a href="workorders.html" class="mega-item"><img src="../assets/images/icons/workorders.png" alt=""><div class="mi-text"><strong>WorkOrders</strong><span data-i18n="dm_workorders">Órdenes de trabajo</span></div></a>
+          <a href="guardcheck.html" class="mega-item"><img src="../assets/images/icons/guardcheck.png" alt=""><div class="mi-text"><strong>GuardCheck</strong><span data-i18n="dm_guardcheck">Vigilancia y rondas</span></div></a>
+          <a href="fleetops.html" class="mega-item"><img src="../assets/images/icons/fleetops.png" alt=""><div class="mi-text"><strong>FleetOps</strong><span data-i18n="dm_fleetops">Control operacional</span></div></a>
+          <a href="routeos.html" class="mega-item"><img src="../assets/images/icons/routeos.png" alt=""><div class="mi-text"><strong>RouteOS</strong><span data-i18n="dm_routeos">Rutas de transporte</span></div></a>
+          <a href="fleetsync.html" class="mega-item"><img src="../assets/images/icons/fleetsync.png" alt=""><div class="mi-text"><strong>FleetSync</strong><span data-i18n="dm_fleetsync">Integraciones GPS</span></div></a>
+          <a href="trackphone.html" class="mega-item"><img src="../assets/images/icons/trackphone.png" alt=""><div class="mi-text"><strong>TrackPhone</strong><span data-i18n="dm_trackphone">Rastreo por celular</span></div></a>
+          <a href="satlink.html" class="mega-item"><img src="../assets/images/icons/satlink.png" alt=""><div class="mi-text"><strong>SatLink</strong><span data-i18n="dm_satlink">Conexión satelital</span></div></a>
+          <a href="mailux.html" class="mega-item"><img src="../assets/images/icons/mailux.svg" alt=""><div class="mi-text"><strong>Mailux</strong><span data-i18n="dm_mailux">Email marketing</span></div></a>
+          <a href="developers.html" class="mega-item"><img src="../assets/images/icons/developers.png" alt=""><div class="mi-text"><strong>Developers</strong><span data-i18n="dm_developers">API y documentación</span></div></a>
+            <a href="schooltrack.html" class="mega-item"><img src="../assets/images/icons/schooltrack.png" alt=""><div class="mi-text"><strong>SchoolTrack</strong><span data-i18n="dm_schooltrack">Transporte escolar inteligente</span></div></a>
+            <a href="coldchain.html" class="mega-item"><img src="../assets/images/icons/coldchain.png" alt=""><div class="mi-text"><strong>ColdChain</strong><span data-i18n="dm_coldchain">Monitoreo de cadena de frío</span></div></a>
+            <a href="assettrack.html" class="mega-item"><img src="../assets/images/icons/assettrack.png" alt=""><div class="mi-text"><strong>AssetTrack</strong><span data-i18n="dm_assettrack">Rastreo de activos y remolques</span></div></a>
+        <a href="fleetwatch.html" class="mega-item"><img src="../assets/images/icons/fleetwatch.png" alt=""><div class="mi-text"><strong>FleetWatch</strong><span data-i18n="dm_fleetwatch">Equipos que dejan de reportar</span></div></a><a href="remindo.html" class="mega-item"><img src="../assets/images/icons/remindo.png" alt=""><div class="mi-text"><strong>Remindo</strong><span data-i18n="dm_remindo">Tareas y vencimientos de GPS</span></div></a><a href="fuec.html" class="mega-item"><img src="../assets/images/icons/fuec.png" alt=""><div class="mi-text"><strong>FUEC</strong><span data-i18n="dm_fuec">Extracto del contrato (transporte especial)</span></div></a><a href="whatstar.html" class="mega-item"><img src="../assets/images/icons/whatstar.svg" alt=""><div class="mi-text"><strong>WhatStar</strong><span data-i18n="dm_whatstar">Alertas y campañas por WhatsApp</span></div></a><a href="webservices.html" class="mega-item"><img src="../assets/images/icons/webservices.svg" alt=""><div class="mi-text"><strong>WebService</strong><span data-i18n="dm_webservices">Más de 380 aplicaciones conectadas</span></div></a></div></div></div>
       </div>
       <a href="../contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
     </div>
@@ -80,7 +152,7 @@
   <div class="container">
     <div data-reveal>
       <div class="app-icon-lg" style="background:none;border:none;padding:0">
-        <img src="../assets/images/icons/satlink.png" width="72" height="72" style="border-radius:18px;display:block">
+        <img src="../assets/images/icons/satlink.png" width="72" height="72" style="border-radius:18px;display:block" alt="">
       </div>
       <div class="app-hero-badge" style="border-color:#E50515;color:#E50515" data-i18n="sl_badge">Conexión Satelital</div>
       <h1 data-i18n-html="sl_title">SatLink — <span style="color:#E50515">Conexión Satelital.</span></h1>
@@ -159,27 +231,28 @@
 <section class="section" style="background:var(--c-bg-2)">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="section-label" style="color:#E50515" data-i18n="app_sec_usecases">Casos de uso</span>
+      <span class="section-label" style="color:#E50515" data-i18n="nw_1">A quién venderle</span>
       <h2 class="section-title" data-i18n="sl_uc_title">Para operar donde no hay cobertura celular</h2>
+      <p class="section-sub" data-i18n="nw_sell_satlink">Usted distribuye con su propia marca: esta es la lista de a quién le puede vender SatLink, y con qué argumento.</p>
     </div>
     <div class="industries-grid" data-reveal>
       <div class="industry-card">
-        <div class="industry-icon" style="background:rgba(229,5,21,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E50515" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a6 6 0 0 0 10 0 6 6 0 0 0 10 0"/><path d="M4 18 3 9l9-3 9 3-1 9"/><path d="M12 6V3"/></svg></div>
+        <div class="industry-icon" style="background:rgba(229,5,21,.1);color:#E50515"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E50515" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a6 6 0 0 0 10 0 6 6 0 0 0 10 0"/><path d="M4 18 3 9l9-3 9 3-1 9"/><path d="M12 6V3"/></svg></div>
         <h4 data-i18n="sl_uc1t">Transporte fluvial y marítimo</h4>
         <p data-i18n="sl_uc1d">Barcos, lanchas y remolques en ríos y mar abierto, donde la señal celular no llega pero el seguimiento no puede fallar.</p>
       </div>
       <div class="industry-card">
-        <div class="industry-icon" style="background:rgba(229,5,21,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E50515" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 20 4-9 5 4 4-7 5 12z"/><path d="M3 20h18"/></svg></div>
+        <div class="industry-icon" style="background:rgba(229,5,21,.1);color:#E50515"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E50515" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 20 4-9 5 4 4-7 5 12z"/><path d="M3 20h18"/></svg></div>
         <h4 data-i18n="sl_uc2t">Minería y zonas remotas</h4>
         <p data-i18n="sl_uc2d">Equipos y estaciones en selva, llanos o montaña donde no hay torres celulares pero sí cielo abierto para el satélite.</p>
       </div>
       <div class="industry-card">
-        <div class="industry-icon" style="background:rgba(229,5,21,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E50515" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="industry-icon" style="background:rgba(229,5,21,.1);color:#E50515"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E50515" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
         <h4 data-i18n="sl_uc3t">Carga de largo recorrido</h4>
         <p data-i18n="sl_uc3d">Camiones que cruzan tramos sin cobertura entre ciudades y deben seguir reportando todo el trayecto, sin huecos en el mapa.</p>
       </div>
       <div class="industry-card">
-        <div class="industry-icon" style="background:rgba(229,5,21,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E50515" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+        <div class="industry-icon" style="background:rgba(229,5,21,.1);color:#E50515"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E50515" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
         <h4 data-i18n="sl_uc4t">Activos fijos aislados</h4>
         <p data-i18n="sl_uc4d">Estaciones, plantas y sensores en sitios remotos que necesitan monitoreo continuo en tu misma plataforma GPS.</p>
       </div>
@@ -233,7 +306,7 @@
     <span class="fi fi-es" id="float-flag"></span>
   </button>
 </div>
-<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/i18n.js?v=1785343476"></script>
 <script src="../assets/js/main.js"></script>
 <script>(function(){var bs=document.querySelectorAll(".sc-feat"),im=document.getElementById("sc-img");bs.forEach(function(b){b.addEventListener("click",function(){bs.forEach(function(x){x.classList.remove("active")});b.classList.add("active");im.src=b.getAttribute("data-img");});});})();</script>
 </body>

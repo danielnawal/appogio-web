@@ -3,17 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="tab_fleetsync">FleetSync — Integraciones GPS | Appogio</title>
-  <meta name="description" content="FleetSync es un hub de conectividad multi-proveedor que integra tus dispositivos y plataformas GPS en un solo flujo de datos normalizado para todo el ecosistema.">
+  <title data-i18n="tab_fleetsync">Integración de plataformas y equipos GPS | FleetSync</title>
+  <meta name="description" content="Conecte varios proveedores GPS y plataformas en un solo flujo de datos normalizado, con panel de conexiones, sandbox y API documentada.">
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon-64.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/main.css?v=1781723488">
+  <link rel="stylesheet" href="../assets/css/main.css?v=1785343476">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
   <style>:root { --app-color: #F0883A; }</style>
+  <link rel="canonical" href="https://appogio.com/apps/fleetsync.html">
+  <meta property="og:site_name" content="Appogio">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://appogio.com/apps/fleetsync.html">
+  <meta property="og:title" content="Integración de plataformas y equipos GPS">
+  <meta property="og:description" content="Conecte varios proveedores GPS y plataformas en un solo flujo de datos normalizado, con panel de conexiones, sandbox y API documentada.">
+  <meta property="og:image" content="https://appogio.com/assets/images/fleetsync-inicio.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Integración de plataformas y equipos GPS">
+  <meta name="twitter:description" content="Conecte varios proveedores GPS y plataformas en un solo flujo de datos normalizado, con panel de conexiones, sandbox y API documentada.">
+  <meta name="twitter:image" content="https://appogio.com/assets/images/fleetsync-inicio.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FleetSync",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Software de gestión de flotas y rastreo GPS",
+  "operatingSystem": "Web",
+  "url": "https://appogio.com/apps/fleetsync.html",
+  "description": "Conecte varios proveedores GPS y plataformas en un solo flujo de datos normalizado, con panel de conexiones, sandbox y API documentada.",
+  "inLanguage": [
+    "es",
+    "pt-BR",
+    "en"
+  ],
+  "featureList": [
+    "Conexión con múltiples proveedores GPS",
+    "Datos normalizados en un solo formato",
+    "Panel de conexiones gestionadas",
+    "API y documentación para desarrolladores"
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Appogio",
+    "url": "https://appogio.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Appogio",
+    "url": "https://appogio.com/",
+    "logo": "https://appogio.com/assets/images/logo-appogio.png"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://appogio.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Aplicaciones",
+      "item": "https://appogio.com/#apps"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "FleetSync",
+      "item": "https://appogio.com/apps/fleetsync.html"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 <nav class="navbar scrolled">
@@ -24,27 +96,27 @@
       <a href="webservices.html" class="nav-link nav-link-ws" style="display:inline-flex;align-items:center;gap:.4rem;font-weight:700"><span style="background:linear-gradient(135deg,#6366f1,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">WebService</span><span style="background:rgba(99,102,241,.12);color:#6366f1;font-size:.62rem;font-weight:800;letter-spacing:.4px;padding:2px 6px;border-radius:6px;line-height:1.4">+380</span></a><div class="nav-dropdown has-mega">
         <a class="nav-link"><span data-i18n="nav_apps">Aplicaciones</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg></a>
         <div class="dropdown-menu dropdown-mega"><div class="mega-inner"><div class="mega-head" data-i18n="apps_eco">Aplicaciones del ecosistema</div><div class="mega-grid">
-          <a href="driveiq.html" class="mega-item"><img src="../assets/images/icons/driveiq.svg"><div class="mi-text"><strong>DriveIQ</strong><span data-i18n="dm_driveiq">Análisis de comportamiento vial</span></div></a>
-          <a href="inspectpro.html" class="mega-item"><img src="../assets/images/icons/inspectpro.png"><div class="mi-text"><strong>InspectPro</strong><span data-i18n="dm_inspectpro">Inspecciones digitales de vehículos</span></div></a>
-          <a href="pilotos.html" class="mega-item"><img src="../assets/images/icons/pilotos.png"><div class="mi-text"><strong>PilotOS</strong><span data-i18n="dm_pilotos">Gestión de conductores</span></div></a>
-          <a href="pesv.html" class="mega-item"><img src="../assets/images/icons/pesv.png"><div class="mi-text"><strong>PESV</strong><span data-i18n="dm_pesv">Plan de Seguridad Vial</span></div></a>
-          <a href="camfleet.html" class="mega-item"><img src="../assets/images/icons/camfleet.svg"><div class="mi-text"><strong>CamFleet</strong><span data-i18n="dm_camfleet">Cámaras y grabación vehicular</span></div></a>
-          <a href="tagradar.html" class="mega-item"><img src="../assets/images/icons/tagradar.svg"><div class="mi-text"><strong>TagRadar</strong><span data-i18n="dm_tagradar">Rastreo de activos BLE</span></div></a>
-          <a href="notice.html" class="mega-item"><img src="../assets/images/icons/notice.png"><div class="mi-text"><strong>Notice</strong><span data-i18n="dm_notice">Mensajería y comunicaciones</span></div></a>
-          <a href="fleetcare.html" class="mega-item"><img src="../assets/images/icons/fleetcare.png"><div class="mi-text"><strong>FleetCare</strong><span data-i18n="dm_fleetcare">Mantenimiento de flota</span></div></a>
-          <a href="workorders.html" class="mega-item"><img src="../assets/images/icons/workorders.png"><div class="mi-text"><strong>WorkOrders</strong><span data-i18n="dm_workorders">Órdenes de trabajo</span></div></a>
-          <a href="guardcheck.html" class="mega-item"><img src="../assets/images/icons/guardcheck.png"><div class="mi-text"><strong>GuardCheck</strong><span data-i18n="dm_guardcheck">Vigilancia y rondas</span></div></a>
-          <a href="fleetops.html" class="mega-item"><img src="../assets/images/icons/fleetops.png"><div class="mi-text"><strong>FleetOps</strong><span data-i18n="dm_fleetops">Control operacional</span></div></a>
-          <a href="routeos.html" class="mega-item"><img src="../assets/images/icons/routeos.png"><div class="mi-text"><strong>RouteOS</strong><span data-i18n="dm_routeos">Rutas de transporte</span></div></a>
-          <a href="fleetsync.html" class="mega-item"><img src="../assets/images/icons/fleetsync.png"><div class="mi-text"><strong>FleetSync</strong><span data-i18n="dm_fleetsync">Integraciones GPS</span></div></a>
-          <a href="trackphone.html" class="mega-item"><img src="../assets/images/icons/trackphone.png"><div class="mi-text"><strong>TrackPhone</strong><span data-i18n="dm_trackphone">Rastreo por celular</span></div></a>
-          <a href="satlink.html" class="mega-item"><img src="../assets/images/icons/satlink.png"><div class="mi-text"><strong>SatLink</strong><span data-i18n="dm_satlink">Conexión satelital</span></div></a>
-          <a href="mailux.html" class="mega-item"><img src="../assets/images/icons/mailux.svg"><div class="mi-text"><strong>Mailux</strong><span data-i18n="dm_mailux">Email marketing</span></div></a>
-          <a href="developers.html" class="mega-item"><img src="../assets/images/icons/developers.png"><div class="mi-text"><strong>Developers</strong><span data-i18n="dm_developers">API y documentación</span></div></a>
-            <a href="schooltrack.html" class="mega-item"><img src="../assets/images/icons/schooltrack.png"><div class="mi-text"><strong>SchoolTrack</strong><span data-i18n="dm_schooltrack">Transporte escolar inteligente</span></div></a>
-            <a href="coldchain.html" class="mega-item"><img src="../assets/images/icons/coldchain.png"><div class="mi-text"><strong>ColdChain</strong><span data-i18n="dm_coldchain">Monitoreo de cadena de frío</span></div></a>
-            <a href="assettrack.html" class="mega-item"><img src="../assets/images/icons/assettrack.png"><div class="mi-text"><strong>AssetTrack</strong><span data-i18n="dm_assettrack">Rastreo de activos y remolques</span></div></a>
-        <a href="fleetwatch.html" class="mega-item"><img src="../assets/images/icons/fleetwatch.png"><div class="mi-text"><strong>FleetWatch</strong><span data-i18n="dm_fleetwatch">Equipos que dejan de reportar</span></div></a><a href="remindo.html" class="mega-item"><img src="../assets/images/icons/remindo.png"><div class="mi-text"><strong>Remindo</strong><span data-i18n="dm_remindo">Tareas y vencimientos de GPS</span></div></a><a href="fuec.html" class="mega-item"><img src="../assets/images/icons/fuec.png"><div class="mi-text"><strong>FUEC</strong><span data-i18n="dm_fuec">Extracto del contrato (transporte especial)</span></div></a><a href="whatstar.html" class="mega-item"><img src="../assets/images/icons/whatstar.svg"><div class="mi-text"><strong>WhatStar</strong><span data-i18n="dm_whatstar">Alertas y campañas por WhatsApp</span></div></a><a href="webservices.html" class="mega-item"><img src="../assets/images/icons/webservices.svg"><div class="mi-text"><strong>WebService</strong><span data-i18n="dm_webservices">Más de 380 aplicaciones conectadas</span></div></a></div></div></div>
+          <a href="driveiq.html" class="mega-item"><img src="../assets/images/icons/driveiq.svg" alt=""><div class="mi-text"><strong>DriveIQ</strong><span data-i18n="dm_driveiq">Análisis de comportamiento vial</span></div></a>
+          <a href="inspectpro.html" class="mega-item"><img src="../assets/images/icons/inspectpro.png" alt=""><div class="mi-text"><strong>InspectPro</strong><span data-i18n="dm_inspectpro">Inspecciones digitales de vehículos</span></div></a>
+          <a href="pilotos.html" class="mega-item"><img src="../assets/images/icons/pilotos.png" alt=""><div class="mi-text"><strong>PilotOS</strong><span data-i18n="dm_pilotos">Gestión de conductores</span></div></a>
+          <a href="pesv.html" class="mega-item"><img src="../assets/images/icons/pesv.png" alt=""><div class="mi-text"><strong>PESV</strong><span data-i18n="dm_pesv">Plan de Seguridad Vial</span></div></a>
+          <a href="camfleet.html" class="mega-item"><img src="../assets/images/icons/camfleet.svg" alt=""><div class="mi-text"><strong>CamFleet</strong><span data-i18n="dm_camfleet">Cámaras y grabación vehicular</span></div></a>
+          <a href="tagradar.html" class="mega-item"><img src="../assets/images/icons/tagradar.svg" alt=""><div class="mi-text"><strong>TagRadar</strong><span data-i18n="dm_tagradar">Rastreo de activos BLE</span></div></a>
+          <a href="notice.html" class="mega-item"><img src="../assets/images/icons/notice.png" alt=""><div class="mi-text"><strong>Notice</strong><span data-i18n="dm_notice">Mensajería y comunicaciones</span></div></a>
+          <a href="fleetcare.html" class="mega-item"><img src="../assets/images/icons/fleetcare.png" alt=""><div class="mi-text"><strong>FleetCare</strong><span data-i18n="dm_fleetcare">Mantenimiento de flota</span></div></a>
+          <a href="workorders.html" class="mega-item"><img src="../assets/images/icons/workorders.png" alt=""><div class="mi-text"><strong>WorkOrders</strong><span data-i18n="dm_workorders">Órdenes de trabajo</span></div></a>
+          <a href="guardcheck.html" class="mega-item"><img src="../assets/images/icons/guardcheck.png" alt=""><div class="mi-text"><strong>GuardCheck</strong><span data-i18n="dm_guardcheck">Vigilancia y rondas</span></div></a>
+          <a href="fleetops.html" class="mega-item"><img src="../assets/images/icons/fleetops.png" alt=""><div class="mi-text"><strong>FleetOps</strong><span data-i18n="dm_fleetops">Control operacional</span></div></a>
+          <a href="routeos.html" class="mega-item"><img src="../assets/images/icons/routeos.png" alt=""><div class="mi-text"><strong>RouteOS</strong><span data-i18n="dm_routeos">Rutas de transporte</span></div></a>
+          <a href="fleetsync.html" class="mega-item"><img src="../assets/images/icons/fleetsync.png" alt=""><div class="mi-text"><strong>FleetSync</strong><span data-i18n="dm_fleetsync">Integraciones GPS</span></div></a>
+          <a href="trackphone.html" class="mega-item"><img src="../assets/images/icons/trackphone.png" alt=""><div class="mi-text"><strong>TrackPhone</strong><span data-i18n="dm_trackphone">Rastreo por celular</span></div></a>
+          <a href="satlink.html" class="mega-item"><img src="../assets/images/icons/satlink.png" alt=""><div class="mi-text"><strong>SatLink</strong><span data-i18n="dm_satlink">Conexión satelital</span></div></a>
+          <a href="mailux.html" class="mega-item"><img src="../assets/images/icons/mailux.svg" alt=""><div class="mi-text"><strong>Mailux</strong><span data-i18n="dm_mailux">Email marketing</span></div></a>
+          <a href="developers.html" class="mega-item"><img src="../assets/images/icons/developers.png" alt=""><div class="mi-text"><strong>Developers</strong><span data-i18n="dm_developers">API y documentación</span></div></a>
+            <a href="schooltrack.html" class="mega-item"><img src="../assets/images/icons/schooltrack.png" alt=""><div class="mi-text"><strong>SchoolTrack</strong><span data-i18n="dm_schooltrack">Transporte escolar inteligente</span></div></a>
+            <a href="coldchain.html" class="mega-item"><img src="../assets/images/icons/coldchain.png" alt=""><div class="mi-text"><strong>ColdChain</strong><span data-i18n="dm_coldchain">Monitoreo de cadena de frío</span></div></a>
+            <a href="assettrack.html" class="mega-item"><img src="../assets/images/icons/assettrack.png" alt=""><div class="mi-text"><strong>AssetTrack</strong><span data-i18n="dm_assettrack">Rastreo de activos y remolques</span></div></a>
+        <a href="fleetwatch.html" class="mega-item"><img src="../assets/images/icons/fleetwatch.png" alt=""><div class="mi-text"><strong>FleetWatch</strong><span data-i18n="dm_fleetwatch">Equipos que dejan de reportar</span></div></a><a href="remindo.html" class="mega-item"><img src="../assets/images/icons/remindo.png" alt=""><div class="mi-text"><strong>Remindo</strong><span data-i18n="dm_remindo">Tareas y vencimientos de GPS</span></div></a><a href="fuec.html" class="mega-item"><img src="../assets/images/icons/fuec.png" alt=""><div class="mi-text"><strong>FUEC</strong><span data-i18n="dm_fuec">Extracto del contrato (transporte especial)</span></div></a><a href="whatstar.html" class="mega-item"><img src="../assets/images/icons/whatstar.svg" alt=""><div class="mi-text"><strong>WhatStar</strong><span data-i18n="dm_whatstar">Alertas y campañas por WhatsApp</span></div></a><a href="webservices.html" class="mega-item"><img src="../assets/images/icons/webservices.svg" alt=""><div class="mi-text"><strong>WebService</strong><span data-i18n="dm_webservices">Más de 380 aplicaciones conectadas</span></div></a></div></div></div>
       </div>
       <a href="../contacto.html" class="nav-link" data-i18n="nav_contact">Contacto</a>
     </div>
@@ -80,7 +152,7 @@
   <div class="container">
     <div data-reveal>
       <div class="app-icon-lg" style="background:none;border:none;padding:0">
-        <img src="../assets/images/icons/fleetsync.png" width="72" height="72" style="border-radius:18px;display:block">
+        <img src="../assets/images/icons/fleetsync.png" width="72" height="72" style="border-radius:18px;display:block" alt="">
       </div>
       <div class="app-hero-badge" style="border-color:#F0883A;color:#F0883A" data-i18n="fs_badge">Integraciones GPS</div>
       <h1 data-i18n-html="fs_title">FleetSync — <span style="color:#F0883A">Integraciones GPS.</span></h1>
@@ -159,27 +231,28 @@
 <section class="section" style="background:var(--c-bg-2)">
   <div class="container">
     <div class="section-head" data-reveal>
-      <span class="section-label" style="color:#F0883A" data-i18n="app_sec_usecases">Casos de uso</span>
+      <span class="section-label" style="color:#F0883A" data-i18n="nw_1">A quién venderle</span>
       <h2 class="section-title" data-i18n="fs_uc_title">Para quien vive entre varias plataformas GPS</h2>
+      <p class="section-sub" data-i18n="nw_sell_fleetsync">Usted distribuye con su propia marca: esta es la lista de a quién le puede vender FleetSync, y con qué argumento.</p>
     </div>
     <div class="industries-grid" data-reveal>
       <div class="industry-card">
-        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v3M11 12l-5 5M13 12l5 5"/></svg></div>
+        <div class="industry-icon" style="background:rgba(240,136,58,.1);color:#F0883A"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v3M11 12l-5 5M13 12l5 5"/></svg></div>
         <h4 data-i18n="fs_uc1t">Distribuidores multi-plataforma</h4>
         <p data-i18n="fs_uc1d">Distribuidores que manejan varias plataformas GPS y necesitan unificar los datos.</p>
       </div>
       <div class="industry-card">
-        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="industry-icon" style="background:rgba(240,136,58,.1);color:#F0883A"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
         <h4 data-i18n="fs_uc2t">Flotas con equipos mixtos</h4>
         <p data-i18n="fs_uc2d">Empresas con dispositivos de distintos proveedores en una misma flota.</p>
       </div>
       <div class="industry-card">
-        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+        <div class="industry-icon" style="background:rgba(240,136,58,.1);color:#F0883A"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
         <h4 data-i18n="fs_uc3t">Integradores y software de terceros</h4>
         <p data-i18n="fs_uc3d">Equipos que conectan sistemas externos (ERP, BI, facturación) al GPS.</p>
       </div>
       <div class="industry-card">
-        <div class="industry-icon" style="background:rgba(30,58,122,.1)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg></div>
+        <div class="industry-icon" style="background:rgba(240,136,58,.1);color:#F0883A"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1E3A7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg></div>
         <h4 data-i18n="fs_uc4t">Migración entre plataformas</h4>
         <p data-i18n="fs_uc4d">Proyectos que mueven dispositivos de una plataforma a otra sin perder datos.</p>
       </div>
@@ -232,7 +305,7 @@
     <span class="fi fi-es" id="float-flag"></span>
   </button>
 </div>
-<script src="../assets/js/i18n.js"></script>
+<script src="../assets/js/i18n.js?v=1785343476"></script>
 <script src="../assets/js/main.js"></script>
 </body>
 </html>
