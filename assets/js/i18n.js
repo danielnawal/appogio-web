@@ -4,6 +4,12 @@
 
 const translations = {
   es: {
+    sc_st_map_t:'Mapa en vivo',
+    sc_st_map_d:'El bus en el mapa, con su velocidad y su próxima parada',
+    sc_st_fam_t:'Vista de la familia',
+    sc_st_fam_d:'El papá ve cuántos minutos faltan y avisa si su hijo no viaja',
+    sc_st_mon_t:'Vista del monitor',
+    sc_st_mon_d:'Lista de abordaje, escaneo de carné y botón de pánico',
     sc_cf_pan_t:'Panel de control',
     sc_cf_pan_d:'Cámaras, streams en vivo, almacenamiento y clientes de un vistazo',
     sc_cf_flo_t:'Flota de vehículos',
@@ -1615,6 +1621,12 @@ const translations = {
   },
 
   pt: {
+    sc_st_map_t:'Mapa ao vivo',
+    sc_st_map_d:'O ônibus no mapa, com sua velocidade e sua próxima parada',
+    sc_st_fam_t:'Visão da família',
+    sc_st_fam_d:'O pai vê quantos minutos faltam e avisa se o filho não viaja',
+    sc_st_mon_t:'Visão do monitor',
+    sc_st_mon_d:'Lista de embarque, leitura do crachá e botão de pânico',
     sc_cf_pan_t:'Painel de controle',
     sc_cf_pan_d:'Câmeras, streams ao vivo, armazenamento e clientes num relance',
     sc_cf_flo_t:'Frota de veículos',
@@ -3226,6 +3238,12 @@ const translations = {
   },
 
   en: {
+    sc_st_map_t:'Live map',
+    sc_st_map_d:'The bus on the map, with its speed and next stop',
+    sc_st_fam_t:'Family view',
+    sc_st_fam_d:'Parents see the minutes left and report if their child is not riding',
+    sc_st_mon_t:'Monitor view',
+    sc_st_mon_d:'Boarding list, badge scanning and panic button',
     sc_cf_pan_t:'Control panel',
     sc_cf_pan_d:'Cameras, live streams, storage and clients at a glance',
     sc_cf_flo_t:'Vehicle fleet',
