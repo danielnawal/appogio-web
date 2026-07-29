@@ -56,6 +56,7 @@ function animateCounter(el) {
     const value = eased * target;
     el.textContent = prefix + value.toFixed(decimals) + suffix;
     if (progress < 1) requestAnimationFrame(update);
+    else el.dataset.counterDone = '1';
   }
   requestAnimationFrame(update);
 }

@@ -4,6 +4,35 @@
 
 const translations = {
   es: {
+    wc_28: " años",
+    wc_29: " canales",
+    wc_1: "Servidores",
+    wc_2: "Cifrado TLS",
+    wc_3: "FOTO",
+    wc_4: "Hablemos de",
+    wc_5: "Nombre *",
+    wc_6: "Empresa *",
+    wc_7: "Email *",
+    wc_8: "Tu nombre",
+    wc_9: "Nombre de tu empresa",
+    wc_10: "correo@empresa.com",
+    wc_11: "Describe brevemente tu operación y el principal dolor que enfrentas...",
+    wc_12: "Tiempo real",
+    wc_13: "Enganches",
+    wc_14: "Activos",
+    wc_15: "Grabaciones",
+    wc_16: "Equipos",
+    wc_17: "Plantillas",
+    wc_18: "Mensajes",
+    wc_19: "Programados",
+    wc_20: "Historial",
+    wc_21: "Códigos QR",
+    wc_22: "Inventario",
+    wc_23: "Salud",
+    wc_24: "Manufactura",
+    wc_25: "Logística",
+    wc_26: "y por qué",
+    wc_27: "App Android",
     wb_396: "«Usted no tiene que cambiar nada de lo que ya usa. Nuestra plataforma se conecta con su sistema y le manda la información sola: dónde están los vehículos, cuánto recorrieron, qué pasó en la ruta. Ya lo hacemos con",
     wb_397: "«¿Que su sistema no está en esa lista? No importa:",
     wb_398: ". Es lo que hacemos todos los meses.»",
@@ -1427,6 +1456,35 @@ const translations = {
   },
 
   pt: {
+    wc_28: " anos",
+    wc_29: " canais",
+    wc_1: "Servidores",
+    wc_2: "Criptografia TLS",
+    wc_3: "FOTO",
+    wc_4: "Vamos falar da",
+    wc_5: "Nome *",
+    wc_6: "Empresa *",
+    wc_7: "E-mail *",
+    wc_8: "Seu nome",
+    wc_9: "Nome da sua empresa",
+    wc_10: "email@empresa.com",
+    wc_11: "Descreva brevemente sua operação e a principal dor que você enfrenta...",
+    wc_12: "Tempo real",
+    wc_13: "Engates",
+    wc_14: "Ativos",
+    wc_15: "Gravações",
+    wc_16: "Equipamentos",
+    wc_17: "Modelos",
+    wc_18: "Mensagens",
+    wc_19: "Programados",
+    wc_20: "Histórico",
+    wc_21: "Códigos QR",
+    wc_22: "Inventário",
+    wc_23: "Saúde",
+    wc_24: "Manufatura",
+    wc_25: "Logística",
+    wc_26: "e por quê",
+    wc_27: "App Android",
     wb_396: "«Você não precisa mudar nada do que já usa. A nossa plataforma se conecta ao seu sistema e envia a informação sozinha: onde estão os veículos, quanto rodaram, o que aconteceu na rota. Já fazemos isso com",
     wb_397: "«O seu sistema não está nessa lista? Não tem problema:",
     wb_398: ". É o que fazemos todos os meses.»",
@@ -2850,6 +2908,35 @@ const translations = {
   },
 
   en: {
+    wc_28: " years",
+    wc_29: " channels",
+    wc_1: "Servers",
+    wc_2: "TLS encryption",
+    wc_3: "PHOTO",
+    wc_4: "Let's talk about",
+    wc_5: "Name *",
+    wc_6: "Company *",
+    wc_7: "Email *",
+    wc_8: "Your name",
+    wc_9: "Your company name",
+    wc_10: "you@company.com",
+    wc_11: "Briefly describe your operation and the main pain point you face...",
+    wc_12: "Real time",
+    wc_13: "Couplings",
+    wc_14: "Assets",
+    wc_15: "Recordings",
+    wc_16: "Devices",
+    wc_17: "Templates",
+    wc_18: "Messages",
+    wc_19: "Scheduled",
+    wc_20: "History",
+    wc_21: "QR codes",
+    wc_22: "Inventory",
+    wc_23: "Healthcare",
+    wc_24: "Manufacturing",
+    wc_25: "Logistics",
+    wc_26: "and why",
+    wc_27: "Android app",
     wb_396: "«You don't have to change anything you already use. Our platform connects to your system and sends the information on its own: where the vehicles are, how far they went, what happened on the route. We already do it with",
     wb_397: "«Your system is not on that list? No problem:",
     wb_398: ". It is what we do every month.»",
@@ -4288,6 +4375,13 @@ function applyLang(lang) {
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const v = t[el.dataset.i18nPlaceholder];
     if (v !== undefined) el.placeholder = v;
+  });
+  /* sufijo de los contadores animados (lo lee main.js al animar) */
+  document.querySelectorAll('[data-i18n-suffix]').forEach(el => {
+    const v = t[el.dataset.i18nSuffix];
+    if (v === undefined) return;
+    el.dataset.suffix = v;
+    if (el.dataset.counterDone) el.textContent = (el.dataset.prefix || '') + el.dataset.target + v;
   });
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
   localStorage.setItem('appogio_lang', lang);
