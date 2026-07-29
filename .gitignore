@@ -1,0 +1,6 @@
+
+# Respaldos locales: se quedan en el disco, no en el repositorio
+*.bak
+*.bak-*
+*.bak.*
+*.ORIGINAL
