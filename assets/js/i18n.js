@@ -4,6 +4,10 @@
 
 const translations = {
   es: {
+    sc_cf_pan_t:'Panel de control',
+    sc_cf_pan_d:'Cámaras, streams en vivo, almacenamiento y clientes de un vistazo',
+    sc_cf_flo_t:'Flota de vehículos',
+    sc_cf_flo_d:'Cada cámara vinculada a su vehículo y su equipo GPS',
     sc_at_al_t:'Alertas',
     sc_at_al_d:'Robo, batería baja, inactividad y equipos sin señal',
     sc_cc_exc_t:'Excursiones',
@@ -1611,6 +1615,10 @@ const translations = {
   },
 
   pt: {
+    sc_cf_pan_t:'Painel de controle',
+    sc_cf_pan_d:'Câmeras, streams ao vivo, armazenamento e clientes num relance',
+    sc_cf_flo_t:'Frota de veículos',
+    sc_cf_flo_d:'Cada câmera vinculada ao seu veículo e ao seu equipamento GPS',
     sc_at_al_t:'Alertas',
     sc_at_al_d:'Roubo, bateria fraca, inatividade e equipamentos sem sinal',
     sc_cc_exc_t:'Excursões',
@@ -3218,6 +3226,10 @@ const translations = {
   },
 
   en: {
+    sc_cf_pan_t:'Control panel',
+    sc_cf_pan_d:'Cameras, live streams, storage and clients at a glance',
+    sc_cf_flo_t:'Vehicle fleet',
+    sc_cf_flo_d:'Each camera linked to its vehicle and its GPS unit',
     sc_at_al_t:'Alerts',
     sc_at_al_d:'Theft, low battery, inactivity and units with no signal',
     sc_cc_exc_t:'Excursions',
