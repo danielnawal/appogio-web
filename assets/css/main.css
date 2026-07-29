@@ -335,8 +335,10 @@ p { color: var(--c-text-2); line-height: 1.75; }
 /* Espaciado más compacto entre secciones en las páginas internas de apps (no afecta el inicio) */
 .app-hero ~ .section { padding-top: 3.25rem; padding-bottom: 3.25rem; }
 #caracteristicas-todas { padding-top: 3.5rem; padding-bottom: 3.5rem; }
-.showcase-img { border: 1px solid var(--c-border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); background: var(--c-bg-card); aspect-ratio: 16 / 10; }
-.showcase-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .25s ease; }
+/* El marco se adapta a la imagen: la captura llega justo hasta la orilla, sin recorte.
+   Antes tenia aspect-ratio 16/10 + object-fit:cover y recortaba los lados de las capturas. */
+.showcase-img { border: 1px solid var(--c-border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); background: var(--c-bg-card); }
+.showcase-img img { width: 100%; height: auto; max-height: 600px; object-fit: contain; display: block; transition: opacity .25s ease; }
 .showcase-list { display: flex; flex-direction: column; gap: .4rem; }
 .sc-feat { text-align: left; background: transparent; border: none; border-left: 3px solid transparent; padding: .9rem 1.1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; cursor: pointer; transition: var(--t-fast); font-family: inherit; }
 .sc-feat:hover { background: var(--c-bg-card); }
