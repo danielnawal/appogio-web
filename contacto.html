@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto y Demo — Appogio</title>
+  <title data-i18n="tab_contacto">Contacto y Demo — Appogio</title>
   <meta name="description" content="Solicita una demo gratuita de Appogio. Te contactamos en menos de 24 horas para mostrarte cómo digitalizar tu operación vehicular.">
   <link rel="stylesheet" href="assets/css/main.css?v=1781723488">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
   <style>
     .contact-hero {
       padding-top: calc(72px + 5rem);
@@ -220,6 +221,26 @@
     </div>
   </div>
 </footer>
+
+<div class="lang-float" id="lang-float">
+  <div class="lang-float-menu" id="lang-float-menu">
+    <button class="lang-float-option" data-lang="es" data-flag-class="fi-es">
+      <span class="fi fi-es"></span>
+      <span>Español</span>
+    </button>
+    <button class="lang-float-option" data-lang="pt" data-flag-class="fi-br">
+      <span class="fi fi-br"></span>
+      <span>Português</span>
+    </button>
+    <button class="lang-float-option" data-lang="en" data-flag-class="fi-us">
+      <span class="fi fi-us"></span>
+      <span>English</span>
+    </button>
+  </div>
+  <button class="lang-float-btn" id="lang-float-trigger" aria-label="Cambiar idioma">
+    <span class="fi fi-es" id="float-flag"></span>
+  </button>
+</div>
 
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
