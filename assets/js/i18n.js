@@ -150,6 +150,17 @@ const translations = {
     mm_so_taller_d: "Mantenimiento antes de la falla",
     mm_so_video: "Video a bordo",
     mm_so_video_d: "Ver qué pasó, no solo dónde",
+    ws_sc1s: "Mensajes enviados, contactos y respuestas automáticas",
+    ws_sc1t: "Panel de control",
+    ws_sc2s: "Varias líneas de WhatsApp en una sola cuenta",
+    ws_sc2t: "Sus números conectados",
+    ws_sc3s: "Listas por grupo e importación desde CSV",
+    ws_sc3t: "Agenda de contactos",
+    ws_sc4s: "Qué pregunta la gente, cuántos leads y en qué idioma",
+    ws_sc4t: "Analítica del chatbot",
+    ws_sc5s: "Cada mensaje enviado, con su tipo y su fecha",
+    ws_sc5t: "Registro de mensajes",
+    ws_sc_title: "WhatStar en pantalla",
     x_marca_candado_de_seguridad_y_correo_a_quien_0_1: "Clientes corporativos",
     x_marca_candado_de_seguridad_y_correo_a_quien_0_2: "Sus áreas de sistemas revisan certificados antes de aprobar el acceso.",
     x_marca_candado_de_seguridad_y_correo_a_quien_1_1: "Operaciones que dependen del correo",
@@ -4715,6 +4726,17 @@ const translations = {
     mm_so_taller_d: "Manutenção antes da falha",
     mm_so_video: "Vídeo a bordo",
     mm_so_video_d: "Ver o que aconteceu, não só onde",
+    ws_sc1s: "Mensagens enviadas, contatos e respostas automáticas",
+    ws_sc1t: "Painel de controle",
+    ws_sc2s: "Várias linhas de WhatsApp em uma única conta",
+    ws_sc2t: "Seus números conectados",
+    ws_sc3s: "Listas por grupo e importação de CSV",
+    ws_sc3t: "Agenda de contatos",
+    ws_sc4s: "O que as pessoas perguntam, quantos contatos e em que idioma",
+    ws_sc4t: "Análise do chatbot",
+    ws_sc5s: "Cada mensagem enviada, com seu tipo e sua data",
+    ws_sc5t: "Registro de mensagens",
+    ws_sc_title: "WhatStar na tela",
     x_marca_candado_de_seguridad_y_correo_a_quien_0_1: "Clientes corporativos",
     x_marca_candado_de_seguridad_y_correo_a_quien_0_2: "As áreas de TI conferem certificados antes de liberar o acesso.",
     x_marca_candado_de_seguridad_y_correo_a_quien_1_1: "Operações que dependem de e-mail",
@@ -9280,6 +9302,17 @@ const translations = {
     mm_so_taller_d: "Maintenance before the breakdown",
     mm_so_video: "Onboard video",
     mm_so_video_d: "See what happened, not just where",
+    ws_sc1s: "Messages sent, contacts and automatic replies",
+    ws_sc1t: "Control panel",
+    ws_sc2s: "Several WhatsApp lines in a single account",
+    ws_sc2t: "Your connected numbers",
+    ws_sc3s: "Lists by group and CSV import",
+    ws_sc3t: "Contact list",
+    ws_sc4s: "What people ask, how many leads and in which language",
+    ws_sc4t: "Chatbot analytics",
+    ws_sc5s: "Every message sent, with its type and date",
+    ws_sc5t: "Message log",
+    ws_sc_title: "WhatStar on screen",
     x_marca_candado_de_seguridad_y_correo_a_quien_0_1: "Corporate clients",
     x_marca_candado_de_seguridad_y_correo_a_quien_0_2: "Their IT teams check certificates before approving access.",
     x_marca_candado_de_seguridad_y_correo_a_quien_1_1: "Operations that depend on email",
@@ -13710,6 +13743,11 @@ function applyLang(lang) {
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const v = t[el.dataset.i18nHtml];
     if (v !== undefined) el.innerHTML = v;
+  });
+  /* etiquetas <meta>: el texto va en el atributo content, no adentro */
+  document.querySelectorAll('[data-i18n-content]').forEach(el => {
+    const v = t[el.dataset.i18nContent];
+    if (v !== undefined) el.setAttribute('content', v);
   });
   document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
     const v = t[el.dataset.i18nPlaceholder];
