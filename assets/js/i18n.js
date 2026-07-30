@@ -13771,7 +13771,15 @@ function setFlagClass(el, flagClass) {
 
 /* ---- Switcher UI ---- */
 document.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('appogio_lang') || 'es';
+  /* Primera visita: se toma el idioma del navegador del visitante.
+     Si ya eligió alguna vez, manda su elección y no se le cambia. */
+  function idiomaDelNavegador() {
+    const l = (navigator.language || 'es').toLowerCase();
+    if (l.startsWith('pt')) return 'pt';
+    if (l.startsWith('en')) return 'en';
+    return 'es';
+  }
+  const saved = localStorage.getItem('appogio_lang') || idiomaDelNavegador();
 
   /* --- Navbar switcher --- */
   const trigger = document.getElementById('lang-trigger');
