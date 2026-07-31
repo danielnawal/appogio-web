@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title data-i18n="tab_driveiq">Análise de condução e score de motoristas | DriveIQ</title>
+<meta content="Meça como cada motorista dirige: score de 0 a 100, oito tipos de eventos, ranking e coaching automático para reduzir acidentes e consumo." data-i18n-content="seo_d_driveiq" name="description"/>
+<link href="/assets/images/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/assets/images/favicon-64.png" rel="icon" sizes="64x64" type="image/png"/>
+<link href="/assets/images/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/main.css?v=20260730c" rel="stylesheet"/>
+<link href="/assets/css/megamenu.css?v=20260730" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" rel="stylesheet"/>
+<style>
+    :root { --app-color: #F59E0B; }
+    .app-accent { color: #F59E0B; }
+    .app-bg { background: rgba(245,158,11,.1); }
+    .app-border { border-color: rgba(245,158,11,.3); }
+  </style>
+<link href="https://appogio.com/pt/apps/driveiq.html" rel="canonical"/><link href="https://appogio.com/apps/driveiq.html" hreflang="es" rel="alternate"/><link href="https://appogio.com/pt/apps/driveiq.html" hreflang="pt-BR" rel="alternate"/><link href="https://appogio.com/en/apps/driveiq.html" hreflang="en" rel="alternate"/><link href="https://appogio.com/apps/driveiq.html" hreflang="x-default" rel="alternate"/>
+<meta content="Appogio" property="og:site_name"/>
+<meta content="pt_BR" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="https://appogio.com/pt/apps/driveiq.html" property="og:url"/>
+<meta content="Análise de direção e score de motoristas" data-i18n-content="seo_t_driveiq" property="og:title"/>
+<meta content="Meça como cada motorista dirige: score de 0 a 100, oito tipos de eventos, ranking e coaching automático para reduzir acidentes e consumo." data-i18n-content="seo_d_driveiq" property="og:description"/>
+<meta content="https://appogio.com/assets/images/driveiq-screenshot.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Análise de direção e score de motoristas" data-i18n-content="seo_t_driveiq" name="twitter:title"/>
+<meta content="Meça como cada motorista dirige: score de 0 a 100, oito tipos de eventos, ranking e coaching automático para reduzir acidentes e consumo." data-i18n-content="seo_d_driveiq" name="twitter:description"/>
+<meta content="https://appogio.com/assets/images/driveiq-screenshot.png" name="twitter:image"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DriveIQ",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Software de gestión de flotas y rastreo GPS",
+  "operatingSystem": "Web",
+  "url": "https://appogio.com/apps/driveiq.html",
+  "description": "Mida cómo conduce cada conductor: score de 0 a 100, ocho tipos de eventos, ranking y coaching automático para reducir accidentes y consumo.",
+  "inLanguage": [
+    "es",
+    "pt-BR",
+    "en"
+  ],
+  "featureList": [
+    "Score de conducción de 0 a 100",
+    "Ocho tipos de eventos detectados",
+    "Ranking de conductores y coaching automático",
+    "Panel de vehículos en tiempo real"
+  ],
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Appogio",
+    "url": "https://appogio.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Appogio",
+    "url": "https://appogio.com/",
+    "logo": "https://appogio.com/assets/images/logo-appogio.png"
+  }
+}
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://appogio.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Aplicaciones",
+      "item": "https://appogio.com/#apps"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "DriveIQ",
+      "item": "https://appogio.com/apps/driveiq.html"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<!-- Nav -->
+<nav class="navbar">
+<div class="container">
+<a class="nav-logo" href="/pt/index.html"><img alt="Appogio" height="38" src="/assets/images/logo-appogio.png?v=2" style="display:block;"/></a>
+<div class="nav-links"><div class="nav-dropdown has-mega"><a class="nav-link"><span data-i18n="nav_platform">Plataforma</span><svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="m6 9 6 6 6-6"></path></svg></a><div class="dropdown-menu dropdown-mega"><div class="mega-inner"><div class="mega-head mega-col-head" data-i18n="mm_h_sistema">O sistema</div><div class="mega-grid"><a class="mega-item" href="../plataforma/panel-de-rastreo.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="10" r="3"></circle><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_panel">Painel de rastreamento</strong><span data-i18n="mm_pl_panel_d">Onde está cada veículo, agora</span></div></a><a class="mega-item" href="../plataforma/zonas-y-alertas.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M4 20V8l8-4 8 4v12"></path><path d="M4 20h16M9 20v-6h6v6"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_zonas">Zonas e alertas</strong><span data-i18n="mm_pl_zonas_d">Avisa se entra ou sai de um local</span></div></a><a class="mega-item" href="../plataforma/informes.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_inf">Relatórios</strong><span data-i18n="mm_pl_inf_d">Percursos, paradas, velocidade, horas</span></div></a><a class="mega-item" href="../plataforma/aplicacion-para-celular.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="20" rx="2" width="10" x="7" y="2"></rect><path d="M11 18h2"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_app">Aplicativo de celular</strong><span data-i18n="mm_pl_app_d">Android e iPhone, com sua marca</span></div></a></div><div class="mega-head mega-col-head" data-i18n="mm_h_conecta">Com o que se conecta</div><div class="mega-grid"><a class="mega-item" href="../plataforma/equipos-compatibles.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="10" rx="2" width="10" x="7" y="7"></rect><path d="M10 2v3M14 2v3M10 19v3M14 19v3M2 10h3M2 14h3M19 10h3M19 14h3"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_equipos">Equipamentos compatíveis</strong><span data-i18n="mm_pl_equipos_d">3.200+ referências homologadas</span></div></a><a class="mega-item" href="../equipos/index.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path><path d="M8 11h6"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_catalogo">Catálogo de equipamentos</strong><span data-i18n="mm_pl_catalogo_d">Procure seu modelo, marca por marca</span></div></a><a class="mega-item" href="../plataforma/conexion-con-otros-sistemas.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0z"></path><path d="M12 17v5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_conex">Conexão com outros sistemas</strong><span data-i18n="mm_pl_conex_d">380+ aplicações já conectadas</span></div></a><a class="mega-item" href="../plataforma/acceso-para-programadores.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="7" cy="15" r="4"></circle><path d="m10 12 8-8 3 3-2 2-2-2-4 4"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_prog">Acesso para programadores</strong><span data-i18n="mm_pl_prog_d">Para o parceiro que monta o seu</span></div></a></div><div class="mega-head mega-col-head" data-i18n="mm_h_confiar">Por que confiar</div><div class="mega-grid"><a class="mega-item" href="../plataforma/mapas-propios.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M12 3 2 8l10 5 10-5-10-5z"></path><path d="M2 16l10 5 10-5M2 12l10 5 10-5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_mapas">Mapas próprios</strong><span data-i18n="mm_pl_mapas_d">Sem depender de terceiros</span></div></a><a class="mega-item" href="../plataforma/datos-separados.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="11" rx="2" width="16" x="4" y="10"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_datos">Cada cliente, separado</strong><span data-i18n="mm_pl_datos_d">Ninguém vê os dados de ninguém</span></div></a><a class="mega-item" href="../plataforma/copias-de-seguridad.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5l-8-3z"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_resp">Cópias de segurança</strong><span data-i18n="mm_pl_resp_d">Backup diário das informações</span></div></a><a class="mega-item" href="../plataforma/estado-del-servicio.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M2 12h5l2.5-7 5 14L17 12h5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pl_estado">Status do serviço</strong><span data-i18n="mm_pl_estado_d">Com que frequência está disponível</span></div></a></div></div></div></div><div class="nav-dropdown has-mega">
+<a class="nav-link"><span data-i18n="nav_apps">Aplicativos</span><svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="m6 9 6 6 6-6"></path></svg></a>
+<div class="dropdown-menu dropdown-mega">
+<div class="mega-inner">
+<div class="mega-head" data-i18n="apps_eco">Aplicativos do ecossistema</div>
+<div class="mega-grid">
+<a class="mega-item" href="driveiq.html"><img alt="" src="/assets/images/icons/driveiq.svg"/><div class="mi-text"><strong>DriveIQ</strong><span data-i18n="dm_driveiq">Análise de comportamento ao volante</span></div></a>
+<a class="mega-item" href="inspectpro.html"><img alt="" src="/assets/images/icons/inspectpro.png"/><div class="mi-text"><strong>InspectPro</strong><span data-i18n="dm_inspectpro">Inspeções digitais de veículos</span></div></a>
+<a class="mega-item" href="pilotos.html"><img alt="" src="/assets/images/icons/pilotos.png"/><div class="mi-text"><strong>PilotOS</strong><span data-i18n="dm_pilotos">Gestão de condutores</span></div></a>
+<a class="mega-item" href="pesv.html"><img alt="" src="/assets/images/icons/pesv.png"/><div class="mi-text"><strong>PESV</strong><span data-i18n="dm_pesv">Plano de Segurança Viária</span></div></a>
+<a class="mega-item" href="camfleet.html"><img alt="" src="/assets/images/icons/camfleet.svg"/><div class="mi-text"><strong>CamFleet</strong><span data-i18n="dm_camfleet">Câmeras e gravação veicular</span></div></a>
+<a class="mega-item" href="tagradar.html"><img alt="" src="/assets/images/icons/tagradar.svg"/><div class="mi-text"><strong>TagRadar</strong><span data-i18n="dm_tagradar">Rastreamento de ativos BLE</span></div></a>
+<a class="mega-item" href="notice.html"><img alt="" src="/assets/images/icons/notice.png"/><div class="mi-text"><strong>Notice</strong><span data-i18n="dm_notice">Mensagens e comunicações</span></div></a>
+<a class="mega-item" href="fleetcare.html"><img alt="" src="/assets/images/icons/fleetcare.png"/><div class="mi-text"><strong>FleetCare</strong><span data-i18n="dm_fleetcare">Manutenção de frota</span></div></a>
+<a class="mega-item" href="workorders.html"><img alt="" src="/assets/images/icons/workorders.png"/><div class="mi-text"><strong>WorkOrders</strong><span data-i18n="dm_workorders">Ordens de serviço</span></div></a>
+<a class="mega-item" href="guardcheck.html"><img alt="" src="/assets/images/icons/guardcheck.png"/><div class="mi-text"><strong>GuardCheck</strong><span data-i18n="dm_guardcheck">Vigilância e rondas</span></div></a>
+<a class="mega-item" href="fleetops.html"><img alt="" src="/assets/images/icons/fleetops.png"/><div class="mi-text"><strong>FleetOps</strong><span data-i18n="dm_fleetops">Controle operacional</span></div></a>
+<a class="mega-item" href="routeos.html"><img alt="" src="/assets/images/icons/routeos.png"/><div class="mi-text"><strong>RouteOS</strong><span data-i18n="dm_routeos">Rotas de transporte</span></div></a>
+<a class="mega-item" href="fleetsync.html"><img alt="" src="/assets/images/icons/fleetsync.png"/><div class="mi-text"><strong>FleetSync</strong><span data-i18n="dm_fleetsync">Integrações GPS</span></div></a>
+<a class="mega-item" href="trackphone.html"><img alt="" src="/assets/images/icons/trackphone.png"/><div class="mi-text"><strong>TrackPhone</strong><span data-i18n="dm_trackphone">Rastreamento por celular</span></div></a>
+<a class="mega-item" href="satlink.html"><img alt="" src="/assets/images/icons/satlink.png"/><div class="mi-text"><strong>SatLink</strong><span data-i18n="dm_satlink">Conexão por satélite</span></div></a>
+<a class="mega-item" href="mailux.html"><img alt="" src="/assets/images/icons/mailux.svg"/><div class="mi-text"><strong>Mailux</strong><span data-i18n="dm_mailux">Email marketing</span></div></a>
+<a class="mega-item" href="developers.html"><img alt="" src="/assets/images/icons/developers.png"/><div class="mi-text"><strong>Developers</strong><span data-i18n="dm_developers">API e documentação</span></div></a>
+<a class="mega-item" href="schooltrack.html"><img alt="" src="/assets/images/icons/schooltrack.png"/><div class="mi-text"><strong>SchoolTrack</strong><span data-i18n="dm_schooltrack">Transporte escolar inteligente</span></div></a>
+<a class="mega-item" href="coldchain.html"><img alt="" src="/assets/images/icons/coldchain.png"/><div class="mi-text"><strong>ColdChain</strong><span data-i18n="dm_coldchain">Monitoramento da cadeia de frio</span></div></a>
+<a class="mega-item" href="assettrack.html"><img alt="" src="/assets/images/icons/assettrack.png"/><div class="mi-text"><strong>AssetTrack</strong><span data-i18n="dm_assettrack">Rastreamento de ativos e reboques</span></div></a>
+<a class="mega-item" href="fleetwatch.html"><img alt="" src="/assets/images/icons/fleetwatch.png"/><div class="mi-text"><strong>FleetWatch</strong><span data-i18n="dm_fleetwatch">Equipamentos que param de reportar</span></div></a><a class="mega-item" href="remindo.html"><img alt="" src="/assets/images/icons/remindo.png"/><div class="mi-text"><strong>Remindo</strong><span data-i18n="dm_remindo">Tarefas e vencimentos de GPS</span></div></a><a class="mega-item" href="fuec.html"><img alt="" src="/assets/images/icons/fuec.png"/><div class="mi-text"><strong>FUEC</strong><span data-i18n="dm_fuec">Extrato do contrato (transporte especial)</span></div></a><a class="mega-item" href="whatstar.html"><img alt="" src="/assets/images/icons/whatstar.svg"/><div class="mi-text"><strong>WhatStar</strong><span data-i18n="dm_whatstar">Alertas e campanhas por WhatsApp</span></div></a><a class="mega-item" href="webservices.html"><img alt="" src="/assets/images/icons/webservices.svg"/><div class="mi-text"><strong>WebService</strong><span data-i18n="dm_webservices">Mais de 380 aplicações conectadas</span></div></a></div>
+</div>
+</div>
+</div><div class="nav-dropdown has-mega"><a class="nav-link"><span data-i18n="mm_nav_marca">Sua marca</span><svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="m6 9 6 6 6-6"></path></svg></a><div class="dropdown-menu dropdown-mega"><div class="mega-inner"><div class="mega-head mega-col-head" data-i18n="mm_h_nombre">Tudo sai com seu nome</div><div class="mega-grid"><a class="mega-item" href="../marca/tu-dominio-y-tu-logotipo.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"></path></svg></span><div class="mi-text"><strong data-i18n="mm_ma_dom">Seu domínio e sua logo</strong><span data-i18n="mm_ma_dom_d">Seu cliente nunca vê outro nome</span></div></a><a class="mega-item" href="../marca/tu-aplicacion-en-las-tiendas.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M4 9h16v11H4z"></path><path d="M3 9l1.5-5h15L21 9M9 20v-6h6v6"></path></svg></span><div class="mi-text"><strong data-i18n="mm_ma_tien">Seu aplicativo nas lojas</strong><span data-i18n="mm_ma_tien_d">Publicado na Google Play e App Store</span></div></a><a class="mega-item" href="../marca/tu-pagina-web.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"></path><path d="M14 3v5h5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_ma_web">Seu site</strong><span data-i18n="mm_ma_web_d">Modelo pronto para sua empresa</span></div></a><a class="mega-item" href="../marca/candado-de-seguridad-y-correo.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="11" rx="2" width="16" x="4" y="10"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span><div class="mi-text"><strong data-i18n="mm_ma_ssl">Cadeado de segurança e e-mail</strong><span data-i18n="mm_ma_ssl_d">Certificado e e-mails com seu domínio</span></div></a></div><div class="mega-head mega-col-head" data-i18n="mm_h_arranca">Como começar</div><div class="mega-grid"><a class="mega-item" href="../marca/que-necesitas-para-empezar.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M5 21V4h13l-2.5 4L18 12H5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_ma_req">O que precisa para começar</strong><span data-i18n="mm_ma_req_d">A lista completa, sem surpresas</span></div></a><a class="mega-item" href="../marca/cuanto-se-demora.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><div class="mi-text"><strong data-i18n="mm_ma_tiem">Quanto tempo leva</strong><span data-i18n="mm_ma_tiem_d">Prazos reais de implantação</span></div></a><a class="mega-item" href="../marca/marcas-ya-funcionando.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="9" r="5"></circle><path d="M8.5 13.5 7 22l5-2.5L17 22l-1.5-8.5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_ma_soc">Marcas já funcionando</strong><span data-i18n="mm_ma_soc_d">Parceiros com plataforma própria</span></div></a><a class="mega-item" href="../marca/panel-de-distribuidor.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg></span><div class="mi-text"><strong data-i18n="mm_ma_panel">Seu painel de distribuidor</strong><span data-i18n="mm_ma_panel_d">Crie clientes, ative e suspenda</span></div></a></div></div></div></div><div class="nav-dropdown has-mega"><a class="nav-link"><span data-i18n="mm_nav_sol">Soluções</span><svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="m6 9 6 6 6-6"></path></svg></a><div class="dropdown-menu dropdown-mega"><div class="mega-inner"><div class="mega-head mega-col-head" data-i18n="mm_h_mejora">Que melhoria oferecer ao seu cliente</div><div class="mega-grid"><a class="mega-item" href="../soluciones/reducir-accidentes.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5l-8-3z"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_acc">Segurança viária</strong><span data-i18n="mm_so_acc_d">Menos acidentes, menos multas</span></div></a><a class="mega-item" href="../soluciones/evitar-el-robo.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="11" rx="2" width="16" x="4" y="10"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_robo">Antifurto e recuperação</strong><span data-i18n="mm_so_robo_d">Aviso a tempo e desligamento seguro</span></div></a><a class="mega-item" href="../soluciones/controlar-el-combustible.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M4 18a9 9 0 1 1 16 0"></path><path d="M12 18l4-5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_comb">Controle de combustível</strong><span data-i18n="mm_so_comb_d">Onde o combustível se perde</span></div></a><a class="mega-item" href="../soluciones/cumplir-la-norma.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="9" r="5"></circle><path d="M8.5 13.5 7 22l5-2.5L17 22l-1.5-8.5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_norma">Conformidade legal</strong><span data-i18n="mm_so_norma_d">Segurança viária, contratos, vistorias</span></div></a><a class="mega-item" href="../soluciones/bajar-costos-de-taller.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M15 3a5 5 0 0 0-4.6 7L3 17.4 6.6 21l7.4-7.4A5 5 0 1 0 15 3z"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_taller">Manutenção preventiva</strong><span data-i18n="mm_so_taller_d">Manutenção antes da falha</span></div></a><a class="mega-item" href="../soluciones/entregar-a-tiempo.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_entr">Cumprimento de entregas</strong><span data-i18n="mm_so_entr_d">Cumprimento perante seus clientes</span></div></a><a class="mega-item" href="../soluciones/controlar-horas-de-trabajo.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_horas">Controle de jornada</strong><span data-i18n="mm_so_horas_d">Horas trabalhadas e paradas reais</span></div></a><a class="mega-item" href="../soluciones/cuidar-la-carga-fria.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M12 2v20M4 6l16 12M20 6L4 18"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_frio">Cadeia de frio</strong><span data-i18n="mm_so_frio_d">Aviso se a temperatura subir</span></div></a><a class="mega-item" href="../soluciones/rutas-escolares.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="12" rx="2" width="16" x="4" y="4"></rect><path d="M4 11h16M7 20v-2M17 20v-2"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_esc">Rotas escolares</strong><span data-i18n="mm_so_esc_d">Aviso de embarque e chegada</span></div></a><a class="mega-item" href="../soluciones/no-perder-la-herramienta.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M3 12V4h8l10 10-8 8L3 12z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg></span><div class="mi-text"><strong data-i18n="mm_so_herr">Controle de ativos</strong><span data-i18n="mm_so_herr_d">Controle de equipamentos sem motor</span></div></a><a class="mega-item" href="../soluciones/video-a-bordo.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M2 7h11v10H2z"></path><path d="M13 11l7-4v10l-7-4"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_video">Vídeo a bordo</strong><span data-i18n="mm_so_video_d">Ver o que aconteceu, não só onde</span></div></a><a class="mega-item" href="../soluciones/rondas-de-vigilancia.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="3" y="14"></rect><path d="M14 14h3v3h-3zM20 14v3M14 20h6"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_ronda">Rondas de vigilância</strong><span data-i18n="mm_so_ronda_d">Comprovar que o vigilante passou</span></div></a><a class="mega-item" href="../soluciones/trabajo-en-campo.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M9 3 5 7l2 2 4-4z"></path><path d="m7 9-4 8 2 2 8-4"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_campo">Trabalho em campo</strong><span data-i18n="mm_so_campo_d">Ordens, evidência e prazos</span></div></a><a class="mega-item" href="../soluciones/rastreo-sin-equipo.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="20" rx="2" width="10" x="7" y="2"></rect><path d="M11 18h2"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_sinequipo">Rastreamento sem equipamento</strong><span data-i18n="mm_so_sinequipo_d">Pelo celular, sem instalar</span></div></a><a class="mega-item" href="../soluciones/cobertura-satelital.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="12" r="2.5"></circle><path d="M4.5 4.5a10.6 10.6 0 0 1 15 15M7.3 7.3a6.6 6.6 0 0 1 9.4 9.4"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_sat">Cobertura via satélite</strong><span data-i18n="mm_so_sat_d">Onde não há sinal de celular</span></div></a><a class="mega-item" href="../soluciones/avisos-automaticos.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M21 12a8 8 0 0 1-11.4 7.2L3 21l1.8-6.6A8 8 0 1 1 21 12z"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_avisos">Avisos automáticos</strong><span data-i18n="mm_so_avisos_d">Por WhatsApp, e-mail ou celular</span></div></a><a class="mega-item" href="../soluciones/equipos-que-dejan-de-reportar.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M2 12h5l2.5-7 5 14L17 12h5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_mudos">Equipamentos sem reportar</strong><span data-i18n="mm_so_mudos_d">Detectados antes da reclamação</span></div></a><a class="mega-item" href="../soluciones/conectar-con-su-sistema.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-12 0z"></path><path d="M12 17v5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_so_conex">Conectar com o sistema dele</strong><span data-i18n="mm_so_conex_d">Sem mudar o que já usa</span></div></a></div><div class="mega-head mega-col-head" data-i18n="mm_h_quien">Para quem vender</div><div class="mega-grid"><a class="mega-item" href="../soluciones/transporte-de-carga.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M2 6h11v10H2z"></path><path d="M13 9h4l4 4v3h-8"></path><circle cx="6.5" cy="18.5" r="1.5"></circle><circle cx="17.5" cy="18.5" r="1.5"></circle></svg></span><div class="mi-text"><strong data-i18n="mm_me_carga">Transporte de carga</strong><span data-i18n="mm_me_carga_d">Caminhões e carretas</span></div></a><a class="mega-item" href="../soluciones/transporte-de-pasajeros.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="12" rx="2" width="16" x="4" y="4"></rect><path d="M4 11h16M7 20v-2M17 20v-2"></path></svg></span><div class="mi-text"><strong data-i18n="mm_me_pas">Transporte de passageiros</strong><span data-i18n="mm_me_pas_d">Ônibus, vans e fretamento</span></div></a><a class="mega-item" href="../soluciones/transporte-escolar.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="9" r="5"></circle><path d="M8.5 13.5 7 22l5-2.5L17 22l-1.5-8.5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_me_esc">Transporte escolar</strong><span data-i18n="mm_me_esc_d">Escolas e rotas de estudantes</span></div></a><a class="mega-item" href="../soluciones/reparto-y-domicilios.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="18" r="3"></circle><path d="M9 6h5a4 4 0 0 1 0 8h-4a4 4 0 0 0 0 8"></path></svg></span><div class="mi-text"><strong data-i18n="mm_me_rep">Entregas e delivery</strong><span data-i18n="mm_me_rep_d">Entregas na cidade</span></div></a><a class="mega-item" href="../soluciones/construccion-y-maquinaria.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M4 21h16"></path><path d="M6 21V4h12M6 8h12M12 4v6"></path></svg></span><div class="mi-text"><strong data-i18n="mm_me_cons">Construção e maquinário</strong><span data-i18n="mm_me_cons_d">Obra, caçambas e equipamento pesado</span></div></a><a class="mega-item" href="../soluciones/agricultura.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M20 4C10 4 4 9 4 16v4h4c7 0 12-6 12-16z"></path><path d="M9 15c2.5-2.5 5-4 8-5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_me_agro">Agricultura</strong><span data-i18n="mm_me_agro_d">Fazendas, tratores e colheita</span></div></a><a class="mega-item" href="../soluciones/servicios-en-la-calle.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M9 3 5 7l2 2 4-4z"></path><path d="m7 9-4 8 2 2 8-4"></path></svg></span><div class="mi-text"><strong data-i18n="mm_me_serv">Serviços em campo</strong><span data-i18n="mm_me_serv_d">Técnicos, instaladores, equipes</span></div></a><a class="mega-item" href="../soluciones/alimentos-y-refrigerados.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M12 2v20M4 6l16 12M20 6L4 18"></path></svg></span><div class="mi-text"><strong data-i18n="mm_me_alim">Alimentos e refrigerados</strong><span data-i18n="mm_me_alim_d">Cadeia de frio e distribuição</span></div></a><a class="mega-item" href="../soluciones/alquiler-de-vehiculos.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="14" rx="2" width="20" x="2" y="5"></rect><path d="M2 10h20"></path></svg></span><div class="mi-text"><strong data-i18n="mm_me_ren">Aluguel de veículos</strong><span data-i18n="mm_me_ren_d">Locação e veículos alugados</span></div></a><a class="mega-item" href="../soluciones/seguridad-y-vigilancia.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="3" y="14"></rect><path d="M14 14h3v3h-3zM20 14v3M14 20h6"></path></svg></span><div class="mi-text"><strong data-i18n="mm_me_seg">Segurança e vigilância</strong><span data-i18n="mm_me_seg_d">Empresas de vigilantes e rondas</span></div></a></div></div></div></div><div class="nav-dropdown has-mega"><a class="nav-link"><span data-i18n="mm_nav_prec">Preços</span><svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="m6 9 6 6 6-6"></path></svg></a><div class="dropdown-menu dropdown-mega"><div class="mega-inner"><div class="mega-head mega-col-head" data-i18n="mm_h_paga">O que você paga</div><div class="mega-grid mega-grid-3"><a class="mega-item" href="../precios/como-se-cobra.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="12" rx="2" width="20" x="2" y="6"></rect><circle cx="12" cy="12" r="3"></circle></svg></span><div class="mi-text"><strong data-i18n="mm_pr_como">Como é cobrado</strong><span data-i18n="mm_pr_como_d">Por veículo ativo, mês a mês</span></div></a><a class="mega-item" href="../precios/planes-por-cantidad.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M12 3 2 8l10 5 10-5-10-5z"></path><path d="M2 16l10 5 10-5M2 12l10 5 10-5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pr_plan">Planos por quantidade</strong><span data-i18n="mm_pr_plan_d">Quanto mais veículos, menos paga</span></div></a><a class="mega-item" href="../precios/que-esta-incluido.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"></path><path d="M14 3v5h5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pr_incl">O que está incluído</strong><span data-i18n="mm_pr_incl_d">E o que é cobrado à parte</span></div></a></div><div class="mega-head mega-col-head" data-i18n="mm_h_gana">O que você ganha</div><div class="mega-grid mega-grid-3"><a class="mega-item" href="../precios/calculadora-de-ganancia.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="20" rx="2" width="14" x="5" y="2"></rect><path d="M8 6h8M8 11h2M12 11h2M8 15h2M12 15h2M8 19h6"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pr_calc">Seu lucro</strong><span data-i18n="mm_pr_calc_d">Quanto paga e quanto cobra</span></div></a><a class="mega-item" href="../precios/formas-de-pago.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><rect height="14" rx="2" width="20" x="2" y="5"></rect><path d="M2 10h20"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pr_pago">Formas de pagamento</strong><span data-i18n="mm_pr_pago_d">E como pagam a você</span></div></a><a class="mega-item" href="../precios/pago-anual-por-adelantado.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M12 3v6M12 15v6M3 12h6M15 12h6M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"></path></svg></span><div class="mi-text"><strong data-i18n="mm_pr_anu">Pagamento anual antecipado</strong><span data-i18n="mm_pr_anu_d">Compre saldo e economize</span></div></a></div></div></div></div><div class="nav-dropdown has-mega"><a class="nav-link"><span data-i18n="mm_nav_rec">Recursos</span><svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="m6 9 6 6 6-6"></path></svg></a><div class="dropdown-menu dropdown-mega"><div class="mega-inner"><div class="mega-head mega-col-head" data-i18n="mm_h_arrancar">Para começar</div><div class="mega-grid mega-grid-3"><a class="mega-item" href="../recursos/primeros-30-dias.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M5 21V4h13l-2.5 4L18 12H5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_re_30">Seus primeiros 30 dias</strong><span data-i18n="mm_re_30_d">Passo a passo desde o primeiro dia</span></div></a><a class="mega-item" href="../recursos/soporte-tecnico.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><path d="m5.6 5.6 3.6 3.6M14.8 14.8l3.6 3.6M18.4 5.6l-3.6 3.6M9.2 14.8l-3.6 3.6"></path></svg></span><div class="mi-text"><strong data-i18n="mm_re_sop">Suporte técnico</strong><span data-i18n="mm_re_sop_d">Fale com uma pessoa</span></div></a><a class="mega-item" href="../recursos/capacitacion.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"></path><path d="M18 7h2v13H7"></path></svg></span><div class="mi-text"><strong data-i18n="mm_re_cap">Capacitação</strong><span data-i18n="mm_re_cap_d">Para você e sua equipe</span></div></a></div><div class="mega-head mega-col-head" data-i18n="mm_h_vender">Para vender</div><div class="mega-grid mega-grid-3"><a class="mega-item" href="../recursos/material-de-venta.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"></path><path d="M14 3v5h5"></path></svg></span><div class="mi-text"><strong data-i18n="mm_re_mat">Material de vendas</strong><span data-i18n="mm_re_mat_d">Apresentações com sua marca</span></div></a><a class="mega-item" href="../recursos/preguntas-frecuentes.html"><span class="mi-ico"><svg fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M21 12a8 8 0 0 1-11.4 7.2L3 21l1.8-6.6A8 8 0 1 1 21 12z"></path></svg></span><div class="mi-text"><strong data-i18n="mm_re_faq">Perguntas frequentes</strong><span data-i18n="mm_re_faq_d">O que mais nos perguntam</span></div></a></div></div></div></div><a class="nav-link" data-i18n="nav_contact" href="/pt/contacto.html">Contato</a></div>
+<div class="lang-switcher">
+<button aria-label="Cambiar idioma" class="lang-btn" id="lang-trigger">
+<span class="fi fi-es fis" id="lang-flag"></span>
+<span id="lang-code">ES</span>
+<svg fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><path d="m6 9 6 6 6-6"></path></svg>
+</button>
+<div class="lang-menu" id="lang-menu">
+<button class="lang-option" data-code="ES" data-flag-class="fi-es" data-lang="es"><span class="fi fi-es fis"></span> Español</button>
+<button class="lang-option" data-code="PT" data-flag-class="fi-br" data-lang="pt"><span class="fi fi-br fis"></span> Português</button>
+<button class="lang-option" data-code="EN" data-flag-class="fi-us" data-lang="en"><span class="fi fi-us fis"></span> English</button>
+</div>
+</div>
+<div class="nav-cta">
+<a class="btn btn-outline btn-sm" data-i18n="nav_demo" href="/pt/contacto.html">Solicitar Demo</a>
+</div>
+<button aria-label="Menú" class="nav-mobile-toggle">
+<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+</button>
+</div>
+</nav>
+<div class="mobile-menu">
+<a data-i18n="nav_home" href="/pt/index.html">Início</a>
+<a data-i18n="nav_apps" href="../index.html#apps">Aplicativos</a>
+<div class="mm-h" data-i18n="nav_platform">Plataforma</div>
+<a data-i18n="mm_pl_panel" href="../plataforma/panel-de-rastreo.html">Painel de rastreamento</a>
+<a data-i18n="mm_pl_zonas" href="../plataforma/zonas-y-alertas.html">Zonas e alertas</a>
+<a data-i18n="mm_pl_inf" href="../plataforma/informes.html">Relatórios</a>
+<a data-i18n="mm_pl_app" href="../plataforma/aplicacion-para-celular.html">Aplicativo de celular</a>
+<a data-i18n="mm_pl_equipos" href="../plataforma/equipos-compatibles.html">Equipamentos compatíveis</a>
+<a data-i18n="mm_pl_catalogo" href="../equipos/index.html">Catálogo de equipamentos</a>
+<a data-i18n="mm_pl_conex" href="../plataforma/conexion-con-otros-sistemas.html">Conexão com outros sistemas</a>
+<a data-i18n="mm_pl_prog" href="../plataforma/acceso-para-programadores.html">Acesso para programadores</a>
+<a data-i18n="mm_pl_mapas" href="../plataforma/mapas-propios.html">Mapas próprios</a>
+<a data-i18n="mm_pl_datos" href="../plataforma/datos-separados.html">Cada cliente, separado</a>
+<a data-i18n="mm_pl_resp" href="../plataforma/copias-de-seguridad.html">Cópias de segurança</a>
+<a data-i18n="mm_pl_estado" href="../plataforma/estado-del-servicio.html">Status do serviço</a>
+<a data-i18n="mm_pl_donde" href="../plataforma/donde-vive-la-informacion.html">Onde ficam seus dados</a>
+<div class="mm-h" data-i18n="mm_nav_marca">Sua marca</div>
+<a data-i18n="mm_ma_dom" href="../marca/tu-dominio-y-tu-logotipo.html">Seu domínio e sua logo</a>
+<a data-i18n="mm_ma_tien" href="../marca/tu-aplicacion-en-las-tiendas.html">Seu aplicativo nas lojas</a>
+<a data-i18n="mm_ma_web" href="../marca/tu-pagina-web.html">Seu site</a>
+<a data-i18n="mm_ma_ssl" href="../marca/candado-de-seguridad-y-correo.html">Cadeado de segurança e e-mail</a>
+<a data-i18n="mm_ma_req" href="../marca/que-necesitas-para-empezar.html">O que precisa para começar</a>
+<a data-i18n="mm_ma_tiem" href="../marca/cuanto-se-demora.html">Quanto tempo leva</a>
+<a data-i18n="mm_ma_soc" href="../marca/marcas-ya-funcionando.html">Marcas já funcionando</a>
+<a data-i18n="mm_ma_panel" href="../marca/panel-de-distribuidor.html">Seu painel de distribuidor</a>
+<div class="mm-h" data-i18n="mm_h_mejora">Que melhoria oferecer ao seu cliente</div>
+<a data-i18n="mm_so_acc" href="../soluciones/reducir-accidentes.html">Segurança viária</a>
+<a data-i18n="mm_so_robo" href="../soluciones/evitar-el-robo.html">Antifurto e recuperação</a>
+<a data-i18n="mm_so_comb" href="../soluciones/controlar-el-combustible.html">Controle de combustível</a>
+<a data-i18n="mm_so_norma" href="../soluciones/cumplir-la-norma.html">Conformidade legal</a>
+<a data-i18n="mm_so_taller" href="../soluciones/bajar-costos-de-taller.html">Manutenção preventiva</a>
+<a data-i18n="mm_so_entr" href="../soluciones/entregar-a-tiempo.html">Cumprimento de entregas</a>
+<a data-i18n="mm_so_horas" href="../soluciones/controlar-horas-de-trabajo.html">Controle de jornada</a>
+<a data-i18n="mm_so_frio" href="../soluciones/cuidar-la-carga-fria.html">Cadeia de frio</a>
+<a data-i18n="mm_so_esc" href="../soluciones/rutas-escolares.html">Rotas escolares</a>
+<a data-i18n="mm_so_herr" href="../soluciones/no-perder-la-herramienta.html">Controle de ativos</a>
+<a data-i18n="mm_so_video" href="../soluciones/video-a-bordo.html">Vídeo a bordo</a>
+<a data-i18n="mm_so_ronda" href="../soluciones/rondas-de-vigilancia.html">Rondas de vigilância</a>
+<a data-i18n="mm_so_campo" href="../soluciones/trabajo-en-campo.html">Trabalho em campo</a>
+<a data-i18n="mm_so_sinequipo" href="../soluciones/rastreo-sin-equipo.html">Rastreamento sem equipamento</a>
+<a data-i18n="mm_so_sat" href="../soluciones/cobertura-satelital.html">Cobertura via satélite</a>
+<a data-i18n="mm_so_avisos" href="../soluciones/avisos-automaticos.html">Avisos automáticos</a>
+<a data-i18n="mm_so_mudos" href="../soluciones/equipos-que-dejan-de-reportar.html">Equipamentos sem reportar</a>
+<a data-i18n="mm_so_conex" href="../soluciones/conectar-con-su-sistema.html">Conectar com o sistema dele</a>
+<div class="mm-h" data-i18n="mm_h_quien">Para quem vender</div>
+<a data-i18n="mm_me_carga" href="../soluciones/transporte-de-carga.html">Transporte de carga</a>
+<a data-i18n="mm_me_pas" href="../soluciones/transporte-de-pasajeros.html">Transporte de passageiros</a>
+<a data-i18n="mm_me_esc" href="../soluciones/transporte-escolar.html">Transporte escolar</a>
+<a data-i18n="mm_me_rep" href="../soluciones/reparto-y-domicilios.html">Entregas e delivery</a>
+<a data-i18n="mm_me_cons" href="../soluciones/construccion-y-maquinaria.html">Construção e maquinário</a>
+<a data-i18n="mm_me_agro" href="../soluciones/agricultura.html">Agricultura</a>
+<a data-i18n="mm_me_serv" href="../soluciones/servicios-en-la-calle.html">Serviços em campo</a>
+<a data-i18n="mm_me_alim" href="../soluciones/alimentos-y-refrigerados.html">Alimentos e refrigerados</a>
+<a data-i18n="mm_me_ren" href="../soluciones/alquiler-de-vehiculos.html">Aluguel de veículos</a>
+<a data-i18n="mm_me_seg" href="../soluciones/seguridad-y-vigilancia.html">Segurança e vigilância</a>
+<div class="mm-h" data-i18n="mm_nav_prec">Preços</div>
+<a data-i18n="mm_pr_como" href="../precios/como-se-cobra.html">Como é cobrado</a>
+<a data-i18n="mm_pr_plan" href="../precios/planes-por-cantidad.html">Planos por quantidade</a>
+<a data-i18n="mm_pr_incl" href="../precios/que-esta-incluido.html">O que está incluído</a>
+<a data-i18n="mm_pr_calc" href="../precios/calculadora-de-ganancia.html">Seu lucro</a>
+<a data-i18n="mm_pr_pago" href="../precios/formas-de-pago.html">Formas de pagamento</a>
+<a data-i18n="mm_pr_anu" href="../precios/pago-anual-por-adelantado.html">Pagamento anual antecipado</a>
+<div class="mm-h" data-i18n="mm_nav_rec">Recursos</div>
+<a data-i18n="mm_re_30" href="../recursos/primeros-30-dias.html">Seus primeiros 30 dias</a>
+<a data-i18n="mm_re_sop" href="../recursos/soporte-tecnico.html">Suporte técnico</a>
+<a data-i18n="mm_re_cap" href="../recursos/capacitacion.html">Capacitação</a>
+<a data-i18n="mm_re_mat" href="../recursos/material-de-venta.html">Material de vendas</a>
+<a data-i18n="mm_re_faq" href="../recursos/preguntas-frecuentes.html">Perguntas frequentes</a>
+<div class="mm-h"></div>
+<a data-i18n="nav_contact" href="/pt/contacto.html">Contato</a>
+<a class="btn btn-primary" data-i18n="nav_demo" href="/pt/contacto.html" style="text-align:center;border-radius:100px;margin-top:1rem">Solicitar Demo</a>
+</div>
+<!-- Hero -->
+<section class="app-hero" style="--app-color:#F59E0B">
+<div class="app-hero-glow"></div>
+<div class="container">
+<div data-reveal="">
+<div class="app-icon-lg" style="background:none;border:none;padding:0">
+<img alt="" height="72" src="/assets/images/icons/driveiq.svg" style="border-radius:18px;display:block" width="72"/>
+</div>
+<div class="app-hero-badge" data-i18n="dq_badge">Análise de Condução</div>
+<h1 data-i18n-html="dq_title">Converta dados de condução em <span style="color:#F59E0B">ação preventiva</span></h1>
+<p data-i18n="dq_desc" style="font-size:1.125rem;max-width:560px;margin:1.25rem 0 2rem">DriveIQ analisa em tempo real o comportamento de cada motorista: excesso de velocidade, frenagens bruscas, acelerações agressivas e tempo em marcha lenta. Pontuações, alertas e coaching para reduzir acidentes e combustível.</p>
+<div style="display:flex;gap:1rem;flex-wrap:wrap">
+<a class="btn btn-primary btn-lg" data-i18n="app_btn_demo" href="/pt/contacto.html" style="background:#F59E0B;box-shadow:0 0 32px rgba(245,158,11,.3)">Solicitar Demo</a>
+</div>
+</div>
+<!-- Hero screenshot -->
+<div data-reveal="">
+<!-- ================================================
+           IMAGEN DE DRIVEIQ
+           Reemplaza por: <img src="/assets/images/driveiq-screenshot.png" alt="DriveIQ Dashboard" style="width:100%;border-radius:16px;border:1px solid rgba(245,158,11,.2)">
+           ================================================ -->
+<img alt="Dashboard DriveIQ" src="/assets/images/driveiq-screenshot.png" style="width:100%;border-radius:16px;border:1px solid rgba(245,158,11,.2);display:block"/>
+</div>
+</div>
+</section>
+<!-- Stats bar -->
+<div style="background:rgba(245,158,11,.06);border-top:1px solid rgba(245,158,11,.15);border-bottom:1px solid rgba(245,158,11,.15);padding:2rem 0">
+<div class="container">
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;text-align:center">
+<div>
+<div data-counter="" data-suffix="%" data-target="15" style="font-size:2.25rem;font-weight:900;color:#F59E0B;font-family:var(--font-head)">0</div>
+<div data-i18n="dq_stat_1" style="font-size:.85rem;color:var(--c-text-3)">Redução de combustível</div>
+</div>
+<div>
+<div data-counter="" data-suffix="%" data-target="40" style="font-size:2.25rem;font-weight:900;color:#F59E0B;font-family:var(--font-head)">0</div>
+<div data-i18n="dq_stat_2" style="font-size:.85rem;color:var(--c-text-3)">Menos incidentes viários</div>
+</div>
+<div>
+<div data-counter="" data-suffix="%" data-target="100" style="font-size:2.25rem;font-weight:900;color:#F59E0B;font-family:var(--font-head)">0</div>
+<div data-i18n="dq_stat_3" style="font-size:.85rem;color:var(--c-text-3)">Cobertura da frota</div>
+</div>
+<div>
+<div style="font-size:2.25rem;font-weight:900;color:#F59E0B;font-family:var(--font-head)">24/7</div>
+<div data-i18n="dq_stat_4" style="font-size:.85rem;color:var(--c-text-3)">Monitoramento contínuo</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Features -->
+<section class="section">
+<div class="container">
+<div class="section-head" data-reveal="">
+<span class="section-label" data-i18n="app_sec_features" style="color:#F59E0B">Funcionalidades</span>
+<h2 class="section-title" data-i18n="dq_feat_title">Tudo que você precisa para melhorar a condução</h2>
+</div>
+<div class="features-grid">
+<div class="feature-card" data-reveal="" style="--card-color:#1E3A7A">
+<div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 20V4M8 20V10M16 20v-6M4 20v-2M20 20v-4"></path></svg></div>
+<h4 data-i18n="dq_f1_title">Score de condução (0–100)</h4>
+<p data-i18n="dq_f1_desc">Pontuação calculada em tempo real por motorista. Desconta pontos por excesso de velocidade, frenagens bruscas, acelerações agressivas, curvas, uso do telefone, fadiga, cinto de segurança e tempo em marcha lenta.</p>
+</div>
+<div class="feature-card" data-reveal="" style="--card-color:#1E3A7A">
+<div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div>
+<h4 data-i18n="dq_f2_title">8 tipos de eventos detectados</h4>
+<p data-i18n="dq_f2_desc">Excesso de velocidade, frenagem brusca, aceleração agressiva, curva brusca, uso do telefone ao volante, fadiga do motorista, cinto desapertado e tempo excessivo em marcha lenta — cada um com severidade e localização exata.</p>
+</div>
+<div class="feature-card" data-reveal="" style="--card-color:#1E3A7A">
+<div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 00-3-3.87"></path><path d="M16 3.13a4 4 0 010 7.75"></path></svg></div>
+<h4 data-i18n="dq_f3_title">Ranking e coaching automático</h4>
+<p data-i18n="dq_f3_desc">Ranking comparativo entre todos os motoristas da empresa. O sistema gera até 3 dicas de coaching personalizadas com base nos eventos mais frequentes de cada motorista.</p>
+</div>
+<div class="feature-card" data-reveal="" style="--card-color:#1E3A7A">
+<div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="3"></rect><path d="M8 21h8M12 17v4"></path></svg></div>
+<h4 data-i18n="dq_f4_title">Painel de veículos em tempo real</h4>
+<p data-i18n="dq_f4_desc">Posição exata, velocidade atual e estado online/offline de cada unidade. Tipos de veículos personalizáveis para adaptar os parâmetros de avaliação a cada categoria da sua frota.</p>
+</div>
+<div class="feature-card" data-reveal="" style="--card-color:#1E3A7A">
+<div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg></div>
+<h4 data-i18n="dq_f5_title">Grupos de veículos</h4>
+<p data-i18n="dq_f5_desc">Organize sua frota em grupos por zona, tipo de serviço ou turno. Filtre eventos, scores e relatórios por grupo. Ideal para empresas com múltiplas operações ou filiais.</p>
+</div>
+<div class="feature-card" data-reveal="" style="--card-color:#1E3A7A">
+<div class="feature-icon-wrap"><div class="feature-icon-bg"></div><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+<h4 data-i18n="dq_f6_title">Integração nativa com Appogio</h4>
+<p data-i18n="dq_f6_desc">Consome diretamente os dados da sua plataforma GPS. Sem configuração adicional: veículos, motoristas e eventos já registrados no Appogio aparecem automaticamente no DriveIQ.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Showcase interactivo -->
+<section class="section showcase" style="background:var(--c-bg-2)">
+<div class="container">
+<div class="section-head" data-reveal="">
+<span class="section-label" data-i18n="app_sec_how" style="color:#F59E0B">Como funciona</span>
+<h2 class="section-title" data-i18n="dq_video_title">DriveIQ em ação</h2>
+</div>
+<div class="showcase-wrap" data-reveal="">
+<div class="showcase-img"><img alt="DriveIQ" id="sc-img" src="/assets/images/driveiq-dashboard.png"/></div>
+<div class="showcase-list">
+<button class="sc-feat active" data-img="../assets/images/driveiq-dashboard.png"><strong>Dashboard</strong><span data-i18n="wb_188">Pontuação e comportamento de toda a frota</span></button>
+<button class="sc-feat" data-img="../assets/images/driveiq-conductores.png"><strong data-i18n="pv_sc4t">Condutores</strong><span><span data-i18n="ax_53">Ranking e desempenho por motorista</span></span></button>
+<button class="sc-feat" data-img="../assets/images/driveiq-eventos.png"><strong data-i18n="wb_189">Eventos de condução</strong><span data-i18n="wb_190">Excessos de velocidade, frenagens e aceleração</span></button>
+<button class="sc-feat" data-img="../assets/images/driveiq-reportes.png"><strong data-i18n="dd_reports_title">Relatórios</strong><span data-i18n="wb_191">Relatórios e exportação de dados</span></button>
+</div>
+</div>
+</div>
+<script>(function(){var bs=document.querySelectorAll(".sc-feat"),im=document.getElementById("sc-img");bs.forEach(function(b){b.addEventListener("click",function(){bs.forEach(function(x){x.classList.remove("active")});b.classList.add("active");im.src=b.getAttribute("data-img");});});})();</script>
+</section>
+<!-- CTA -->
+<section class="section cta-section">
+<div class="container">
+<h2 class="section-title" data-i18n="dq_cta_title">Pronto para vender aos seus clientes o controle da direção?</h2>
+<p data-i18n="dq_cta_desc">Solicite uma demonstração do DriveIQ e ofereça às frotas dos seus clientes a pontuação por motorista, os eventos de direção e os relatórios, com a sua marca.</p>
+<div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem">
+<a class="btn btn-primary btn-lg" data-i18n="dq_cta_btn" href="/pt/contacto.html" style="background:#F59E0B;box-shadow:0 0 32px rgba(245,158,11,.3)">Solicitar Demo do DriveIQ</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<section class="section" id="caracteristicas-todas">
+<div class="container">
+<div class="section-head" data-reveal=""><span class="section-label" data-i18n="app_sec_specs" style="color:#F59E0B">Recursos</span><h2 class="section-title" data-i18n="wb_192">Tudo o que o DriveIQ inclui</h2></div>
+<div data-reveal="" style="columns:2;column-gap:3rem;max-width:920px;margin:0 auto"><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg fill="none" height="20" stroke="#F59E0B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" viewbox="0 0 24 24" width="20"><path d="M20 6 9 17l-5-5"></path></svg><span data-i18n="driveiq_feat_1" style="color:var(--c-text-2);font-size:.95rem">Pontuação de condução por motorista</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg fill="none" height="20" stroke="#F59E0B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" viewbox="0 0 24 24" width="20"><path d="M20 6 9 17l-5-5"></path></svg><span data-i18n="wb_193" style="color:var(--c-text-2);font-size:.95rem">Eventos: excesso de velocidade, frenagens e acelerações bruscas, marcha lenta</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg fill="none" height="20" stroke="#F59E0B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" viewbox="0 0 24 24" width="20"><path d="M20 6 9 17l-5-5"></path></svg><span style="color:var(--c-text-2);font-size:.95rem"><span data-i18n="ax_53">Ranking e desempenho por motorista</span></span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg fill="none" height="20" stroke="#F59E0B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" viewbox="0 0 24 24" width="20"><path d="M20 6 9 17l-5-5"></path></svg><span style="color:var(--c-text-2);font-size:.95rem"><span data-i18n="ax_76">Limiares configuráveis e tipos de veículo</span></span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg fill="none" height="20" stroke="#F59E0B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" viewbox="0 0 24 24" width="20"><path d="M20 6 9 17l-5-5"></path></svg><span data-i18n="driveiq_feat_3" style="color:var(--c-text-2);font-size:.95rem">Grupos de veículos e análise</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg fill="none" height="20" stroke="#F59E0B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" viewbox="0 0 24 24" width="20"><path d="M20 6 9 17l-5-5"></path></svg><span data-i18n="wb_7" style="color:var(--c-text-2);font-size:.95rem">Relatórios exportáveis</span></div><div style="break-inside:avoid;display:flex;gap:.65rem;margin:0 0 1.1rem"><svg fill="none" height="20" stroke="#F59E0B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" style="flex-shrink:0;margin-top:2px" viewbox="0 0 24 24" width="20"><path d="M20 6 9 17l-5-5"></path></svg><span data-i18n="wb_194" style="color:var(--c-text-2);font-size:.95rem">Supervisores com acesso diferenciado</span></div></div>
+</div>
+</section>
+<!-- A quién venderle --><section class="section" style="background:var(--c-bg-2)"><div class="container"><div class="section-head" data-reveal=""><span class="section-label" data-i18n="nw_1" style="color:#F59E0B">Para quem vender</span><h2 class="section-title" data-i18n="nw_120">Tipos de cliente para os quais funciona</h2><p class="section-sub" data-i18n="wb_195">Você distribui com a sua própria marca: esta é a lista de para quem pode vender o DriveIQ, e com qual argumento.</p></div><div class="industries-grid" data-reveal=""><div class="industry-card"><div class="industry-icon" style="background:rgba(245,158,11,.1);color:#F59E0B"><svg fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><rect height="13" width="15" x="1" y="3"></rect><path d="M16 8h4l3 3v5h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div><h4 data-i18n="wb_196">Frotas com muitos motoristas</h4><p data-i18n="wb_197">Onde não dá para vigiar cada um e é preciso um número que diga quem dirige bem e quem não.</p></div><div class="industry-card"><div class="industry-icon" style="background:rgba(245,158,11,.1);color:#F59E0B"><svg fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path></svg></div><h4 data-i18n="wb_198">Empresas com sinistros frequentes</h4><p data-i18n="wb_199">As que precisam reduzir a acidentalidade e podem mostrar a mudança com dados.</p></div><div class="industry-card"><div class="industry-icon" style="background:rgba(245,158,11,.1);color:#F59E0B"><svg fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"></path><path d="M9 9v.01M9 13v.01M9 17v.01"></path></svg></div><h4 data-i18n="wb_11">Transporte de passageiros e escolar</h4><p data-i18n="wb_200">Onde a condução brusca é sentida pelos passageiros e vira reclamação.</p></div><div class="industry-card"><div class="industry-icon" style="background:rgba(245,158,11,.1);color:#F59E0B"><svg fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><path d="M20 7h-9M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg></div><h4 data-i18n="wb_203">Quem negocia a sua apólice</h4><p data-i18n="wb_204">Empresas que podem levar à seguradora a prova de que a sua condução melhorou.</p></div></div></div></section><footer>
+<div class="container">
+<div class="footer-bottom" style="border-top:none;padding-top:0">
+<a class="nav-logo" href="/pt/index.html"><img alt="Appogio" height="38" src="/assets/images/logo-appogio.png?v=2" style="display:block;"/></a>
+<div class="footer-bottom-links">
+<a href="inspectpro.html">InspectPro</a>
+<a href="pilotos.html">PilotOS</a>
+<a href="camfleet.html">CamFleet</a>
+<a href="tagradar.html">TagRadar</a>
+<a href="notice.html">Notice</a>
+</div>
+</div>
+</div>
+</footer>
+<a aria-label="WhatsApp" class="wa-float" href="https://wa.me/573052292372?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Appogio" rel="noopener" target="_blank">
+<div class="wa-float-btn">
+<svg fill="white" height="28" viewbox="0 0 24 24" width="28">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path>
+<path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.121 1.524 5.854L0 24l6.335-1.505A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.372l-.36-.213-3.728.885.939-3.63-.234-.373A9.818 9.818 0 1112 21.818z"></path>
+</svg>
+</div>
+</a>
+<div class="lang-float" id="lang-float">
+<div class="lang-float-menu" id="lang-float-menu">
+<button class="lang-float-option" data-flag-class="fi-es" data-lang="es">
+<span class="fi fi-es"></span>
+<span>Español</span>
+</button>
+<button class="lang-float-option" data-flag-class="fi-br" data-lang="pt">
+<span class="fi fi-br"></span>
+<span>Português</span>
+</button>
+<button class="lang-float-option" data-flag-class="fi-us" data-lang="en">
+<span class="fi fi-us"></span>
+<span>English</span>
+</button>
+</div>
+<button aria-label="Cambiar idioma" class="lang-float-btn" id="lang-float-trigger">
+<span class="fi fi-es" id="float-flag"></span>
+</button>
+</div>
+<script src="/assets/js/i18n.js?v=20260730j"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
