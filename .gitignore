@@ -4,3 +4,6 @@
 *.bak-*
 *.bak.*
 *.ORIGINAL
+
+# Carpeta de trabajo del publicador de Cloudflare
+.wrangler/
