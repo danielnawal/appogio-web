@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Esta página la sirve el alojamiento (Cloudflare Pages) CON CÓDIGO 404
+       cuando la dirección pedida no existe. Antes no existía este archivo y el
+       alojamiento devolvía la PORTADA con código 200: para Google eso es un
+       "soft 404" y le permite indexar direcciones inventadas con el contenido
+       duplicado de la portada. Verificado el 31-jul-2026 con /esto-no-existe,
+       /apps/inventado y /equipos/marca-falsa: las tres daban la portada y 200. -->
+  <meta name="robots" content="noindex,follow">
+  <title data-i18n="e404_tab">Página no encontrada — Appogio</title>
+  <link rel="stylesheet" href="/assets/css/main.css?v=1221a35829">
+  <style>
+    .e404{min-height:100vh;display:flex;flex-direction:column;align-items:center;
+          justify-content:center;text-align:center;padding:2rem 1.25rem;gap:1.25rem}
+    .e404 img{width:150px;height:auto}
+    .e404 .num{font-family:var(--font-head);font-size:clamp(3rem,14vw,5rem);
+                font-weight:900;line-height:1;color:var(--c-accent);margin:0}
+    .e404 h1{font-size:clamp(1.25rem,5vw,1.75rem);margin:0}
+    .e404 p{color:var(--c-text-2);max-width:34rem;margin:0}
+    .e404 .enlaces{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin-top:.5rem}
+  </style>
+</head>
+<body>
+  <main class="e404">
+    <img src="/assets/images/logo-appogio.png" alt="Appogio">
+    <p class="num">404</p>
+    <h1 data-i18n="e404_titulo">Esta página no existe</h1>
+    <p data-i18n="e404_texto">Puede que la dirección esté mal escrita o que la página haya cambiado de sitio. Desde aquí llega a lo principal.</p>
+    <div class="enlaces">
+      <a class="btn btn-primary" href="/" data-i18n="e404_inicio">Ir al inicio</a>
+      <a class="btn btn-secondary" href="/equipos/" data-i18n="e404_equipos">Equipos compatibles</a>
+      <a class="btn btn-secondary" href="/contacto" data-i18n="e404_contacto">Contacto</a>
+    </div>
+  </main>
+  <script src="/assets/js/i18n.js?v=caa137b640"></script>
+</body>
+</html>
