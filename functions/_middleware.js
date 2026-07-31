@@ -18,10 +18,18 @@
  * que sirve el archivo estático de siempre. Si esto falla, el sitio entero
  * responde error: para volver atrás, borrar la carpeta `functions/` y publicar.
  */
+/* Los nombres que NO deben servir el sitio, sino mandar al bueno.
+   - www.appogio.com: dado de alta como dominio del proyecto, servia lo mismo.
+   - appogio-web.pages.dev: la direccion interna del proyecto. Servia el sitio
+     entero, es alcanzable desde fuera y NO lleva la cabecera "noindex" (las
+     copias de prueba, `algo.appogio-web.pages.dev`, si la llevan; por eso solo
+     se redirige el nombre pelado y las pruebas se pueden seguir usando). */
+const NOMBRES_QUE_SOBRAN = new Set(['www.appogio.com', 'appogio-web.pages.dev']);
+
 export async function onRequest(context) {
   const url = new URL(context.request.url);
 
-  if (url.hostname === 'www.appogio.com') {
+  if (NOMBRES_QUE_SOBRAN.has(url.hostname)) {
     url.hostname = 'appogio.com';
     /* 301 = permanente: es lo que consolida las dos direcciones en una sola
        a ojos del buscador. Se conservan la ruta, la consulta y todo lo demás
