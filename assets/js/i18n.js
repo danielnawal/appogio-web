@@ -13929,7 +13929,15 @@ function applyLang(lang) {
     if (el.dataset.counterDone) el.textContent = (el.dataset.prefix || '') + el.dataset.target + v;
   });
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
-  localStorage.setItem('appogio_lang', lang);
+  /* En modo privado, o con los datos de sitio bloqueados, tocar localStorage
+     LANZA un error. Sin este resguardo ese error tumbaba la función entera y
+     el selector de idioma dejaba de responder a los clics. */
+  try { localStorage.setItem('appogio_lang', lang); } catch (e) {}
+}
+
+/* Lee la preferencia guardada sin morir si el navegador no deja guardar. */
+function idiomaGuardado() {
+  try { return localStorage.getItem('appogio_lang'); } catch (e) { return null; }
 }
 
 /* ---- Helper: set flag icon class ---- */
@@ -13937,8 +13945,92 @@ function setFlagClass(el, flagClass) {
   el.className = 'fi fis ' + flagClass;
 }
 
+/* ---- Elegir idioma = ir a la dirección de ese idioma ----------------------
+   El sitio tiene una dirección propia por idioma (/en/…, /pt/…). Cuando el
+   visitante elige un idioma, lo correcto es LLEVARLO a esa dirección y no solo
+   traducirle el texto: así el enlace que comparte lleva el idioma dentro y lo
+   que ve coincide con lo que Google indexó.
+
+   De dónde sale la dirección: de las etiquetas <link rel="alternate" hreflang>
+   que cada página YA lleva en su cabecera. No se inventa ni se arma pegando
+   trozos de texto; se lee del documento. Ventajas:
+     - misma fuente que lee Google, así que en estas páginas el selector y el
+       SEO no pueden decir cosas distintas;
+     - si una página NO tiene versión en ese idioma tampoco tiene la etiqueta,
+       y entonces se traduce en el sitio como se hacía antes. Esto importa:
+       el alojamiento devuelve la PORTADA con código 200 cuando la dirección no
+       existe, así que un salto a ciegas dejaría al visitante en el inicio sin
+       ningún error visible.
+
+   ALCANCE REAL: este código gobierna 90 páginas (portada, contacto, las 25
+   fichas de aplicación y las legales, en los 3 idiomas). Las otras 588 traen
+   un script propio pegado después de </html> que intercepta el clic en fase de
+   captura con stopPropagation, así que ahí ESTO NUNCA CORRE: manda su mapa de
+   direcciones fijo. Hoy los dos coinciden (comprobado destino por destino),
+   pero son dos fuentes distintas y conviene saberlo antes de renombrar páginas.
+
+   Se busca POR ATRIBUTO, no por texto: al regenerar las páginas se reordenan
+   los atributos, y un patrón de texto fallaría en silencio. */
+const HREFLANG_DE = { es: 'es', pt: 'pt-BR', en: 'en' };
+
+function direccionDelIdioma(lang) {
+  const codigo = HREFLANG_DE[lang];
+  if (!codigo) return null;
+  const el = document.querySelector(
+    'link[rel="alternate"][hreflang="' + codigo + '"]');
+  return el && el.href ? el.href : null;
+}
+
+/* Compara direcciones como lo hace el alojamiento, no como se escriben.
+   Cloudflare Pages sirve las páginas SIN «.html» (/apps/camfleet) y manda un
+   308 a quien pida /apps/camfleet.html, mientras que las etiquetas hreflang sí
+   llevan el «.html». Sin igualar las dos formas, "¿ya estoy en esta página?"
+   daría que NO siempre, y pulsar el idioma que ya se está viendo recargaría la
+   página entera: se pierde el punto de lectura y lo escrito en el formulario.
+   OJO: esto NO se ve probando en un servidor local, porque ahí la dirección sí
+   lleva «.html» y la comparación parece funcionar. */
+function mismaPagina(a, b) {
+  const limpia = r => r.replace(/\/index\.html$/, '/')
+                       .replace(/\.html$/, '')
+                       .replace(/\/+$/, '') || '/';
+  return limpia(a) === limpia(b);
+}
+
+function elegirIdioma(lang) {
+  const destino = direccionDelIdioma(lang);
+  if (destino) {
+    let ruta = null;
+    try { ruta = new URL(destino, location.href).pathname; } catch (e) { ruta = null; }
+    if (ruta && !mismaPagina(ruta, location.pathname)) {
+      try { localStorage.setItem('appogio_lang', lang); } catch (e) {}
+      /* se conservan la consulta y el ancla: si no, un visitante que llega de
+         una campaña con ?utm_… perdería de dónde vino al cambiar de idioma. */
+      location.href = destino + location.search + location.hash;
+      return;                      /* se va de la página: no traducir aquí */
+    }
+  }
+  applyLang(lang);                 /* sin versión propia, o ya estamos en ella */
+}
+
 /* ---- Switcher UI ---- */
 document.addEventListener('DOMContentLoaded', () => {
+  /* Si la dirección ya declara el idioma (/en/…, /pt/…), ESE manda: la página
+     viene escrita en ese idioma desde el servidor. Sin esta regla, alguien que
+     hubiera elegido portugués y llegara a una página inglesa desde Google la
+     vería traducida a portugués con dirección y canonical en inglés.
+
+     LÍMITE CONOCIDO: las páginas en español NO llevan prefijo, así que aquí no
+     hay forma de distinguirlas y siguen mostrándose en el idioma guardado. Es
+     el comportamiento de siempre (así se traduce al visitante extranjero que
+     cae en una dirección española), pero significa que una página española
+     puede verse en inglés. Cambiarlo es decidir si el sitio debe MANDAR al
+     visitante a /en/ al entrar, que es una decisión de producto pendiente. */
+  function idiomaDeLaDireccion() {
+    const p = location.pathname;
+    if (p === '/en' || p.indexOf('/en/') === 0) return 'en';
+    if (p === '/pt' || p.indexOf('/pt/') === 0) return 'pt';
+    return null;
+  }
   /* Primera visita: se toma el idioma del navegador del visitante.
      Si ya eligió alguna vez, manda su elección y no se le cambia. */
   function idiomaDelNavegador() {
@@ -13947,7 +14039,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (l.startsWith('en')) return 'en';
     return 'es';
   }
-  const saved = localStorage.getItem('appogio_lang') || idiomaDelNavegador();
+  const saved = idiomaDeLaDireccion()
+             || idiomaGuardado()
+             || idiomaDelNavegador();
 
   /* --- Navbar switcher --- */
   const trigger = document.getElementById('lang-trigger');
@@ -13971,7 +14065,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
         menu.classList.remove('open');
         syncFloat(lang);
-        applyLang(lang);
+        elegirIdioma(lang);
       });
     });
 
@@ -14022,7 +14116,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navBtn.classList.add('active');
           }
         }
-        applyLang(lang);
+        elegirIdioma(lang);
       });
     });
 
