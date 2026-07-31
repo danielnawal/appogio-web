@@ -1880,3 +1880,138 @@ select.form-control { cursor: pointer; }
   .trust-logos { gap: 1.5rem; }
   .trust-logo { font-size: .9rem; }
 }
+
+/* ============================================================
+   FICHAS DE APLICACIÓN — MAQUETA EN TELÉFONO
+   ------------------------------------------------------------
+   PROBLEMA QUE RESUELVE: las 75 fichas de /apps/ (25 aplicaciones x 3 idiomas)
+   traían la maqueta ESCRITA DENTRO DEL HTML (`style="display:grid;
+   grid-template-columns:repeat(4,1fr)"` y `style="columns:2"`). Un estilo en
+   línea le gana a cualquier regla de esta hoja, así que en un teléfono seguían
+   siendo 4 columnas: la página medía 601 px en una pantalla de 393 y el
+   navegador la encogía para que cupiera — texto pequeño y contenido cortado.
+   Medido a 320, 360 y 393 px. Las demás páginas del sitio no tenían el fallo.
+
+   CÓMO SE ARREGLA: esas cuatro maquetas salieron del HTML y viven aquí, con su
+   nombre. En pantalla grande llevan EXACTAMENTE las mismas declaraciones que
+   tenían en el atributo `style`, así que no se mueve ni un píxel (comprobado
+   midiendo 48 combinaciones de página y ancho contra el sitio publicado).
+   Lo único nuevo es que en pantalla estrecha se pliegan.
+
+   OJO: en la base se conserva `1fr` a propósito, NO `minmax(0,1fr)`. Los dos
+   sirven para que quepa, pero `minmax(0,1fr)` reparte las columnas por igual y
+   `1fr` las reparte según el contenido: cambiarlo movía la barra de cifras a
+   820 px de ancho. `minmax(0,1fr)` se usa solo dentro de las reglas de
+   teléfono, que es donde hace falta que la columna pueda achicarse.
+
+   Los cortes de pantalla (1024 / 768 / 480) son los que ya usa esta hoja.
+   ============================================================ */
+
+/* Barra de cifras del encabezado: "Tiempo real / Posición y estado" x4 */
+.app-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+/* Tarjetas de hardware compatible: icono + título + descripción, x4 */
+.app-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+/* Tarjetas anchas, x2 */
+.app-cards-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* Lista de características a dos columnas de texto */
+.app-specs-columns {
+  columns: 2;
+  column-gap: 3rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .app-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app-tiles-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app-cards-2   { grid-template-columns: minmax(0, 1fr); }
+  /* Una sola columna de texto: a dos columnas, en un teléfono, cada renglón
+     queda de 3 o 4 palabras y se lee mal. */
+  .app-specs-columns { columns: 1; }
+}
+
+/* Los enlaces de aplicaciones del pie eran una fila que NO saltaba de línea:
+   en un teléfono los últimos tres quedaban fuera de la pantalla. */
+.footer-bottom-links { flex-wrap: wrap; }
+
+/* ============================================================
+   PANTALLAS MUY ESTRECHAS (320 px: iPhone SE y Android antiguos)
+   ------------------------------------------------------------
+   POR QUÉ HACE FALTA: una columna declarada `1fr` NUNCA se encoge por debajo
+   de lo que mide su contenido. Si dentro hay una palabra que no se puede
+   partir —"PDF·Excel", "99.9%", una dirección, o un campo de formulario con su
+   ancho por defecto— la columna crece, y con ella la página entera. Medido: a
+   320 px se desbordaban 70 de las 90 páginas.
+
+   `minmax(0,1fr)` le da permiso a la columna para achicarse, y
+   `overflow-wrap: break-word` deja partir SOLO la palabra que de verdad no
+   quepa (una palabra normal no se toca). Los dos juntos hacen falta: sin el
+   primero la columna no cede, sin el segundo el texto se sale de la tarjeta.
+
+   Solo aplica a 480 px o menos: en escritorio y en tableta no cambia nada.
+   ============================================================ */
+@media (max-width: 480px) {
+  .form-grid,
+  .contact-grid,
+  .roles-grid,
+  .security-stats,
+  .offices-grid,
+  .app-cards-2,
+  /* Las tarjetas llevan icono, título y un párrafo: a dos por fila no respiran. */
+  .app-tiles-grid { grid-template-columns: minmax(0, 1fr); }
+
+  /* La barra de cifras se queda en DOS columnas a propósito: son una cifra
+     corta y un renglón de texto, y de a una ocupaban la pantalla entera. */
+  .app-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* La cifra lleva `font-size:2.25rem` ESCRITO EN EL HTML. A ese tamaño una
+     palabra como "Geocercas" o "Enganches" no entra en media pantalla de un
+     teléfono y se partía por la mitad ("Geoce / rcas"): se veía roto. Aquí el
+     tamaño se hace fluido —crece con la pantalla y nunca pasa del original—
+     para que la palabra quepa entera. Hace falta `!important` porque un estilo
+     escrito en el HTML le gana a esta hoja; es el único sitio donde se usa. */
+  .app-stats-grid > div > div:first-child {
+    font-size: clamp(1.35rem, 6.8vw, 2.25rem) !important;
+    line-height: 1.1;
+  }
+
+  body { overflow-wrap: break-word; }
+
+  /* Los campos de formulario traen un ancho propio de fábrica que no depende
+     del CSS; sin esto el formulario de contacto ensanchaba la página. */
+  input, select, textarea { min-width: 0; max-width: 100%; }
+}
+
+/* Lista de tildes a dos columnas (177 páginas: plataforma, precios, recursos,
+   marca y soluciones). Venía escrita dentro del HTML, así que en un teléfono
+   seguía en dos columnas y el texto se salía de la pantalla. Mismas
+   declaraciones que tenía en el atributo `style`; lo nuevo es que se pliega. */
+.check-list-2col {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 760px;
+  columns: 2;
+  column-gap: 2.5rem;
+}
+@media (max-width: 768px) {
+  .check-list-2col { columns: 1; }
+}
