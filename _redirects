@@ -1,0 +1,9 @@
+# Redirecciones por RUTA (Cloudflare Pages).
+# OJO: aqui NO se puede redirigir por dominio (www -> sin www): Pages compara
+# solo la ruta. Eso vive en functions/_middleware.js.
+
+# /manuales/ era una pagina vacia que saltaba al inicio con una etiqueta
+# «refresh» y JavaScript. Respondia 200, se llamaba «Appogio» y no tenia
+# descripcion ni canonical: para Google, una pagina flaca mas. El salto es el
+# mismo que ya hacia, pero ahora dicho con un 301, que es la senal que entiende.
+/manuales/*   /   301
